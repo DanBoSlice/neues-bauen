@@ -1,8 +1,7 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Bauhaus Regular', 'Helvetica Neue', sans-serif;
+  font-size: 18px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10,4 +9,47 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+@font-face {
+  font-family: 'Bauhaus Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Bauhaus Regular'), url('/public/bauhaus-webfont/BauhausRegular.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Bauhaus Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Bauhaus Italic'), url('/public/bauhaus-webfont/BauhausItalic.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Bauhaus Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Bauhaus Bold'), url('/public/bauhaus-webfont/BauhausBold.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'Bauhaus Bold Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Bauhaus Bold Italic'), url('/public/bauhaus-webfont/BauhausBoldItalic.woff') format('woff');
+}
+
+.container {
+  width: 792px;
+  margin: 0 auto;
+}
+
+.header {
+  background-image: url("/public/header.png");
+  width: 792px;
+  height: 192px;
 }
