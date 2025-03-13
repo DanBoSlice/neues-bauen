@@ -1,16 +1,25 @@
 body {
   margin: 0;
-  font-family: 'Bauhaus Regular', 'Helvetica Neue', sans-serif;
   font-size: 18px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body,
+button {
+  font-family: 'Bauhaus Regular', 'Helvetica Neue', sans-serif;
 }
 
+button {
+  background: #6388a5;
+  border: 3px solid #6388a5;
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  padding: .5em 1em;
+}
 
 @font-face {
   font-family: 'Bauhaus Regular';
@@ -19,7 +28,6 @@ code {
   src: local('Bauhaus Regular'), url('/public/bauhaus-webfont/BauhausRegular.woff') format('woff');
 }
 
-
 @font-face {
   font-family: 'Bauhaus Italic';
   font-style: normal;
@@ -27,14 +35,12 @@ code {
   src: local('Bauhaus Italic'), url('/public/bauhaus-webfont/BauhausItalic.woff') format('woff');
 }
 
-
 @font-face {
   font-family: 'Bauhaus Bold';
   font-style: normal;
   font-weight: normal;
   src: local('Bauhaus Bold'), url('/public/bauhaus-webfont/BauhausBold.woff') format('woff');
 }
-
 
 @font-face {
   font-family: 'Bauhaus Bold Italic';
@@ -45,11 +51,27 @@ code {
 
 .container {
   width: 792px;
+  min-height: 100vh;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .header {
   background-image: url("/public/header.png");
   width: 792px;
   height: 192px;
+}
+
+.content {
+  background: #eab49a;
+  flex: 1;
+  width: 100%;
+}
+
+.footer {
+  background-image: url("/public/footer.png");
+  width: 792px;
+  height: 80px;
 }
