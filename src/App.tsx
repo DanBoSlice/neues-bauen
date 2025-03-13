@@ -5,10 +5,11 @@ function App() {
   return (
     <>
       <div className="intro">
-        <h1>Welcome to the 1920s</h1>
         <h2>Weimar Republic Architecture</h2>
 
-        <p>Hier geht es um dies und das</p>
+        <p>
+          Welcome on my little hobby website about architecture of the 1920s in Germany.
+        </p>
       </div>
 
       <div className="windows"></div>
