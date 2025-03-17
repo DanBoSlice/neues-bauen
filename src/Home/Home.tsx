@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       <div className="intro">
-        <h2>Weimar Republic Architecture</h2>
+        <h1>Neues Bauen Portal</h1>
 
         <p>
           Welcome on my little hobby website about architecture of the 1920s in Germany.
