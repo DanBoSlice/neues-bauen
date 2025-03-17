@@ -13,11 +13,11 @@
   top: 5px;
   text-align: center;
   padding: var(--sign-padding);
-  width: 130px;
+  display: inline-block;
 
   .border {
     position: relative;
-    padding: .1em 0;
+    padding: .1em 1em;
     overflow: hidden;
 
     &:before {

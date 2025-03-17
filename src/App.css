@@ -1,11 +1,5 @@
-.intro {
-  text-align: center;
-  padding: 3em 0;
-}
-
-.windows {
-  background: url("/public/windows.png") no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 185px;
+.menu {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 1em;
 }
