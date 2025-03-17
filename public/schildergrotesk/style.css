@@ -1,0 +1,6 @@
+@font-face {
+  font-family: 'schildergrotesk';
+  src: url('schildergrotesk.woff2') format('woff2'),
+       url('schildergrotesk.woff') format('woff'),
+       url('schildergrotesk.ttf')  format('truetype');
+}

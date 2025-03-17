@@ -1,0 +1,77 @@
+:root {
+  --sign-padding: 3px;
+  --sign-border-radius: 7px;
+  --sign-border-width: 2px;
+}
+
+.street-sign {
+  background: #063971;
+  color: #fff;
+  font-family: 'schildergrotesk', sans-serif;
+  letter-spacing: 1px;
+  position: relative;
+  top: 5px;
+  text-align: center;
+  padding: var(--sign-padding);
+  width: 130px;
+
+  .border {
+    position: relative;
+    padding: .1em 0;
+    overflow: hidden;
+
+    &:before {
+      content: "";
+      border: var(--sign-border-width) solid #fff;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+
+    .corner {
+      background: #063971;
+      border-radius: 50%;
+      width: var(--sign-border-radius);
+      height: var(--sign-border-radius);
+      position: absolute;
+
+      &:before {
+        content: "";
+        background: #063971;
+        border-radius: 50%;
+        width: var(--sign-border-radius);
+        height: var(--sign-border-radius);
+        position: absolute;
+        top: calc(-1 * var(--sign-border-width));
+        left: calc(-1 * var(--sign-border-width));
+        border: var(--sign-border-width) solid white;
+      }
+
+      &:nth-of-type(1) {
+        top: var(--sign-border-width);
+        left: var(--sign-border-width);
+        transform: translate(-50%, -50%);
+      }
+
+      &:nth-of-type(2) {
+        top: var(--sign-border-width);
+        right: var(--sign-border-width);
+        transform: translate(50%, -50%);
+      }
+
+      &:nth-of-type(3) {
+        bottom: var(--sign-border-width);
+        left: var(--sign-border-width);
+        transform: translate(-50%, 50%);
+      }
+
+      &:nth-of-type(4) {
+        bottom: var(--sign-border-width);
+        right: var(--sign-border-width);
+        transform: translate(50%, 50%);
+      }
+    }
+  }
+}
