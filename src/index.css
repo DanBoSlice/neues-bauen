@@ -11,7 +11,7 @@ body {
 
 body,
 button {
-  font-family: 'Bauhaus Regular', 'Helvetica Neue', sans-serif;
+  font-family: 'Helvetica Neue', sans-serif;
 }
 
 button {
@@ -25,30 +25,6 @@ button {
   padding: .5em 1em;
 }
 
-.container {
-  width: 792px;
-  min-height: 100vh;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-}
-
-.header {
-  background-image: url("/public/header.png");
-  width: 792px;
-  height: 192px;
-}
-
-.content {
-  background: #eab49a;
-  flex: 1;
-  width: 100%;
-}
-
-.footer {
-  background-image: url("/public/footer.png");
-  width: 792px;
-  height: 80px;
+a {
+  text-decoration: none;
 }

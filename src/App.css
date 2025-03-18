@@ -1,5 +1,58 @@
+.container {
+  width: 792px;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.header {
+  background: url("/public/header.png") no-repeat;
+  width: 792px;
+  padding-top: 192px;
+  text-align: center;
+}
+
+.logo {
+  font-family: 'GrenadierNF', sans-serif;
+  font-weight: normal;
+  font-size: 4em;
+  color: #fffaf4;
+  text-shadow: 0 0 5px #ff8000, 0 0 10px #ff8000, 0 0 20px #ff8000, 0 0 40px #ff8000, 0 0 80px #ff8000;
+  animation: flicker 1.5s infinite alternate;
+}
+
+@keyframes flicker {
+  0% { opacity: 0.8; text-shadow: 0 0 5px #ff8000, 0 0 10px #ff8000, 0 0 20px #ff8000; }
+  50% { opacity: 1; text-shadow: 0 0 10px #ff8000, 0 0 20px #ff8000, 0 0 40px #ff8000; }
+  100% { opacity: 0.9; text-shadow: 0 0 5px #ff8000, 0 0 10px #ff8000, 0 0 20px #ff8000; }
+}
+
 .menu {
   display: flex;
   justify-content: space-evenly;
   margin-bottom: 1em;
+}
+
+.content {
+  background: #eab49a;
+  flex: 1;
+  width: 100%;
+  padding: 1em;
+}
+
+.footer {
+  background: url("/public/footer.png");
+  width: 792px;
+  display: flex;
+  justify-content: right;
+  gap: 5em;
+  padding: 30px 50px 50px;
+}
+
+.note {
+  font-size: .85em;
+  padding-bottom: 1em;
 }

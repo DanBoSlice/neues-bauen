@@ -10,7 +10,7 @@ export default function Guestbook() {
       <Routes>
         <Route path="/" element={(
           <>
-            <h2>Guestbook</h2>
+            <h1>Guestbook</h1>
             <p>Build your own 1920s house and leave a message!</p>
 
             <Link to="form">Sign guestbook</Link>

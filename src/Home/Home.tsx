@@ -5,11 +5,11 @@ export default function Home() {
   return (
     <>
       <div className="intro">
-        <h1>Portal des Neues Bauens</h1>
-
         <p>
-          Welcome to the Portal of <i>Neues Bauen</i> &ndash; German for "New Building", the modernist architecture
-          movement around the 1920s in Germany
+          <strong>
+            Welcome to the Portal of <i>Neues Bauen</i> &ndash; German for &raquo;New Building&laquo;,
+            the modernist architecture movement around the 1920s in Germany
+          </strong>
         </p>
 
         <p>
@@ -21,6 +21,11 @@ export default function Home() {
           Have fun exploring the site and learning about Neues Bauen, and make sure to leave your own house in the guestbook!
         </p>
       </div>
+
+      <h3>There will be more</h3>
+      <p>
+        I'll keep working on the website and add more content in the future.
+      </p>
     </>
   );
 }

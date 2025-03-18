@@ -6,7 +6,7 @@ export default function BuildersPlaque() {
     <div className="builders-plaque">
       Built in the year
       2025 by
-      danbos.de
+      danbos
     </div>
   );
 }

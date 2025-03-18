@@ -1,7 +1,5 @@
 .wrapper {
-  padding: 0 2em;
-
-  h2 {
+  h1 {
     text-align: center;
   }
 }
@@ -11,7 +9,7 @@
   gap: 1em;
 }
 
-.form {
+.options-form {
   flex: 1;
 }
 
@@ -24,4 +22,10 @@
     height: 32px;
     cursor: pointer;
   }
+}
+
+.input-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }

@@ -8,14 +8,14 @@ export default function GuestbookForm() {
 
   return (
     <div className="wrapper">
-      <h2>Build your own 1920s house</h2>
+      <h1>Sign the guestbook</h1>
 
       <div className="form-content">
         <GuestbookHouse
           facade={facade}
         />
 
-        <div className="form">
+        <div className="options-form">
           <div>
             <h3>Facade</h3>
 
@@ -27,11 +27,19 @@ export default function GuestbookForm() {
         </div>
       </div>
 
-      <div>
-        <textarea></textarea>
+      <div className="input-form">
+        <div>
+          <label htmlFor="guestbook-name">Your name</label>
+          <input type="text" id="guestbook-name"/>
+        </div>
+
+        <div>
+          <label htmlFor="guestbook-message">Your message</label>
+          <textarea id="guestbook-message"></textarea>
+        </div>
 
         <button>
-          Submit your house
+          Submit your house and message
         </button>
 
         <Link to="/guestbook">
