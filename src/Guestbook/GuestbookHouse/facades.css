@@ -1,0 +1,19 @@
+.facade-1 {
+  .facade {
+    fill: #f3f3f3;
+  }
+
+  &.option {
+    background: #f3f3f3;
+  }
+}
+
+.facade-2 {
+  .facade {
+    fill: #f39292;
+  }
+
+  &.option {
+    background: #f39292;
+  }
+}

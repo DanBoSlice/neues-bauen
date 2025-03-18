@@ -34,7 +34,7 @@ function App() {
         <Route path="featured-buildings" element={<Featured/>}/>
         <Route path="interior" element={<Interior/>}/>
         <Route path="design-elements" element={<DesignElements/>}/>
-        <Route path="guestbook" element={<Guestbook/>}/>
+        <Route path="guestbook/*" element={<Guestbook/>}/>
         {/*Todo: 404*/}
       </Routes>
     </BrowserRouter>

@@ -1,15 +1,28 @@
 import React from 'react';
 import './Guestbook.css';
-import { ReactComponent as Svg } from './guestbook.svg';
+import GuestbookEntry from './GuestbookEntry/GuestbookEntry';
+import { Link, Route, Routes } from 'react-router-dom';
+import GuestbookForm from './GuestbookForm/GuestbookForm';
 
 export default function Guestbook() {
   return (
     <>
-      <div className="preview style1">
-        <Svg/>
-      </div>
+      <Routes>
+        <Route path="/" element={(
+          <>
+            <h2>Guestbook</h2>
+            <p>Build your own 1920s house and leave a message!</p>
 
-      Facade: Klinker, mixed clinker facade, clinker base, first floor clinker, stone base
+            <Link to="form">Sign guestbook</Link>
+
+            <br/>
+            <br/>
+
+            <GuestbookEntry/>
+          </>
+        )}/>
+        <Route path="form" element={<GuestbookForm/>}/>
+      </Routes>
     </>
   );
 }

@@ -1,0 +1,31 @@
+.house {
+  width: 350px;
+  height: 350px;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.style1 {
+  .door {
+    fill: #33b377;
+  }
+
+  .window {
+    fill: #33b377;
+  }
+
+  .roof {
+    fill: #8a3232;
+  }
+
+  .small-base {
+    fill: #3a1b1b;
+  }
+
+  .large-base {
+    display: none;
+  }
+}

@@ -1,0 +1,16 @@
+.entry {
+  background: #fff;
+  border: solid 3px #fff;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 1em;
+  padding-bottom: 1em;
+
+  .message {
+    padding: 0 1em;
+  }
+
+  .author {
+    padding: 0 1em;
+  }
+}
