@@ -8,33 +8,42 @@ import DesignElements from './DesignElements/DesignElements';
 import Guestbook from './Guestbook/Guestbook';
 import Interior from './Interior/Interior';
 import BuildersPlaque from './BuildersPlaque';
+import { ReactComponent as Lamp } from './lamp.svg';
 
 function App() {
   return (
     <BrowserRouter>
       <div className="container">
-        <div className="header">
-          <span className="logo">
-            Portal des Neues Bauens
-          </span>
+        <div className="roof"></div>
 
-          <div className="menu">
-            <Link to="/">
-              <Streetsign>Homepage</Streetsign>
-            </Link>
-            {/*<Link to="/featured-buildings">*/}
-            {/*  <Streetsign>Featured Buildings</Streetsign>*/}
-            {/*</Link>*/}
-            {/*<Link to="/interior">*/}
-            {/*  <Streetsign>Interior Design</Streetsign>*/}
-            {/*</Link>*/}
-            <Link to="/design-elements">
-              <Streetsign>Design Elements</Streetsign>
-            </Link>
-            <Link to="/guestbook">
-              <Streetsign>Guestbook</Streetsign>
-            </Link>
+        <div className="header">
+          <Lamp className="lamp"/>
+
+          <div className="header-content">
+            <span className="logo">
+              Portal des Neues Bauens
+            </span>
+
+            <div className="menu">
+              <Link to="/">
+                <Streetsign>Homepage</Streetsign>
+              </Link>
+              {/*<Link to="/featured-buildings">*/}
+              {/*  <Streetsign>Featured Buildings</Streetsign>*/}
+              {/*</Link>*/}
+              {/*<Link to="/interior">*/}
+              {/*  <Streetsign>Interior Design</Streetsign>*/}
+              {/*</Link>*/}
+              <Link to="/design-elements">
+                <Streetsign>Design Elements</Streetsign>
+              </Link>
+              <Link to="/guestbook">
+                <Streetsign>Guestbook</Streetsign>
+              </Link>
+            </div>
           </div>
+
+          <Lamp className="lamp"/>
         </div>
 
         <div className="content">

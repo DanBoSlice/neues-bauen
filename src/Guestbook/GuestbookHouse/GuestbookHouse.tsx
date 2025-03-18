@@ -1,7 +1,7 @@
 import React from 'react';
 import './GuestbookHouse.css';
 import './facades.css';
-import { ReactComponent as Svg } from '../guestbook.svg';
+import { ReactComponent as Svg } from './guestbook.svg';
 
 export interface GuestbookHouseProps {
   facade: number;

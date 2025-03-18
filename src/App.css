@@ -8,17 +8,35 @@
   position: relative;
 }
 
-.header {
+.roof {
   background: url("/public/header.png") no-repeat;
   width: 792px;
-  padding-top: 192px;
-  text-align: center;
+  height: 192px;
+}
+
+.header {
+  width: calc(100% + 50px);
+  display: flex;
+  align-items: center;
+  gap: 1em;
+
+  .header-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    flex: 1;
+    text-align: center;
+  }
+
+  .lamp {
+    height: 200px;
+  }
 }
 
 .logo {
   font-family: 'GrenadierNF', sans-serif;
   font-weight: normal;
-  font-size: 4em;
+  font-size: 3em;
   color: #fffaf4;
   text-shadow: 0 0 5px #ff8000, 0 0 10px #ff8000, 0 0 20px #ff8000, 0 0 40px #ff8000, 0 0 80px #ff8000;
   animation: flicker 1.5s infinite alternate;

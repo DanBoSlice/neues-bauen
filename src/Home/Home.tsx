@@ -21,11 +21,6 @@ export default function Home() {
           Have fun exploring the site and learning about Neues Bauen, and make sure to leave your own house in the guestbook!
         </p>
       </div>
-
-      <h3>There will be more</h3>
-      <p>
-        I'll keep working on the website and add more content in the future.
-      </p>
     </>
   );
 }
