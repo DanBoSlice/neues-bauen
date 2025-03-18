@@ -5,18 +5,15 @@ export default function Home() {
   return (
     <>
       <div className="intro">
-        <h1>Neues Bauen Portal</h1>
+        <h1>Portal des Neues Bauens</h1>
 
         <p>
-          Welcome on my little hobby website about architecture of the 1920s in Germany.
+          Welcome to the Portal of <i>Neues Bauen</i> -- German for "New Building", the modernist architecture
+          movement around the 1920s in Germany!
         </p>
       </div>
 
       <div className="windows"></div>
-
-      <p>Viele Elemente auf dieser Seite können angeklickt werden.</p>
-
-      <button>Lorem</button>
     </>
   );
 }

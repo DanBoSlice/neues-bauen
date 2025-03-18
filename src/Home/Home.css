@@ -9,3 +9,20 @@
   width: 100%;
   height: 185px;
 }
+
+h1 {
+  font-family: 'GrenadierNF', sans-serif;
+  font-weight: normal;
+  font-size: 4em;
+
+
+  color: #fffaf4;
+  text-shadow: 0 0 5px #ff8000, 0 0 10px #ff8000, 0 0 20px #ff8000, 0 0 40px #ff8000, 0 0 80px #ff8000;
+  animation: flicker 1.5s infinite alternate;
+}
+
+@keyframes flicker {
+  0% { opacity: 0.8; text-shadow: 0 0 5px #ff8000, 0 0 10px #ff8000, 0 0 20px #ff8000; }
+  50% { opacity: 1; text-shadow: 0 0 10px #ff8000, 0 0 20px #ff8000, 0 0 40px #ff8000; }
+  100% { opacity: 0.9; text-shadow: 0 0 5px #ff8000, 0 0 10px #ff8000, 0 0 20px #ff8000; }
+}

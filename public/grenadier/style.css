@@ -1,0 +1,5 @@
+@font-face {
+  font-family: 'GrenadierNF';
+  src: url('GrenadierNF.otf') format('opentype'),
+  url('GrenadierNF.ttf')  format('truetype');
+}

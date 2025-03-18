@@ -24,6 +24,11 @@ export default function DesignElements() {
       <h2>Facade</h2>
       <p>Simple plaster, Münchner Rauputz</p>
       <p>Pastel colors, but also bold</p>
+      Während parallel die neue Sachlichkeit des Bauhauses für eine Abschaffung des Ornamentalen eintrat, entwickelten
+      die Architekten des Expressionismus quasi zeitgleich eine ornamentale Formensprache mit rauen, kantigen, oft
+      spitzen Elementen. Auch die horizontale Fassadengliederung durch abwechselnd vor und zurückgesetzten
+      Backsteinreihen sind typisch für diese Bauten. Die Stilelemente sollten die Dynamik der Zeit, aber auch ihre
+      Heftigkeit und ihre Spannungen zum Ausdruck bringen.
 
       <h2>Ornamentation</h2>
       <p>no or minimal ornamentation</p>
