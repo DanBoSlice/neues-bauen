@@ -1,0 +1,37 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+    <style>
+        .facade{fill:#f3f3f3}
+        .door{fill:#33b377}
+        .window{fill:black}
+    </style>
+    <rect class="facade" x="0" y="0" width="500" height="500" />
+    <rect class="small-base" x="0" y="470" width="500" height="30" />
+    <rect class="large-base" x="0" y="325" width="500" height="175" />
+    <rect class="roof" x="0" y="0" width="500" height="70" />
+
+    <rect class="door" x="220" y="400" width="60" height="100" />
+
+    <g class="story" transform="translate(0, 350)">
+        <rect class="window" x="20" width="70" height="75" />
+        <rect class="window" x="120" width="60" height="75" />
+
+        <rect class="window" x="320" width="60" height="75" />
+        <rect class="window" x="410" width="70" height="75" />
+    </g>
+
+    <g class="story" transform="translate(0, 230)">
+        <rect class="window" x="20" width="70" height="75" />
+        <rect class="window" x="120" width="60" height="75" />
+
+        <rect class="window" x="320" width="60" height="75" />
+        <rect class="window" x="410" width="70" height="75" />
+    </g>
+
+    <g class="story" transform="translate(0, 110)">
+        <rect class="window" x="20" width="70" height="75" />
+        <rect class="window" x="120" width="60" height="75" />
+
+        <rect class="window" x="320" width="60" height="75" />
+        <rect class="window" x="410" width="70" height="75" />
+    </g>
+</svg>
