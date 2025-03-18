@@ -3,13 +3,6 @@
   padding: 3em 0;
 }
 
-.windows {
-  background: url("/public/windows.png") no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 185px;
-}
-
 h1 {
   font-family: 'GrenadierNF', sans-serif;
   font-weight: normal;

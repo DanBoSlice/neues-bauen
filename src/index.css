@@ -52,17 +52,3 @@ button {
   width: 792px;
   height: 80px;
 }
-
-.builders-plaque {
-  background: orange;
-  color: #222;
-  text-align: center;
-  padding: .5em;
-  position: absolute;
-  bottom: 100px;
-  right: 10px;
-  width: 150px;
-  font-family: 'Lato Regular', 'Helvetica Neue', sans-serif;
-  font-size: 16px;
-  text-transform: uppercase;
-}

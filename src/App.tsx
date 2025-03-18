@@ -7,6 +7,7 @@ import Featured from './Featured/Featured';
 import DesignElements from './DesignElements/DesignElements';
 import Guestbook from './Guestbook/Guestbook';
 import Interior from './Interior/Interior';
+import BuildersPlaque from './BuildersPlaque';
 
 function App() {
   return (
@@ -15,12 +16,12 @@ function App() {
         <Link to="/">
           <Streetsign>Homepage</Streetsign>
         </Link>
-        <Link to="/featured-buildings">
-          <Streetsign>Featured Buildings</Streetsign>
-        </Link>
-        <Link to="/interior">
-          <Streetsign>Interior Design</Streetsign>
-        </Link>
+        {/*<Link to="/featured-buildings">*/}
+        {/*  <Streetsign>Featured Buildings</Streetsign>*/}
+        {/*</Link>*/}
+        {/*<Link to="/interior">*/}
+        {/*  <Streetsign>Interior Design</Streetsign>*/}
+        {/*</Link>*/}
         <Link to="/design-elements">
           <Streetsign>Design Elements</Streetsign>
         </Link>
@@ -37,6 +38,10 @@ function App() {
         <Route path="guestbook/*" element={<Guestbook/>}/>
         {/*Todo: 404*/}
       </Routes>
+
+      <a href="https://danbos.de" target="_blank" rel="noreferrer">
+        <BuildersPlaque />
+      </a>
     </BrowserRouter>
   );
 }
