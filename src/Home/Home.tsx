@@ -1,5 +1,7 @@
 import React from 'react';
 import "./Home.css";
+import WindowImage from '../WindowImage';
+import image from './image.jpeg';
 
 export default function Home() {
   return (
@@ -20,6 +22,11 @@ export default function Home() {
         <p>
           Have fun exploring the site and learning about Neues Bauen, and make sure to leave your own house in the guestbook!
         </p>
+      </div>
+
+      <div className="images">
+        <WindowImage src={image}/>
+        <WindowImage src={image}/>
       </div>
     </>
   );
