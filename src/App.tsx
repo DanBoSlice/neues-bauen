@@ -14,14 +14,14 @@ function App() {
   return (
     <BrowserRouter>
       <div className="container">
-        <div className="roof"></div>
+        <div className="roof-header"></div>
 
         <div className="header">
           <Lamp className="lamp"/>
 
           <div className="header-content">
             <span className="logo">
-              Portal des Neues Bauens
+              Portal des Neuen Bauens
             </span>
 
             <div className="menu">
@@ -64,15 +64,6 @@ function App() {
         </div>
 
         sidewalk
-
-        <div className="note">
-          <h4>Why does this website look so 1990s?</h4>
-          <p>
-            Because the internet was so much more fun back then. I say bring back the random niche websites!
-            Do you have a fun website like this? <a href="mailto:hello@danbos.de">Send it to me</a> and I'll add
-            your banner here (no joke).
-          </p>
-        </div>
       </div>
     </BrowserRouter>
   );

@@ -1,0 +1,9 @@
+.base-1 {
+  .small-base {
+    fill: #591616;
+  }
+
+  .large-base {
+    display: none;
+  }
+}

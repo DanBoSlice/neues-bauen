@@ -7,6 +7,7 @@ export default function GuestbookEntry() {
   return (
     <div className="entry">
       <GuestbookHouse
+        base={1}
         facade={1}
       />
 

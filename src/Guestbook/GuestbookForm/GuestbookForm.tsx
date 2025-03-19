@@ -4,6 +4,7 @@ import GuestbookHouse from '../GuestbookHouse/GuestbookHouse';
 import { Link } from 'react-router-dom';
 
 export default function GuestbookForm() {
+  const [base, setBase] = useState(1);
   const [facade, setFacade] = useState(1);
 
   return (
@@ -12,6 +13,7 @@ export default function GuestbookForm() {
 
       <div className="form-content">
         <GuestbookHouse
+          base={base}
           facade={facade}
         />
 
