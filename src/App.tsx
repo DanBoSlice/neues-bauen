@@ -46,9 +46,6 @@ function App() {
               <NavLink to="/design-elements">
                 Design Elements
               </NavLink>
-              {/*<NavLink to="/interior">*/}
-              {/*  Interior Design*/}
-              {/*</NavLink>*/}
               <NavLink to="/guestbook">
                 Guestbook
               </NavLink>

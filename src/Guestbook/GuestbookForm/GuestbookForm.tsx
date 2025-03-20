@@ -9,7 +9,7 @@ export default function GuestbookForm() {
 
   return (
     <div className="wrapper">
-      <h1>Sign the guestbook</h1>
+      <h1>Sign the Guestbook</h1>
 
       <div className="form-content">
         <GuestbookHouse
@@ -24,6 +24,15 @@ export default function GuestbookForm() {
             <div className="options">
               <div className="facade-1 option" onClick={() => setFacade(1)}></div>
               <div className="facade-2 option" onClick={() => setFacade(2)}></div>
+            </div>
+          </div>
+
+          <div>
+            <h3>Base</h3>
+
+            <div className="options">
+              <div className="facade-1 option" onClick={() => setBase(1)}></div>
+              <div className="facade-2 option" onClick={() => setBase(2)}></div>
             </div>
           </div>
         </div>

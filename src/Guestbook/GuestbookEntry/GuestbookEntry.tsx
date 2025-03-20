@@ -2,6 +2,7 @@ import React from 'react';
 import './GuestbookEntry.css';
 import GuestbookHouse from '../GuestbookHouse/GuestbookHouse';
 import Streetsign from '../../Streetsign';
+import DoorbellSign from '../../DoorbellSign';
 
 export default function GuestbookEntry() {
   return (
@@ -16,7 +17,7 @@ export default function GuestbookEntry() {
       </div>
 
       <div className="author">
-        <Streetsign>danbos.de</Streetsign>
+        <DoorbellSign>Daniel</DoorbellSign>
       </div>
     </div>
   );

@@ -16,6 +16,11 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
 }
 
+h1 {
+  text-align: center;
+  margin-top: 0;
+}
+
 body,
 button {
   font-family: 'NeverMind Bauhaus Regular', 'Helvetica Neue', sans-serif;
@@ -38,11 +43,20 @@ a {
 
 hr {
   background: #7988f1;
-  height: 20px;
+  height: 18px;
   border: 0;
   margin: 3em -3em;
 }
 
-p:first-of-type {
-  margin-top: 0;
+p {
+  line-height: 1.2;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+}
+
+.intro {
+  text-align: center;
+  text-wrap: balance;
 }

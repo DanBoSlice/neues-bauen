@@ -11,12 +11,16 @@ export default function Guestbook() {
         <Route path="/" element={(
           <>
             <h1>Guestbook</h1>
-            <p>Build your own 1920s house and leave a message!</p>
+            <div className="intro">
+              <p>
+                I hope you enjoyed your visit! If you did, feel free to build your own 1920s house
+                and leave a message for the guestbook.
+              </p>
 
-            <Link to="form">Sign guestbook</Link>
+              <Link to="form">Sign guestbook</Link>
+            </div>
 
-            <br/>
-            <br/>
+            <hr />
 
             <GuestbookEntry/>
           </>

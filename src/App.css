@@ -96,33 +96,5 @@
 .footer {
   background: url("/public/footer.png");
   width: 100%;
-  padding: 30px 50px;
-}
-
-.lamp {
-  height: 150px;
-  overflow: visible;
-  position: absolute;
-  top: 0;
-
-  &:first-of-type {
-    left: 0;
-  }
-
-  &:last-of-type {
-    right: 0;
-  }
-
-  .light {
-    fill: #fce3b4;
-    filter: drop-shadow(0 0 10px hsl(43, 82%, 57%));
-    stroke: rgba(0, 0, 0, 0.5);
-    stroke-width: 1;
-  }
-
-  .railing {
-    fill: none;
-    stroke: rgba(0, 0, 0, 0.5);
-    stroke-width: 1;
-  }
+  height: 80px;
 }

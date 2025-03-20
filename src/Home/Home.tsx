@@ -18,7 +18,10 @@ export default function Home() {
 
         <p>
           Neues Bauen is German for "New Building" or "New Construction" and is the general term for
-          the new methods and principles used in architecture. Bauhaus, Art Deco.
+          the new methods and principles used in architecture.
+        </p>
+        <p>
+          Bauhaus, Art Deco.
         </p>
       </div>
 
@@ -33,13 +36,13 @@ export default function Home() {
       <div className="base">
         <div>
           <p>
-            I started this little old-school hobby website to share my interest and fascination about the architecture
-            of those buildings.
+            I started this little old-school niche website to share my interest and fascination about
+            the architecture of those buildings.
           </p>
 
           <p>
-            Have fun exploring the site and learning about Neues Bauen, and make sure to leave
-            your own house in the <Link to="/guestbook">guestbook</Link>!
+            Have fun exploring the site and learning about Neues Bauen, and make sure to
+            add your own house to the <Link to="/guestbook">guestbook</Link>!
           </p>
         </div>
 

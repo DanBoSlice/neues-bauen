@@ -7,11 +7,8 @@ export default function DesignElements() {
       <h1>Design Elements</h1>
 
       <p>
-        Have a look at this stereotypical multi-family house constructed in 1920s Germany.
-        Are you aware of the design elements that separates it from buildings constructed 10-50 years earlier?
-        It's an incredible paradigm shift.
-      </p>
-      <p>
+        Have a look at this stereotypical multi-family house that might have been
+        constructed in 1920s Germany.
         Click on one of the highlighted design elements to learn more about it.
       </p>
 
