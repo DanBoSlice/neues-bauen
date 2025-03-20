@@ -1,15 +1,25 @@
 import React from 'react';
 import './App.css';
 import Streetsign from './Streetsign';
-import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Link, Route, Routes, useLocation } from 'react-router-dom';
 import Home from './Home/Home';
 import Featured from './Featured/Featured';
 import DesignElements from './DesignElements/DesignElements';
 import Guestbook from './Guestbook/Guestbook';
 import Interior from './Interior/Interior';
 import BuildersPlaque from './BuildersPlaque';
-import { ReactComponent as Lamp } from './lamp.svg';
 import ScrollToTop from './ScrollToTop';
+
+const NavLink = ({ to, children }: { to: string; children: React.ReactNode }) => {
+  const location = useLocation();
+  const isActive = location.pathname === to; // Check if this link is active
+
+  return (
+    <Link to={to}>
+      <Streetsign animated={isActive}>{children}</Streetsign>
+    </Link>
+  );
+};
 
 function App() {
   return (
@@ -22,22 +32,38 @@ function App() {
           <div className="roof-front"></div>
         </div>
 
-        <div className="header">
-          <Lamp className="lamp"/>
-
-          <div className="header-content">
+        <div className="roof-header">
+          <div className="roof-edge"></div>
+          <div className="roof-front">
             <Link to="/" className="logo">
               Portal des Neuen Bauens
             </Link>
-          </div>
 
-          <Lamp className="lamp"/>
+            <div className="menu">
+              <NavLink to="/">
+                Home Street
+              </NavLink>
+              <NavLink to="/design-elements">
+                Design Elements
+              </NavLink>
+              <NavLink to="/interior">
+                Interior Design
+              </NavLink>
+              <NavLink to="/guestbook">
+                Guestbook
+              </NavLink>
+            </div>
+          </div>
         </div>
 
-        <div className="main">
-          <div className="column"></div>
+        <div className="roof-header">
+          <div className="roof-edge"></div>
+          <div className="roof-front"></div>
+        </div>
 
-          <div className="content">
+        <div className="roof-header">
+          <div className="roof-edge"></div>
+          <div className="roof-front">
             <Routes>
               <Route path="/" element={<Home/>}/>
               <Route path="featured-buildings" element={<Featured/>}/>
@@ -47,33 +73,15 @@ function App() {
               {/*Todo: 404*/}
             </Routes>
 
+
+            {/*<Lamp className="lamp"/>*/}
             <a href="https://danbos.de" target="_blank" rel="noreferrer" className="plaque">
               <BuildersPlaque/>
             </a>
           </div>
-
-          <div className="column"></div>
         </div>
 
-        <div className="footer">
-          <div className="menu">
-          <Link to="/">
-              <Streetsign>Homepage</Streetsign>
-            </Link>
-            {/*<Link to="/featured-buildings">*/}
-            {/*  <Streetsign>Featured Buildings</Streetsign>*/}
-            {/*</Link>*/}
-            {/*<Link to="/interior">*/}
-            {/*  <Streetsign>Interior Design</Streetsign>*/}
-            {/*</Link>*/}
-            <Link to="/design-elements">
-              <Streetsign>Design Elements</Streetsign>
-            </Link>
-            <Link to="/guestbook">
-              <Streetsign>Guestbook</Streetsign>
-            </Link>
-          </div>
-        </div>
+        <div className="footer"></div>
       </div>
     </BrowserRouter>
   );

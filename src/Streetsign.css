@@ -4,18 +4,43 @@
   --sign-border-width: 2px;
 }
 
+@keyframes swing {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(1.5deg);
+  }
+  75% {
+    transform: rotate(-1.5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
 .street-sign {
   background: #063971;
   border-radius: 3px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, .2);
+  transition: box-shadow .3s;
   color: #fff;
   font-family: 'schildergrotesk', sans-serif;
+  font-size: .94em;
   letter-spacing: 1px;
   position: relative;
   top: 5px;
   text-align: center;
   padding: var(--sign-padding);
   display: inline-block;
+
+  &:hover {
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, .3);
+  }
+
+  &.animated {
+    animation: swing 2s linear infinite;
+  }
 
   .border {
     position: relative;

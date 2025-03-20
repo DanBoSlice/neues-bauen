@@ -3,12 +3,17 @@
 }
 
 body {
-  background: url('https://rheinischer-verein.de/wp-content/uploads/2024/05/Der-Koelner-Hafen-Ende-der-1920er-Jahre-%C2%A9-koelnprogramm.jpg') no-repeat;
+  background: url('https://rheinischer-verein.de/wp-content/uploads/2024/05/Der-Koelner-Hafen-Ende-der-1920er-Jahre-%C2%A9-koelnprogramm.jpg') no-repeat top;
   background-size: cover;
   margin: 0;
   font-size: 18px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'GrenadierNF', sans-serif;
+  font-weight: normal;
 }
 
 body,

@@ -1,9 +1,13 @@
 import './Streetsign.css';
 import { PropsWithChildren } from 'react';
 
-export default function Streetsign({ children }: PropsWithChildren) {
+export interface StreetsignProps extends PropsWithChildren {
+  animated?: boolean;
+}
+
+export default function Streetsign({ children, animated }: StreetsignProps) {
   return (
-    <div className="street-sign">
+    <div className={'street-sign' + (animated ? ' animated' : '')}>
       <div className="border">
         {children}
 
