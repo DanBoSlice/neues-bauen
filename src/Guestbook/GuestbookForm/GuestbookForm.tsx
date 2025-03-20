@@ -4,7 +4,7 @@ import GuestbookHouse from '../GuestbookHouse/GuestbookHouse';
 import { Link } from 'react-router-dom';
 
 export default function GuestbookForm() {
-  const [base, setBase] = useState(1);
+  const [base, setBase] = useState(2);
   const [facade, setFacade] = useState(1);
 
   return (

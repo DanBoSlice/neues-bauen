@@ -9,8 +9,8 @@ export default function Home() {
       <div className="intro">
         <p>
           <strong>
-            Welcome to the Portal of <i>Neues Bauen</i> &ndash; German for &raquo;New Building&laquo;,
-            the modernist architecture movement around the 1920s in Germany
+            Welcome to the Portal of &raquo;Neues Bauen&laquo;,
+            the modernist architecture movement in 1920s Germany
           </strong>
         </p>
 

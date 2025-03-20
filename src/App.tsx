@@ -9,12 +9,18 @@ import Guestbook from './Guestbook/Guestbook';
 import Interior from './Interior/Interior';
 import BuildersPlaque from './BuildersPlaque';
 import { ReactComponent as Lamp } from './lamp.svg';
+import ScrollToTop from './ScrollToTop';
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
+
       <div className="container">
-        <div className="roof-header"></div>
+        <div className="roof-header">
+          <div className="roof-edge"></div>
+          <div className="roof-front"></div>
+        </div>
 
         <div className="header">
           <Lamp className="lamp"/>
@@ -68,8 +74,6 @@ function App() {
             </Link>
           </div>
         </div>
-
-        sidewalk
       </div>
     </BrowserRouter>
   );

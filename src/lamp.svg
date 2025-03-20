@@ -1,3 +1,6 @@
 <svg viewBox="0 0 40 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet">
-    <polygon points="0,5 20,0 40,5 30,100 20,98 10,100"/>
+    <polygon points="0,5 20,0 40,5 30,90 30,100 10,100 10,90" class="light"/>
+
+    <path d="M20,0 L20,100" class="railing"/>
+    <path d="M10,86 L20,85 L30,86" class="railing"/>
 </svg>

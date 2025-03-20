@@ -7,3 +7,13 @@
     display: none;
   }
 }
+
+.base-2 {
+  .small-base {
+    display: none;
+  }
+
+  .large-base {
+    fill: #591616;
+  }
+}
