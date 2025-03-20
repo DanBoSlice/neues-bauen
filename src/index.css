@@ -35,3 +35,14 @@ button {
 a {
   text-decoration: none;
 }
+
+hr {
+  background: #7988f1;
+  height: 20px;
+  border: 0;
+  margin: 3em -3em;
+}
+
+p:first-of-type {
+  margin-top: 0;
+}

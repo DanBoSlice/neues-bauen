@@ -41,14 +41,14 @@ function App() {
 
             <div className="menu">
               <NavLink to="/">
-                Home Street
+                Home Str.
               </NavLink>
               <NavLink to="/design-elements">
                 Design Elements
               </NavLink>
-              <NavLink to="/interior">
-                Interior Design
-              </NavLink>
+              {/*<NavLink to="/interior">*/}
+              {/*  Interior Design*/}
+              {/*</NavLink>*/}
               <NavLink to="/guestbook">
                 Guestbook
               </NavLink>
@@ -64,20 +64,16 @@ function App() {
         <div className="roof-header">
           <div className="roof-edge"></div>
           <div className="roof-front">
-            <Routes>
-              <Route path="/" element={<Home/>}/>
-              <Route path="featured-buildings" element={<Featured/>}/>
-              <Route path="interior" element={<Interior/>}/>
-              <Route path="design-elements" element={<DesignElements/>}/>
-              <Route path="guestbook/*" element={<Guestbook/>}/>
-              {/*Todo: 404*/}
-            </Routes>
-
-
-            {/*<Lamp className="lamp"/>*/}
-            <a href="https://danbos.de" target="_blank" rel="noreferrer" className="plaque">
-              <BuildersPlaque/>
-            </a>
+            <div className="content">
+              <Routes>
+                <Route path="/" element={<Home/>}/>
+                <Route path="featured-buildings" element={<Featured/>}/>
+                <Route path="interior" element={<Interior/>}/>
+                <Route path="design-elements" element={<DesignElements/>}/>
+                <Route path="guestbook/*" element={<Guestbook/>}/>
+                {/*Todo: 404*/}
+              </Routes>
+            </div>
           </div>
         </div>
 

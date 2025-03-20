@@ -1,7 +1,7 @@
 .container {
-  width: 792px;
+  width: 840px;
   min-height: 100vh;
-  margin: 20px auto 0;
+  margin: 30px auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -34,8 +34,7 @@
   }
 
   &:nth-of-type(4) {
-    width: 840px;
-    height: 800px;
+    width: 100%;
   }
 
   .roof-edge {
@@ -74,34 +73,6 @@
     align-items: center;
     justify-content: center;
   }
-
-  .lamp {
-    height: 150px;
-    overflow: visible;
-    position: absolute;
-    top: 0;
-
-    &:first-of-type {
-      left: 0;
-    }
-
-    &:last-of-type {
-      right: 0;
-    }
-
-    .light {
-      fill: #fce3b4;
-      filter: drop-shadow(0 0 10px hsl(43, 82%, 57%));
-      stroke: rgba(0, 0, 0, 0.5);
-      stroke-width: 1;
-    }
-
-    .railing {
-      fill: none;
-      stroke: rgba(0, 0, 0, 0.5);
-      stroke-width: 1;
-    }
-  }
 }
 
 .logo {
@@ -109,14 +80,6 @@
   font-weight: normal;
   font-size: 3.2em;
   color: #fffaf4;
-  /*text-shadow: 0 0 5px #ff8000, 0 0 10px #ff8000, 0 0 20px #ff8000, 0 0 40px #ff8000, 0 0 80px #ff8000;*/
-  /*animation: flicker 1.5s infinite alternate;*/
-}
-
-@keyframes flicker {
-  0% { opacity: 0.8; text-shadow: 0 0 5px #ff8000, 0 0 10px #ff8000, 0 0 20px #ff8000; }
-  50% { opacity: 1; text-shadow: 0 0 10px #ff8000, 0 0 20px #ff8000, 0 0 40px #ff8000; }
-  100% { opacity: 0.9; text-shadow: 0 0 5px #ff8000, 0 0 10px #ff8000, 0 0 20px #ff8000; }
 }
 
 .menu {
@@ -125,58 +88,41 @@
   justify-content: space-evenly;
 }
 
-.main {
-  background: url('/public/bg.png') #eab49a;
-  flex: 1;
-  width: 762px;
-  display: flex;
-
-  .column {
-    background: #d17963;
-    width: 30px;
-    display: flex;
-    justify-content: space-between;
-
-    &:first-of-type {
-      box-shadow: 4px 0 10px rgba(0, 0, 0, .2);
-    }
-
-    &:last-of-type {
-      box-shadow: -4px 0 10px rgba(0, 0, 0, .2);
-    }
-
-    &:before {
-      content: "";
-      background: #ff896b;
-      width: 10px;
-      height: 100%;
-    }
-
-    &:after {
-      content: "";
-      background: #633329;
-      width: 10px;
-      height: 100%;
-    }
-  }
-
-  .content {
-    padding: 1em 3em;
-    flex: 1;
-  }
-}
-
-.plaque {
-  margin-top: auto;
+.content {
+  width: 100%;
+  padding: 1em 3em;
 }
 
 .footer {
   background: url("/public/footer.png");
-  width: 792px;
+  width: 100%;
   padding: 30px 50px;
 }
 
-.note {
-  font-size: .85em;
-  padding-bottom: 1em;
+.lamp {
+  height: 150px;
+  overflow: visible;
+  position: absolute;
+  top: 0;
+
+  &:first-of-type {
+    left: 0;
+  }
+
+  &:last-of-type {
+    right: 0;
+  }
+
+  .light {
+    fill: #fce3b4;
+    filter: drop-shadow(0 0 10px hsl(43, 82%, 57%));
+    stroke: rgba(0, 0, 0, 0.5);
+    stroke-width: 1;
+  }
+
+  .railing {
+    fill: none;
+    stroke: rgba(0, 0, 0, 0.5);
+    stroke-width: 1;
+  }
 }
