@@ -1,3 +1,18 @@
+.details {
+  display: flex;
+  gap: 1em;
+  margin-top: 3em;
+
+  .example-house {
+    flex: 1;
+  }
+}
+
+.detail-labels {
+  display: flex;
+  flex-direction: column;
+}
+
 .detail-link {
   font-family: 'GrenadierNF', sans-serif;
   font-size: 2em;

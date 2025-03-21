@@ -1,11 +1,5 @@
-.images {
-  display: flex;
-  gap: 1em;
+.home-images {
   margin-top: 3em;
-
-  > * {
-    flex: 1;
-  }
 }
 
 .base {

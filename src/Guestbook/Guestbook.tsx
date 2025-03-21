@@ -13,14 +13,28 @@ export default function Guestbook() {
           and leave a message for the guestbook.
         </p>
 
-        <Link to="form">Sign guestbook</Link>
+        <Link to="form">
+          <button>Sign guestbook</button>
+        </Link>
       </div>
 
       <hr />
 
       <div className="entries">
         <GuestbookEntry
-          message="Great website!"
+          message="1Great website! Lorem ipsum dolor sit amet."
+          author="Daniel"
+        />
+        <GuestbookEntry
+          message="2Great website!"
+          author="Daniel"
+        />
+        <GuestbookEntry
+          message="3Great website!"
+          author="Daniel"
+        />
+        <GuestbookEntry
+          message="4Great website! Lorem ipsum dolor sit amet."
           author="Daniel"
         />
       </div>

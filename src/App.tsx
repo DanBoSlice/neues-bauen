@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Streetsign from './Streetsign';
-import { BrowserRouter, Link, Route, Routes, useLocation } from 'react-router-dom';
+import { BrowserRouter, Link, Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import Home from './Home/Home';
 import Featured from './Featured/Featured';
 import GuestbookRoutes from './Guestbook/GuestbookRoutes';
@@ -72,7 +72,7 @@ function App() {
                 <Route path="interior" element={<Interior/>}/>
                 <Route path="design-elements/*" element={<DesignElementsRoutes/>}/>
                 <Route path="guestbook/*" element={<GuestbookRoutes/>}/>
-                {/*Todo: 404*/}
+                <Route path="*" element={<Navigate to="/"/>}/>
               </Routes>
             </div>
           </div>

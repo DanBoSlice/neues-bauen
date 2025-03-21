@@ -1,20 +1,22 @@
 import React from 'react';
-import "./History.css";
+import './History.css';
+import WindowImage from '../WindowImage';
+import image from '../Home/image.jpeg';
+import Gallery from '../Gallery';
 
 export default function History() {
   return (
     <>
       <h1>History</h1>
 
-      <p>asdf</p>
+      <p>Before, Gründerzeit</p>
 
-      <h2>Before</h2>
+      <Gallery>
+        <WindowImage src={image}/>
+        <WindowImage src={image}/>
+      </Gallery>
 
-      adsf
-
-      <h2>After</h2>
-
-      asdf
+      <p>After, Plattenbau</p>
     </>
   );
 }

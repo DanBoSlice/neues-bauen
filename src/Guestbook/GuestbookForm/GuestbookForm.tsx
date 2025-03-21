@@ -43,17 +43,18 @@ export default function GuestbookForm() {
 
       <div className="input-form">
         <div>
+          <label htmlFor="guestbook-message">Your message</label>
+          <textarea id="guestbook-message"></textarea>
+          <img src="https://m.media-amazon.com/images/I/71mxZfps20L.jpg" alt="" width="100%"/>
+        </div>
+
+        <div>
           <label htmlFor="guestbook-name">Your name</label>
           <input type="text" id="guestbook-name"/>
         </div>
 
-        <div>
-          <label htmlFor="guestbook-message">Your message</label>
-          <textarea id="guestbook-message"></textarea>
-        </div>
-
         <button>
-          Submit your house and message
+          Submit
         </button>
 
         <Link to="/guestbook">

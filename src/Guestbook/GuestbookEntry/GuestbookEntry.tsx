@@ -1,8 +1,6 @@
 import React from 'react';
 import './GuestbookEntry.css';
 import GuestbookHouse from '../GuestbookHouse/GuestbookHouse';
-import Streetsign from '../../Streetsign';
-import DoorbellSign from '../../DoorbellSign';
 import Stamp from '../../Stamp';
 
 export interface GuestbookEntryProps {

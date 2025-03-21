@@ -4,6 +4,7 @@ import WindowImage from '../WindowImage';
 import image from './image.jpeg';
 import { Link } from 'react-router-dom';
 import BuildersPlaque from '../BuildersPlaque';
+import Gallery from '../Gallery';
 
 export default function Home() {
   return (
@@ -17,18 +18,20 @@ export default function Home() {
         </p>
 
         <p>
-          Neues Bauen is German for "New Building" or "New Construction" and is the general term for
-          the new methods and principles used in architecture.
+          Neues Bauen is German for "New Building" or "New Constructing" and describes the new methods
+          and principles in Weimar Republic architecture.
         </p>
         <p>
           Bauhaus, Art Deco.
         </p>
       </div>
 
-      <div className="images">
-        <WindowImage src={image}/>
-        <WindowImage src={image}/>
-        <WindowImage src={image}/>
+      <div className="home-images">
+        <Gallery>
+          <WindowImage src={image}/>
+          <WindowImage src={image}/>
+          <WindowImage src={image}/>
+        </Gallery>
       </div>
 
       <hr />

@@ -9,11 +9,13 @@
 }
 
 .message {
+  font-family: "Courier New", monospace;
+  font-size: 1.1em;
   width: 100%;
 }
 
 .author {
   display: inline-block;
-  font-family: 'Mortega Regular', sans-serif;
-  font-size: 1.8em;
+  font-family: 'Mortega Regular', cursive;
+  font-size: 1.5em;
 }

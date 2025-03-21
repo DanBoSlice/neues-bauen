@@ -36,6 +36,7 @@
     width: 100%;
     display: block;
     opacity: .8;
+    transition: opacity .3s;
   }
 
   &:hover {
