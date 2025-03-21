@@ -27,6 +27,7 @@ export default function DesignElements() {
           <Link to="/design-elements/ornamentation" className="detail-link">Ornamentation</Link>
           <Link to="/design-elements/interiors" className="detail-link">Interiors</Link>
           <Link to="/design-elements/materials" className="detail-link">Materials</Link>
+          <Link to="/design-elements/city-planning" className="detail-link">City Planning</Link>
         </p>
       </div>
     </>

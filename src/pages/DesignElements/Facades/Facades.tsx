@@ -18,6 +18,7 @@ export default function Facades() {
       </Gallery>
 
       <p>Simple plaster, Münchner Rauputz</p>
+      <p>Stories usually very uniform</p>
 
       <p>
         Während parallel die neue Sachlichkeit des Bauhauses für eine Abschaffung des Ornamentalen eintrat, entwickelten

@@ -8,6 +8,7 @@ import Windows from './subpages/Windows';
 import Ornamentation from './subpages/Ornamentation';
 import Interiors from './subpages/Interiors';
 import Materials from './subpages/Materials';
+import CityPlanning from './subpages/CityPlanning';
 
 export default function DesignElementsRoutes() {
   const location = useLocation();
@@ -24,6 +25,7 @@ export default function DesignElementsRoutes() {
         <Route path="ornamentation" element={<Ornamentation/>}/>
         <Route path="interiors" element={<Interiors/>}/>
         <Route path="materials" element={<Materials/>}/>
+        <Route path="city-planning" element={<CityPlanning/>}/>
       </Routes>
     </>
   );
