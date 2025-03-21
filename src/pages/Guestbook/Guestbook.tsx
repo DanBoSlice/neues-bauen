@@ -11,7 +11,7 @@ export default function Guestbook() {
       <div className="intro">
         <p>
           I hope you enjoyed your visit! If you did, feel free to build your own 1920s house
-          and leave a message for the guestbook.
+          and leave a message in the guestbook.
         </p>
 
         <Link to="form">

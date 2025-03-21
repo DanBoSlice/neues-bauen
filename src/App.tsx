@@ -41,9 +41,9 @@ function App() {
               <NavLink to="/">
                 Home Str.
               </NavLink>
-              <NavLink to="/history">
-                History
-              </NavLink>
+              {/*<NavLink to="/history">*/}
+              {/*  History*/}
+              {/*</NavLink>*/}
               <NavLink to="/design-elements">
                 Design Elements
               </NavLink>
