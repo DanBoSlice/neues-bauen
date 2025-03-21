@@ -18,8 +18,8 @@ export default function Home() {
         </p>
 
         <p>
-          Neues Bauen is German for "New Building" or "New Constructing" and describes the new methods
-          and principles in Weimar Republic architecture.
+          Neues Bauen is German for &raquo;New Building&laquo; or &raquo;New Constructing&laquo;
+          and describes the new methods and principles in Weimar Republic architecture.
         </p>
         <p>
           Moving away from the ornate styles of the past, this era focused on functionality and simplicity, and improving
@@ -47,6 +47,7 @@ export default function Home() {
           <p>
             I started this little old-school niche website to share my interest and fascination about
             the architecture of these buildings.
+            More content will follow soon!
           </p>
 
           <p>
