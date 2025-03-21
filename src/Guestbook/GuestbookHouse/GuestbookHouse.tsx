@@ -19,25 +19,25 @@ export default function GuestbookHouse(props: GuestbookHouseProps) {
     'facade-' + props.facade,
   ].join(' ');
 
-  const houseWidth = 273;
-  const houseHeight = 350;
+  const houseWidth = 260;
+  const houseHeight = 340;
 
-  const doorWidth = 42;
+  const doorWidth = 40;
   const doorHeight = 70;
 
-  const stories = [260, 190, 120, 50];
+  const stories = [260, 192, 124, 56];
   const smallBaseHeight = 28;
-  const bigBaseHeight = 95;
+  const bigBaseHeight = 85;
   const windowBars = 3;
 
-  const windowBigWidth = 32;
-  const windowSmallWidth = 25;
+  const windowBigWidth = 30;
+  const windowSmallWidth = 24;
   const windowHeight = 40;
 
   const outerWindowMarginX = 14;
   const innerWindowMarginX = 63;
 
-  const roofHeight = 30;
+  const roofHeight = 36;
 
   return (
     <div className="house">
@@ -141,7 +141,9 @@ export default function GuestbookHouse(props: GuestbookHouseProps) {
         />
 
         {stories.map(y => (
-          <g className="story" transform={`translate(0, ${y})`} key={y}>
+          // accentColor has to be part of the key to force a rerender of the windows when the accent color changes.
+          // Otherwise, Safari doesn't update the window styles if the accentColor changes.
+          <g className="story" transform={`translate(0, ${y})`} key={y + props.accentColor}>
             <use href="#window-big" x={outerWindowMarginX}/>
             <use href="#window-small" x={innerWindowMarginX}/>
 

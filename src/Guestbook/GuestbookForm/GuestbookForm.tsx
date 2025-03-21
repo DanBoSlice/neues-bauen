@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import Stamp from '../../Stamp';
 
 export default function GuestbookForm() {
-  const [accentColor, setAccentColor] = useState(0);
+  const [accentColor, setAccentColor] = useState(1);
   const [base, setBase] = useState(0);
   const [facade, setFacade] = useState(0);
 
@@ -88,15 +88,18 @@ export default function GuestbookForm() {
       </div>
 
       <div className="input-form">
-        <div>
-          <label htmlFor="guestbook-message">Your message</label>
-          <textarea id="guestbook-message"></textarea>
-          <img src="https://m.media-amazon.com/images/I/71mxZfps20L.jpg" alt="" width="100%"/>
+        <div className="message-input">
+          <div className="label">
+            <label htmlFor="guestbook-message">Your message</label>
+          </div>
+          <textarea id="guestbook-message" className="message" rows={3}></textarea>
         </div>
 
         <div>
-          <label htmlFor="guestbook-name">Your name</label>
-          <input type="text" id="guestbook-name"/>
+          <div className="label">
+            <label htmlFor="guestbook-name">Your name</label>
+          </div>
+          <input type="text" id="guestbook-name" className="author" autoComplete="off"/>
         </div>
 
         <button>
