@@ -4,12 +4,11 @@ import Streetsign from './Streetsign';
 import { BrowserRouter, Link, Route, Routes, useLocation } from 'react-router-dom';
 import Home from './Home/Home';
 import Featured from './Featured/Featured';
-import DesignElements from './DesignElements/DesignElements';
-import Guestbook from './Guestbook/Guestbook';
+import GuestbookRoutes from './Guestbook/GuestbookRoutes';
 import Interior from './Interior/Interior';
-import BuildersPlaque from './BuildersPlaque';
 import ScrollToTop from './ScrollToTop';
 import History from './History/History';
+import DesignElementsRoutes from './DesignElements/DesignElementsRoutes';
 
 const NavLink = ({ to, children }: { to: string; children: React.ReactNode }) => {
   const location = useLocation();
@@ -71,8 +70,8 @@ function App() {
                 <Route path="featured-buildings" element={<Featured/>}/>
                 <Route path="history" element={<History/>}/>
                 <Route path="interior" element={<Interior/>}/>
-                <Route path="design-elements" element={<DesignElements/>}/>
-                <Route path="guestbook/*" element={<Guestbook/>}/>
+                <Route path="design-elements/*" element={<DesignElementsRoutes/>}/>
+                <Route path="guestbook/*" element={<GuestbookRoutes/>}/>
                 {/*Todo: 404*/}
               </Routes>
             </div>
