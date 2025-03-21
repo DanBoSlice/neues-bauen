@@ -22,7 +22,13 @@ export default function Home() {
           and principles in Weimar Republic architecture.
         </p>
         <p>
-          Bauhaus, Art Deco.
+          Moving away from the ornate styles of the past, this era focused on functionality and simplicity, and improving
+          living conditions through well-designed spaces.
+        </p>
+        <p>
+          What sets these buildings apart from later modern architecture is the attention to subtle details.
+          They capture the spirit of the time—optimistic and forward-thinking.
+          Here, we’ll explore these distinct design elements of 1920s architecture.
         </p>
       </div>
 
@@ -40,7 +46,7 @@ export default function Home() {
         <div>
           <p>
             I started this little old-school niche website to share my interest and fascination about
-            the architecture of those buildings.
+            the architecture of these buildings.
           </p>
 
           <p>
