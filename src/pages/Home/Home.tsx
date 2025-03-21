@@ -36,7 +36,7 @@ export default function Home() {
 
       <hr />
 
-      <div className="base">
+      <div className="home-end">
         <div>
           <p>
             I started this little old-school niche website to share my interest and fascination about

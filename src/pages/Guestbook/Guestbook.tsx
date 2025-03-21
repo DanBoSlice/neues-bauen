@@ -6,7 +6,7 @@ import './Guestbook.css';
 
 export default function Guestbook() {
   return (
-    <>
+    <div className="guestbook">
       <h1>Guestbook</h1>
       <div className="intro">
         <p>
@@ -39,6 +39,6 @@ export default function Guestbook() {
           author="Daniel"
         />
       </Masonry>
-    </>
+    </div>
   )
 };

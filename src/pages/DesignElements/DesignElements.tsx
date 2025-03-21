@@ -20,14 +20,14 @@ export default function DesignElements() {
           House
         </div>
 
-        <div className="detail-labels">
-          <Link to="roofs" className="detail-link">Roofs</Link>
-          <Link to="facades" className="detail-link">Facades</Link>
-          <Link to="windows" className="detail-link">Windows</Link>
-          <Link to="ornamentation" className="detail-link">Ornamentation</Link>
-          <Link to="interiors" className="detail-link">Interiors</Link>
-          <Link to="materials" className="detail-link">Materials</Link>
-        </div>
+        <p className="detail-labels">
+          <Link to="/design-elements/roofs" className="detail-link">Roofs</Link>
+          <Link to="/design-elements/facades" className="detail-link">Facades</Link>
+          <Link to="/design-elements/windows" className="detail-link">Windows</Link>
+          <Link to="/design-elements/ornamentation" className="detail-link">Ornamentation</Link>
+          <Link to="/design-elements/interiors" className="detail-link">Interiors</Link>
+          <Link to="/design-elements/materials" className="detail-link">Materials</Link>
+        </p>
       </div>
     </>
   );

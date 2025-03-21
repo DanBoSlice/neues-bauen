@@ -10,7 +10,7 @@ import DesignElementsRoutes from './pages/DesignElements/DesignElementsRoutes';
 
 const NavLink = ({ to, children }: { to: string; children: React.ReactNode }) => {
   const location = useLocation();
-  const isActive = location.pathname === to; // Check if this link is active
+  const isActive = to !== '/' && location.pathname.startsWith(to) || to === location.pathname;
 
   return (
     <Link to={to}>
