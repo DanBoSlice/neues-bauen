@@ -3,11 +3,21 @@ import './GuestbookForm.css';
 import GuestbookHouse from '../GuestbookHouse/GuestbookHouse';
 import { Link } from 'react-router-dom';
 import Stamp from '../../../components/Stamp';
+import { CreateEntryDto } from '../api/create-entry.dto';
 
 export default function GuestbookForm() {
   const [accentColor, setAccentColor] = useState(1);
   const [base, setBase] = useState(0);
   const [facade, setFacade] = useState(0);
+
+  const [message, setMessage] = useState('');
+  const [name, setName] = useState('');
+  const [messageError, setMessageError] = useState('');
+  const [nameError, setNameError] = useState('');
+  const [isLoading, setLoading] = useState(false);
+
+  const messageMaxLength = 255;
+  const nameMaxLength = 30;
 
   const accentColors = 2;
   const bases = 2;
@@ -39,9 +49,53 @@ export default function GuestbookForm() {
     selectRandom();
   }, []);
 
+  const handleMessageUpdate = (message: string) => {
+    setMessage(message.substring(0, messageMaxLength));
+    setMessageError('');
+  };
+
+  const handleNameUpdate = (name: string) => {
+    setName(name.substring(0, nameMaxLength));
+    setNameError('');
+  };
+
+  const handleSubmit = (event: React.FormEvent) => {
+    event.preventDefault();
+
+    let isValid = true;
+
+    if (message.trim().length < 5) {
+      setMessageError('Message must be at least 5 characters long.');
+      isValid = false;
+    } else {
+      setMessageError('');
+    }
+
+    if (name.trim().length < 3) {
+      setNameError('Name must be at least 3 characters long.');
+      isValid = false;
+    } else {
+      setNameError('');
+    }
+
+    if (isValid) {
+      setLoading(true);
+
+      const dto: CreateEntryDto = {
+        name,
+        message,
+        facade,
+      };
+
+      console.log(dto);
+    }
+  };
+
   return (
-    <div className="wrapper">
-      <h1>Sign the Guestbook</h1>
+    <div>
+      <div className="intro">
+        <h1>Sign the Guestbook</h1>
+      </div>
 
       <div className="form-content">
         <Stamp>
@@ -53,7 +107,9 @@ export default function GuestbookForm() {
         </Stamp>
 
         <div className="options-form">
-          <button onClick={selectRandom}>Random</button>
+          <button onClick={selectRandom} disabled={isLoading}>
+            Random
+          </button>
 
           <div>
             <h3>Accent Color</h3>
@@ -63,7 +119,7 @@ export default function GuestbookForm() {
                 <div
                   key={i}
                   className={`accent-color-${i} option`}
-                  onClick={() => setAccentColor(i)}
+                  onClick={() => !isLoading && setAccentColor(i)}
                 ></div>
               ))}
             </div>
@@ -77,7 +133,7 @@ export default function GuestbookForm() {
                 <div
                   key={i}
                   className={`facade-${i} option`}
-                  onClick={() => setFacade(i)}
+                  onClick={() => !isLoading && setFacade(i)}
                 ></div>
               ))}
             </div>
@@ -91,7 +147,7 @@ export default function GuestbookForm() {
                 <div
                   key={i}
                   className={`facade-${i} option`}
-                  onClick={() => setBase(i)}
+                  onClick={() => !isLoading && setBase(i)}
                 ></div>
               ))}
             </div>
@@ -99,29 +155,50 @@ export default function GuestbookForm() {
         </div>
       </div>
 
-      <div className="input-form">
+      <form onSubmit={handleSubmit} className="input-form">
         <div className="message-input">
           <div className="label">
             <label htmlFor="guestbook-message">Your message</label>
           </div>
-          <textarea id="guestbook-message" className="message" rows={3}></textarea>
+          <textarea
+            id="guestbook-message"
+            className="message"
+            rows={3}
+            maxLength={messageMaxLength}
+            value={message}
+            disabled={isLoading}
+            onChange={(e) => handleMessageUpdate(e.target.value)}
+          ></textarea>
+          {messageError && <div className="validation-message">{messageError}</div>}
         </div>
 
         <div>
           <div className="label">
             <label htmlFor="guestbook-name">Your name</label>
           </div>
-          <input type="text" id="guestbook-name" className="author" autoComplete="off"/>
+          <input
+            type="text"
+            id="guestbook-name"
+            className="author"
+            autoComplete="off"
+            maxLength={nameMaxLength}
+            value={name}
+            disabled={isLoading}
+            onChange={(e) => handleNameUpdate(e.target.value)}
+          />
+          {nameError && <div className="validation-message">{nameError}</div>}
         </div>
 
-        <button>
-          Submit
+        <button type="submit" disabled={isLoading}>
+          {isLoading ? 'Loading ...' : 'Submit'}
         </button>
 
-        <Link to="/guestbook">
-          Cancel
-        </Link>
-      </div>
+        <p className="cancel">
+          <Link to="/guestbook">
+            Cancel
+          </Link>
+        </p>
+      </form>
     </div>
   );
 }
