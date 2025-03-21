@@ -3,8 +3,7 @@
 }
 
 body {
-  background: url('/public/bg.jpg') no-repeat top;
-  background-size: cover;
+  background: #333;
   margin: 0;
   font-size: 18px;
   color: #111;
