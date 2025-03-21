@@ -1,6 +1,7 @@
 :root {
   --accent-color-0: #33b377;
   --accent-color-1: #cc9286;
+  --accent-color-2: #d3d3d3;
 }
 
 .option {
@@ -10,5 +11,9 @@
 
   &.accent-color-1 {
     background: var(--accent-color-1);
+  }
+
+  &.accent-color-2 {
+    background: var(--accent-color-2);
   }
 }

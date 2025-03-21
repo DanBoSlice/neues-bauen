@@ -17,3 +17,23 @@
     background: #f39292;
   }
 }
+
+.facade-2 {
+  .facade {
+    fill: #f3ee92;
+  }
+
+  &.option {
+    background: #f3ee92;
+  }
+}
+
+.facade-3 {
+  .facade {
+    fill: #8ac7ac;
+  }
+
+  &.option {
+    background: #8ac7ac;
+  }
+}

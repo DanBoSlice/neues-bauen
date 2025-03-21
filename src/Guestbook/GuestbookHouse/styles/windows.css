@@ -29,3 +29,9 @@
     stroke: var(--accent-color-1);
   }
 }
+
+.accent-color-2 {
+  .window-frame {
+    stroke: var(--accent-color-2);
+  }
+}

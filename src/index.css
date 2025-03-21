@@ -47,6 +47,17 @@ a {
   text-decoration: none;
 }
 
+p a {
+  color: #734f2b;
+  text-decoration: none;
+  border-bottom: 3px double #734f2b;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    border-bottom-color: #7988f1;
+  }
+}
+
 hr {
   background: #7988f1;
   height: 18px;
