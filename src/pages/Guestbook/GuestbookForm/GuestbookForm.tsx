@@ -18,9 +18,21 @@ export default function GuestbookForm() {
   };
 
   const selectRandom = () => {
-    setAccentColor(randomIntFromInterval(0, accentColors - 1));
-    setBase(randomIntFromInterval(0, bases - 1));
-    setFacade(randomIntFromInterval(0, facades - 1));
+    const oldState = `${accentColor}${base}${facade}`;
+
+    const newAccountColor = randomIntFromInterval(0, accentColors - 1);
+    setAccentColor(newAccountColor);
+
+    const newBase = randomIntFromInterval(0, bases - 1);
+    setBase(newBase);
+
+    const newFacade = randomIntFromInterval(0, facades - 1);
+    setFacade(newFacade);
+
+    const newState = `${newAccountColor}${newBase}${newFacade}`;
+    if (oldState === newState) {
+      selectRandom();
+    }
   };
 
   useEffect(() => {
