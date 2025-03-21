@@ -23,6 +23,13 @@ export default function GuestbookHouse(props: GuestbookHouseProps) {
   const houseWidth = 260;
   const houseHeight = 360;
 
+  const brickWidth = 8;
+  const brickHeight = 3;
+  const brickRows = 3;
+
+  const shingleWidth = 12;
+  const shingleHeight = 6;
+
   const doorWidth = 40;
   const doorHeight = 70;
 
@@ -32,7 +39,7 @@ export default function GuestbookHouse(props: GuestbookHouseProps) {
   const staircaseY = 84;
 
   const stories = [270, 205, 140, 75];
-  const smallBaseHeight = 28;
+  const smallBaseHeight = 7 * brickHeight;
   const bigBaseHeight = 95;
   const windowBars = 3;
 
@@ -77,6 +84,13 @@ export default function GuestbookHouse(props: GuestbookHouseProps) {
                   className="window-cross-bar"
                 />
               ))}
+            <rect
+              fill="#457949"
+              width={windowBigWidth + 2}
+              height={20}
+              x={-1}
+              y={-1}
+            ></rect>
           </symbol>
 
           <symbol id="window-small" overflow="visible">
@@ -121,6 +135,51 @@ export default function GuestbookHouse(props: GuestbookHouseProps) {
                 />
               ))}
           </symbol>
+
+          <pattern
+            id="brickPattern"
+            width={3 * brickWidth}
+            height={brickRows * brickHeight}
+            patternUnits="userSpaceOnUse"
+          >
+            {[...Array(brickRows)].map((_, i) => {
+              return (
+                <g key={i}>
+                  <rect
+                    width={brickWidth}
+                    height={brickHeight}
+                    x={0}
+                    y={i * brickHeight}
+                    className={'brick brick-' + (i % 3)}
+                  />
+                  <rect
+                    width={brickWidth}
+                    height={brickHeight}
+                    x={brickWidth}
+                    y={i * brickHeight}
+                    className={'brick brick-' + ((i + 1) % 3)}
+                  />
+                  <rect
+                    width={brickWidth}
+                    height={brickHeight}
+                    x={2 * brickWidth}
+                    y={i * brickHeight}
+                    className={'brick brick-' + ((i + 2) % 3)}
+                  />
+                </g>
+              );
+            })}
+          </pattern>
+
+          <pattern
+            id="shinglePattern"
+            width={shingleWidth}
+            height={shingleHeight}
+            patternUnits="userSpaceOnUse"
+          >
+            <rect width={shingleWidth} height={shingleHeight} className="shingle"/>
+            <rect x={-shingleWidth / 2} y={shingleHeight / 2} width={shingleWidth} height={shingleHeight} className="shingle"/>
+          </pattern>
         </defs>
 
         <rect
@@ -131,24 +190,27 @@ export default function GuestbookHouse(props: GuestbookHouseProps) {
           height={houseHeight}
         />
 
-        <rect
-          className="small-base"
-          x="0"
-          y={houseHeight - smallBaseHeight}
-          width={houseWidth}
-          height={smallBaseHeight}
-        />
+        {props.base === 0 && (
+          <rect
+            fill="url(#brickPattern)"
+            x={0}
+            y={houseHeight - smallBaseHeight}
+            width={houseWidth}
+            height={smallBaseHeight}
+          />
+        )}
+        {props.base === 1 && (
+          <rect
+            fill="url(#brickPattern)"
+            x={0}
+            y={houseHeight - bigBaseHeight}
+            width={houseWidth}
+            height={bigBaseHeight}
+          />
+        )}
 
         <rect
-          className="large-base"
-          x="0"
-          y={houseHeight - bigBaseHeight}
-          width={houseWidth}
-          height={bigBaseHeight}
-        />
-
-        <rect
-          className="roof"
+          fill="url(#shinglePattern)"
           x="0"
           y="0"
           width={houseWidth}

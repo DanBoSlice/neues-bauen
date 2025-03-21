@@ -1,19 +1,19 @@
-.base-0 {
-  .small-base {
-    fill: #591616;
-  }
-
-  .large-base {
-    display: none;
-  }
+.base {
+  fill: #d1b390;
 }
 
-.base-1 {
-  .small-base {
-    display: none;
-  }
+.brick {
+  stroke: rgba(41, 34, 26, .3);
+}
 
-  .large-base {
-    fill: #591616;
-  }
+.brick-0 {
+  fill: #875852;
+}
+
+.brick-1 {
+  fill: #6d4647;
+}
+
+.brick-2 {
+  fill: #906763;
 }
