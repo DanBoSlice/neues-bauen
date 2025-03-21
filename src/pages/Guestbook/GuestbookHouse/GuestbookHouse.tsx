@@ -178,12 +178,25 @@ export default function GuestbookHouse(props: GuestbookHouseProps) {
             patternUnits="userSpaceOnUse"
           >
             <rect width={shingleWidth} height={shingleHeight} className="shingle"/>
-            <rect x={-shingleWidth / 2} y={shingleHeight / 2} width={shingleWidth} height={shingleHeight} className="shingle"/>
+            <rect x={-shingleWidth / 2} y={shingleHeight / 2} width={shingleWidth} height={shingleHeight}
+                  className="shingle"/>
+          </pattern>
+
+          <pattern id="stuccoPattern" width="16" height="16" patternUnits="userSpaceOnUse">
+            <path d="M2,2 l8,6 M6,10 l8,6 M10,4 l6,8" className="stucco stucco-0"/>
+            <path d="M14,2 l4,10 M2,14 l10,4" className="stucco stucco-1"/>
           </pattern>
         </defs>
 
         <rect
           className="facade"
+          x="0"
+          y="0"
+          width={houseWidth}
+          height={houseHeight}
+        />
+        <rect
+          fill="url(#stuccoPattern)"
           x="0"
           y="0"
           width={houseWidth}

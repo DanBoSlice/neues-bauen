@@ -1,3 +1,18 @@
+.stucco {
+  stroke: black;
+  stroke-linecap: round;
+
+  &.stucco-0 {
+    stroke-width: .5;
+    stroke-opacity: .3;
+  }
+
+  &.stucco-1 {
+    stroke-width: .5;
+    stroke-opacity: .2;
+  }
+}
+
 .facade-0 {
   .facade {
     fill: #fefdf7;
