@@ -22,7 +22,12 @@ export default function Guestbook() {
 
             <hr />
 
-            <GuestbookEntry/>
+            <div className="entries">
+              <GuestbookEntry
+                message="Great website!"
+                author="Daniel"
+              />
+            </div>
           </>
         )}/>
         <Route path="form" element={<GuestbookForm/>}/>

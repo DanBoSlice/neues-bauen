@@ -1,16 +1,19 @@
 .entry {
-  background: #fff;
-  border: solid 3px #fff;
+  background: #ffffff;
+  box-shadow: 1px 8px 10px rgba(0, 0, 0, .05);
   display: inline-flex;
   flex-direction: column;
+  align-items: center;
   gap: 1em;
-  padding-bottom: 1em;
+  padding: 1em;
+}
 
-  .message {
-    padding: 0 1em;
-  }
+.message {
+  width: 100%;
+}
 
-  .author {
-    padding: 0 1em;
-  }
+.author {
+  display: inline-block;
+  font-family: 'Mortega Regular', sans-serif;
+  font-size: 1.8em;
 }

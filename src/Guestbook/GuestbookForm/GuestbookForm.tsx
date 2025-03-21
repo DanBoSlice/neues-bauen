@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './GuestbookForm.css';
 import GuestbookHouse from '../GuestbookHouse/GuestbookHouse';
 import { Link } from 'react-router-dom';
+import Stamp from '../../Stamp';
 
 export default function GuestbookForm() {
   const [base, setBase] = useState(2);
@@ -12,10 +13,12 @@ export default function GuestbookForm() {
       <h1>Sign the Guestbook</h1>
 
       <div className="form-content">
-        <GuestbookHouse
-          base={base}
-          facade={facade}
-        />
+        <Stamp>
+          <GuestbookHouse
+            base={base}
+            facade={facade}
+          />
+        </Stamp>
 
         <div className="options-form">
           <div>

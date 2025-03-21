@@ -3,21 +3,31 @@ import './GuestbookEntry.css';
 import GuestbookHouse from '../GuestbookHouse/GuestbookHouse';
 import Streetsign from '../../Streetsign';
 import DoorbellSign from '../../DoorbellSign';
+import Stamp from '../../Stamp';
 
-export default function GuestbookEntry() {
+export interface GuestbookEntryProps {
+  message: string;
+  author: string;
+}
+
+export default function GuestbookEntry({ message, author }: GuestbookEntryProps) {
   return (
     <div className="entry">
-      <GuestbookHouse
-        base={1}
-        facade={1}
-      />
+      <Stamp>
+        <GuestbookHouse
+          base={1}
+          facade={1}
+        />
+      </Stamp>
 
       <div className="message">
-        Very nice website!
-      </div>
+        <p>
+          {message}
+        </p>
 
-      <div className="author">
-        <DoorbellSign>Daniel</DoorbellSign>
+        <div className="author" title={author}>
+          {author}
+        </div>
       </div>
     </div>
   );

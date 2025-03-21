@@ -1,0 +1,21 @@
+:root {
+  --stamp-background: #f2e3d1;
+  --r: 10px;
+}
+
+.stamp {
+  background: var(--stamp-background);
+  mask: radial-gradient(50% 50%, #0000 66%, #000 67%) round var(--r) var(--r)/calc(2 * var(--r)) calc(2 * var(--r)),
+  conic-gradient(#000 0 0) content-box;
+  padding: var(--r);
+}
+
+.stamp-inner {
+  background: var(--stamp-background);
+  padding: 5px;
+}
+
+.stamp-motif {
+  border: 2px solid rgba(87, 70, 60, .5);
+  padding: 3px;
+}

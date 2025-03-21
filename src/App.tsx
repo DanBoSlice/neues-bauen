@@ -9,6 +9,7 @@ import Guestbook from './Guestbook/Guestbook';
 import Interior from './Interior/Interior';
 import BuildersPlaque from './BuildersPlaque';
 import ScrollToTop from './ScrollToTop';
+import History from './History/History';
 
 const NavLink = ({ to, children }: { to: string; children: React.ReactNode }) => {
   const location = useLocation();
@@ -43,6 +44,9 @@ function App() {
               <NavLink to="/">
                 Home Str.
               </NavLink>
+              <NavLink to="/history">
+                History
+              </NavLink>
               <NavLink to="/design-elements">
                 Design Elements
               </NavLink>
@@ -65,6 +69,7 @@ function App() {
               <Routes>
                 <Route path="/" element={<Home/>}/>
                 <Route path="featured-buildings" element={<Featured/>}/>
+                <Route path="history" element={<History/>}/>
                 <Route path="interior" element={<Interior/>}/>
                 <Route path="design-elements" element={<DesignElements/>}/>
                 <Route path="guestbook/*" element={<Guestbook/>}/>
