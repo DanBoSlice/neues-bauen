@@ -1,4 +1,4 @@
-.base-1 {
+.base-0 {
   .small-base {
     fill: #591616;
   }
@@ -8,7 +8,7 @@
   }
 }
 
-.base-2 {
+.base-1 {
   .small-base {
     display: none;
   }

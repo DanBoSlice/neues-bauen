@@ -13,6 +13,7 @@ export default function GuestbookEntry({ message, author }: GuestbookEntryProps)
     <div className="entry">
       <Stamp>
         <GuestbookHouse
+          accentColor={0}
           base={1}
           facade={1}
         />

@@ -1,0 +1,31 @@
+.window-frame {
+  stroke-width: 10px;
+}
+
+.window {
+  fill: #313548;
+  stroke: white;
+  stroke-width: 2px;
+}
+
+.window-center-bar {
+  stroke: white;
+  stroke-width: 2px;
+}
+
+.window-cross-bar {
+  stroke: white;
+  stroke-width: 1px;
+}
+
+.accent-color-0 {
+  .window-frame {
+    stroke: var(--accent-color-0);
+  }
+}
+
+.accent-color-1 {
+  .window-frame {
+    stroke: var(--accent-color-1);
+  }
+}

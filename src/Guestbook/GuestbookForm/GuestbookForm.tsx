@@ -1,12 +1,31 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './GuestbookForm.css';
 import GuestbookHouse from '../GuestbookHouse/GuestbookHouse';
 import { Link } from 'react-router-dom';
 import Stamp from '../../Stamp';
 
 export default function GuestbookForm() {
-  const [base, setBase] = useState(2);
-  const [facade, setFacade] = useState(1);
+  const [accentColor, setAccentColor] = useState(0);
+  const [base, setBase] = useState(0);
+  const [facade, setFacade] = useState(0);
+
+  const accentColors = 2;
+  const bases = 2;
+  const facades = 2;
+
+  const randomIntFromInterval = (min: number, max: number): number => {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+  };
+
+  const selectRandom = () => {
+    setAccentColor(randomIntFromInterval(0, accentColors - 1));
+    setBase(randomIntFromInterval(0, bases - 1));
+    setFacade(randomIntFromInterval(0, facades - 1));
+  };
+
+  useEffect(() => {
+    selectRandom();
+  }, []);
 
   return (
     <div className="wrapper">
@@ -15,18 +34,40 @@ export default function GuestbookForm() {
       <div className="form-content">
         <Stamp>
           <GuestbookHouse
+            accentColor={accentColor}
             base={base}
             facade={facade}
           />
         </Stamp>
 
         <div className="options-form">
+          <button onClick={selectRandom}>Random</button>
+
+          <div>
+            <h3>Accent Color</h3>
+
+            <div className="options">
+              {[...Array(facades)].map((_, i) => (
+                <div
+                  key={i}
+                  className={`accent-color-${i} option`}
+                  onClick={() => setAccentColor(i)}
+                ></div>
+              ))}
+            </div>
+          </div>
+
           <div>
             <h3>Facade</h3>
 
             <div className="options">
-              <div className="facade-1 option" onClick={() => setFacade(1)}></div>
-              <div className="facade-2 option" onClick={() => setFacade(2)}></div>
+              {[...Array(facades)].map((_, i) => (
+                <div
+                  key={i}
+                  className={`facade-${i} option`}
+                  onClick={() => setFacade(i)}
+                ></div>
+              ))}
             </div>
           </div>
 
@@ -34,8 +75,13 @@ export default function GuestbookForm() {
             <h3>Base</h3>
 
             <div className="options">
-              <div className="facade-1 option" onClick={() => setBase(1)}></div>
-              <div className="facade-2 option" onClick={() => setBase(2)}></div>
+              {[...Array(facades)].map((_, i) => (
+                <div
+                  key={i}
+                  className={`facade-${i} option`}
+                  onClick={() => setBase(i)}
+                ></div>
+              ))}
             </div>
           </div>
         </div>
