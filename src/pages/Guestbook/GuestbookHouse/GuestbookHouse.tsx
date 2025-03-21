@@ -4,6 +4,7 @@ import './styles/colors.css';
 import './styles/bases.css';
 import './styles/doors.css';
 import './styles/facades.css';
+import './styles/roofs.css';
 import './styles/windows.css';
 
 export interface GuestbookHouseProps {
@@ -20,24 +21,29 @@ export default function GuestbookHouse(props: GuestbookHouseProps) {
   ].join(' ');
 
   const houseWidth = 260;
-  const houseHeight = 340;
+  const houseHeight = 360;
 
   const doorWidth = 40;
   const doorHeight = 70;
 
-  const stories = [260, 192, 124, 56];
+  const staircaseWidth = 28;
+  const staircaseHeight = 180;
+  const staircaseWindowBars = 20;
+  const staircaseY = 84;
+
+  const stories = [270, 205, 140, 75];
   const smallBaseHeight = 28;
-  const bigBaseHeight = 85;
+  const bigBaseHeight = 95;
   const windowBars = 3;
 
   const windowBigWidth = 30;
   const windowSmallWidth = 24;
-  const windowHeight = 40;
+  const windowHeight = 32;
 
   const outerWindowMarginX = 14;
   const innerWindowMarginX = 63;
 
-  const roofHeight = 36;
+  const roofHeight = 55;
 
   return (
     <div className="house">
@@ -98,6 +104,23 @@ export default function GuestbookHouse(props: GuestbookHouseProps) {
                 />
               ))}
           </symbol>
+
+          <symbol id="staircase" overflow="visible">
+            <rect
+              className="window"
+              width={staircaseWidth}
+              height={staircaseHeight}
+            />
+            {[...Array(staircaseWindowBars)]
+              .map((_, i) => (i + 1) * staircaseHeight / (staircaseWindowBars + 1))
+              .map((y) => (
+                <path
+                  key={y}
+                  d={`M0,${y} L${staircaseWidth},${y}`}
+                  className="window-cross-bar"
+                />
+              ))}
+          </symbol>
         </defs>
 
         <rect
@@ -132,14 +155,6 @@ export default function GuestbookHouse(props: GuestbookHouseProps) {
           height={roofHeight}
         />
 
-        <rect
-          className="door"
-          x={(houseWidth - doorWidth) / 2}
-          y={houseHeight - doorHeight}
-          width={doorWidth}
-          height={doorHeight}
-        />
-
         {stories.map(y => (
           // accentColor has to be part of the key to force a rerender of the windows when the accent color changes.
           // Otherwise, Safari doesn't update the window styles if the accentColor changes.
@@ -151,6 +166,20 @@ export default function GuestbookHouse(props: GuestbookHouseProps) {
             <use href="#window-big" x={houseWidth - windowBigWidth - outerWindowMarginX}/>
           </g>
         ))}
+
+        <use
+          href="#staircase"
+          x={(houseWidth - staircaseWidth) / 2}
+          y={staircaseY}
+        />
+
+        <rect
+          className="door"
+          x={(houseWidth - doorWidth) / 2}
+          y={houseHeight - doorHeight}
+          width={doorWidth}
+          height={doorHeight}
+        />
       </svg>
     </div>
   );
