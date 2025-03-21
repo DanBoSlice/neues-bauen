@@ -2,13 +2,13 @@ import React from 'react';
 import './GuestbookEntry.css';
 import GuestbookHouse from '../GuestbookHouse/GuestbookHouse';
 import Stamp from '../../../components/Stamp';
+import { GuestbookEntryDto } from '../api/guestbook-entry.dto';
 
 export interface GuestbookEntryProps {
-  message: string;
-  author: string;
+  entry: GuestbookEntryDto;
 }
 
-export default function GuestbookEntry({ message, author }: GuestbookEntryProps) {
+export default function GuestbookEntry({ entry }: GuestbookEntryProps) {
   return (
     <div className="entry">
       <Stamp>
@@ -21,11 +21,11 @@ export default function GuestbookEntry({ message, author }: GuestbookEntryProps)
 
       <div className="message">
         <p>
-          {message}
+          {entry.message}
         </p>
 
-        <div className="author" title={author}>
-          {author}
+        <div className="author" title={entry.author}>
+          {entry.author}
         </div>
       </div>
     </div>

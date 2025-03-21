@@ -11,7 +11,7 @@ export default function DesignElements() {
         <p>
           Have a look at this stereotypical multi-family house that might have been
           constructed in 1920s Germany.
-          Click on one of the highlighted design elements to learn more about them.
+          Click on one of the highlighted design elements to learn more about it.
         </p>
 
         <p>
