@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import GuestbookEntry from './GuestbookEntry/GuestbookEntry';
 import React from 'react';
+import Masonry from 'react-responsive-masonry';
 import './Guestbook.css';
 
 export default function Guestbook() {
@@ -20,9 +21,9 @@ export default function Guestbook() {
 
       <hr />
 
-      <div className="entries">
+      <Masonry columnsCount={2} gutter={'1em'}>
         <GuestbookEntry
-          message="1Great website! Lorem ipsum dolor sit amet."
+          message="1Great website! Lorem ipsum dolor sit amet. Lorem ipsum. Dolor sit amet consetetur."
           author="Daniel"
         />
         <GuestbookEntry
@@ -37,7 +38,7 @@ export default function Guestbook() {
           message="4Great website! Lorem ipsum dolor sit amet."
           author="Daniel"
         />
-      </div>
+      </Masonry>
     </>
   )
 };
