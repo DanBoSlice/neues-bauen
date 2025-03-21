@@ -62,6 +62,7 @@ hr {
   height: 18px;
   border: 0;
   margin: 3em -3em;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, .1);
 }
 
 p {

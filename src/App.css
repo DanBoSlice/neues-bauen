@@ -1,5 +1,8 @@
+:root {
+  --roof-edge-height: 18px;
+}
+
 .app {
-  background: linear-gradient(to right, #a8b7cc, #d2e5f5, #a8b7cc);
   background: linear-gradient(to right, #a8c9e5, #e1f3ff, #a8c9e5);
   padding-top: 30px;
   position: relative;
@@ -24,71 +27,48 @@
   position: relative;
 }
 
-.roof-header {
-  display: flex;
-  flex-direction: column;
+.facade {
+  background: url('/public/bg.png') #eab49a;
+  position: relative;
 
-  &:nth-of-type(1) {
-    width: 500px;
-    height: 60px;
-  }
-
-  &:nth-of-type(2) {
-    width: 600px;
-    height: 170px;
-    margin-bottom: -18px;
-    position: relative;
-    z-index: 3;
-  }
-
-  &:nth-of-type(3) {
-    width: 740px;
-    height: 70px;
-    margin-bottom: -18px;
-    position: relative;
-    z-index: 2;
-  }
-
-  &:nth-of-type(4) {
-    width: 100%;
-  }
-
-  .roof-edge {
+  &:before {
+    content: "";
+    display: block;
     background: #7988f1;
-    height: 18px;
+    height: var(--roof-edge-height);
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
     /*box-shadow: 0 3px 4px rgba(0, 0, 0, .1);*/
-    position: relative;
-    z-index: 1;
-  }
-
-  .roof-front {
-    background: url('/public/bg.png') #eab49a;
-    flex: 1;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: .5em;
   }
 }
 
-.header {
-  height: 150px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  position: relative;
-  z-index: 2;
-  padding-top: 30px;
+.roof-top {
+  width: 500px;
+  height: 60px;
+}
 
-  .header-content {
-    background: #797979;
-    width: 762px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+.logo-roof {
+  background: url('/public/bg.png') #eab49a;
+  width: 600px;
+  height: 170px;
+  margin-bottom: calc(-1 * var(--roof-edge-height));
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .5em;
+  padding-top: var(--roof-edge-height);
+}
+
+.roof-separator {
+  width: 740px;
+  height: 70px;
+  margin-bottom: calc(-1 * var(--roof-edge-height));
+  z-index: 2;
 }
 
 .logo {
@@ -105,6 +85,8 @@
 }
 
 .content {
+  background: url('/public/bg.png') #eab49a;
+  flex: 1;
   width: 100%;
   padding: 1em 3em 2em;
 }

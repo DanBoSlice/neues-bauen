@@ -26,53 +26,39 @@ function App() {
 
       <div className="app">
         <div className="container">
-          <div className="roof-header">
-            <div className="roof-edge"></div>
-            <div className="roof-front"></div>
-          </div>
+          <div className="facade roof-top"></div>
 
-          <div className="roof-header">
-            <div className="roof-edge"></div>
-            <div className="roof-front">
-              <Link to="/" className="logo">
-                Portal des Neuen Bauens
-              </Link>
+          <div className="facade logo-roof">
+            <Link to="/" className="logo">
+              Portal des Neuen Bauens
+            </Link>
 
-              <div className="menu">
-                <NavLink to="/">
-                  Home Str.
-                </NavLink>
-                {/*<NavLink to="/history">*/}
-                {/*  History*/}
-                {/*</NavLink>*/}
-                <NavLink to="/design-elements">
-                  Design Elements
-                </NavLink>
-                <NavLink to="/guestbook">
-                  Guestbook
-                </NavLink>
-              </div>
+            <div className="menu">
+              <NavLink to="/">
+                Home Str.
+              </NavLink>
+              {/*<NavLink to="/history">*/}
+              {/*  History*/}
+              {/*</NavLink>*/}
+              <NavLink to="/design-elements">
+                Design Elements
+              </NavLink>
+              <NavLink to="/guestbook">
+                Guestbook
+              </NavLink>
             </div>
           </div>
 
-          <div className="roof-header">
-            <div className="roof-edge"></div>
-            <div className="roof-front"></div>
-          </div>
+          <div className="facade roof-separator"></div>
 
-          <div className="roof-header">
-            <div className="roof-edge"></div>
-            <div className="roof-front">
-              <div className="content">
-                <Routes>
-                  <Route path="/" element={<Home/>}/>
-                  <Route path="history" element={<History/>}/>
-                  <Route path="design-elements/*" element={<DesignElementsRoutes/>}/>
-                  <Route path="guestbook/*" element={<GuestbookRoutes/>}/>
-                  <Route path="*" element={<Navigate to="/"/>}/>
-                </Routes>
-              </div>
-            </div>
+          <div className="facade content">
+            <Routes>
+              <Route path="/" element={<Home/>}/>
+              <Route path="history" element={<History/>}/>
+              <Route path="design-elements/*" element={<DesignElementsRoutes/>}/>
+              <Route path="guestbook/*" element={<GuestbookRoutes/>}/>
+              <Route path="*" element={<Navigate to="/"/>}/>
+            </Routes>
           </div>
 
           <div className="footer"></div>
