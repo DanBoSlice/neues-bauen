@@ -1,8 +1,8 @@
 import React from 'react';
 import './History.css';
-import WindowImage from '../WindowImage';
+import WindowImage from '../../components/WindowImage';
 import image from '../Home/image.jpeg';
-import Gallery from '../Gallery';
+import Gallery from '../../components/Gallery';
 
 export default function History() {
   return (

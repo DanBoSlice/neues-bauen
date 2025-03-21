@@ -1,10 +1,10 @@
 import React from 'react';
-import "./Home.css";
-import WindowImage from '../WindowImage';
+import './Home.css';
+import WindowImage from '../../components/WindowImage';
 import image from './image.jpeg';
 import { Link } from 'react-router-dom';
-import BuildersPlaque from '../BuildersPlaque';
-import Gallery from '../Gallery';
+import BuildersPlaque from '../../components/BuildersPlaque';
+import Gallery from '../../components/Gallery';
 
 export default function Home() {
   return (

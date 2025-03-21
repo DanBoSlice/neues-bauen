@@ -1,7 +1,7 @@
 import React from 'react';
 import './GuestbookEntry.css';
 import GuestbookHouse from '../GuestbookHouse/GuestbookHouse';
-import Stamp from '../../Stamp';
+import Stamp from '../../../components/Stamp';
 
 export interface GuestbookEntryProps {
   message: string;

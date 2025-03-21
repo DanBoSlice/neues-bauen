@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './GuestbookForm.css';
 import GuestbookHouse from '../GuestbookHouse/GuestbookHouse';
 import { Link } from 'react-router-dom';
-import Stamp from '../../Stamp';
+import Stamp from '../../../components/Stamp';
 
 export default function GuestbookForm() {
   const [accentColor, setAccentColor] = useState(1);
