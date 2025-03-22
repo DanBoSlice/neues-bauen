@@ -20,7 +20,7 @@ const NavLink = ({ to, children }: { to: string; children: React.ReactNode }) =>
 };
 
 function App() {
-  if (true) {
+  if (false) {
     return (
       <div style={{ color: 'white', textAlign: 'center' }}>
         Coming soon
