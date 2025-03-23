@@ -35,7 +35,6 @@ export default function Facade({ houseWidth, houseHeight, roofHeight, baseHeight
       </pattern>
 
       <pattern id="stuccoPattern" width="16" height="16" patternUnits="userSpaceOnUse">
-        <rect width={16} height={16} className="facade"/>
         <path d="M2,2 l8,6 M6,10 l8,6 M10,4 l6,8" className="stucco stucco-0"/>
         <path d="M14,2 l4,10 M2,14 l10,4" className="stucco stucco-1"/>
       </pattern>
@@ -80,9 +79,15 @@ export default function Facade({ houseWidth, houseHeight, roofHeight, baseHeight
       />
 
       <rect
+        className="facade"
+        width={houseWidth}
+        height={houseHeight - roofHeight - baseHeight}
+        y={roofHeight}
+      />
+      <rect
         fill="url(#stuccoPattern)"
         width={houseWidth}
-        height={houseHeight}
+        height={houseHeight - roofHeight - baseHeight}
         y={roofHeight}
       />
       <rect
@@ -92,6 +97,13 @@ export default function Facade({ houseWidth, houseHeight, roofHeight, baseHeight
         y={roofHeight - brickSeparatorHeight}
       />
 
+      <rect
+        className="facade"
+        width={broadFacadeTopWidth}
+        height={broadFacadeTopHeight}
+        x={(houseWidth - broadFacadeTopWidth) / 2}
+        y={roofHeight - broadFacadeTopHeight}
+      />
       <rect
         fill="url(#stuccoPattern)"
         width={broadFacadeTopWidth}
@@ -107,6 +119,13 @@ export default function Facade({ houseWidth, houseHeight, roofHeight, baseHeight
         y={roofHeight - broadFacadeTopHeight - brickSeparatorHeight}
       />
 
+      <rect
+        className="facade"
+        width={narrowFacadeTopWidth}
+        height={narrowFacadeTopHeight}
+        x={(houseWidth - narrowFacadeTopWidth) / 2}
+        y={roofHeight - broadFacadeTopHeight - narrowFacadeTopHeight}
+      />
       <rect
         fill="url(#stuccoPattern)"
         width={narrowFacadeTopWidth}

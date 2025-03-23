@@ -13,9 +13,9 @@ export default function GuestbookEntry({ entry }: GuestbookEntryProps) {
     <div className="entry">
       <Stamp>
         <GuestbookHouse
-          accentColor={0}
-          base={1}
-          facade={1}
+          facadeStyle={entry.houseStyle.facadeStyle}
+          facadeColor={entry.houseStyle.facadeColor}
+          accentColor={entry.houseStyle.accentColor}
         />
       </Stamp>
 

@@ -12,17 +12,16 @@ import StaircaseWindow from './StaircaseWindow';
 import Door from './Door';
 
 export interface GuestbookHouseProps {
+  facadeStyle: number;
+  facadeColor: number;
   accentColor: number;
-  base: number;
-  facade: number;
 }
 
 export default function GuestbookHouse(props: GuestbookHouseProps) {
   const classes = [
     'house',
     'accent-color-' + props.accentColor,
-    'base-' + props.base,
-    'facade-' + props.facade,
+    'facade-color-' + props.facadeColor,
   ].join(' ');
 
   const houseWidth = 260;
@@ -68,11 +67,11 @@ export default function GuestbookHouse(props: GuestbookHouseProps) {
         houseWidth={houseWidth}
         houseHeight={houseHeight}
         roofHeight={roofHeight}
-        baseHeight={props.base === 1 ? smallBaseHeight : bigBaseHeight}
+        baseHeight={props.facadeStyle === 1 ? smallBaseHeight : bigBaseHeight}
       />
 
       {stories.map((y, story) => {
-        const showBorder = props.base !== 0 || story !== 0;
+        const showBorder = props.facadeStyle !== 0 || story !== 0;
 
         return (
           // accentColor has to be part of the key to force a rerender of the windows when the accent color changes.

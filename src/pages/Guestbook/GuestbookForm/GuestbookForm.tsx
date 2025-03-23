@@ -89,7 +89,11 @@ export default function GuestbookForm() {
         const dto: CreateEntryDto = {
           name,
           message,
-          facade: facadeColor,
+          houseStyle: {
+            facadeStyle: facadeStyle,
+            facadeColor: facadeColor,
+            accentColor: accentColor,
+          },
         };
 
         const response = await fetch('/api/createEntry', {
@@ -122,8 +126,8 @@ export default function GuestbookForm() {
         <Stamp>
           <GuestbookHouse
             accentColor={accentColor}
-            base={facadeStyle}
-            facade={facadeColor}
+            facadeStyle={facadeStyle}
+            facadeColor={facadeColor}
           />
         </Stamp>
 
@@ -152,7 +156,7 @@ export default function GuestbookForm() {
               {[...Array(facadeColors)].map((_, i) => (
                 <div
                   key={i}
-                  className={`facade-${i} option`}
+                  className={`facade-color-${i} option`}
                   onClick={() => !isLoading && setFacadeColor(i)}
                 ></div>
               ))}

@@ -9,6 +9,11 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     id: data.id,
     author: data.author,
     message: data.message,
+    houseStyle: {
+      facadeStyle: data.facade_style,
+      facadeColor: data.facade_color,
+      accentColor: data.accent_color,
+    },
   }));
 
   res.json(entries);
