@@ -1,35 +1,34 @@
 import { Link } from 'react-router-dom';
 import GuestbookEntry from './GuestbookEntry/GuestbookEntry';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Masonry from 'react-responsive-masonry';
 import './Guestbook.css';
-import { GuestbookEntryDto } from './api/guestbook-entry.dto';
+import { GuestbookEntryDto } from '@api/dtos/guestbook-entry.dto';
 
 export default function Guestbook() {
+  const [entries, setEntries] = useState<GuestbookEntryDto[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
   const [hasPublished] = useState(false);
 
-  const entries: GuestbookEntryDto[] = [
-    {
-      id: '1',
-      author: 'Daniel',
-      message: 'Great website! Lorem ipsum dolor sit amet. Lorem ipsum. Dolor sit amet consetetur.',
-    },
-    {
-      id: '2',
-      author: 'Danbos',
-      message: 'Nice website!',
-    },
-    {
-      id: '3',
-      author: 'Dan Bao',
-      message: 'Great website!',
-    },
-    {
-      id: '4',
-      author: 'Daniel',
-      message: 'Great website! Lorem ipsum dolor sit amet.',
-    },
-  ];
+  useEffect(() => {
+    const fetchEntries = async () => {
+      try {
+        const response = await fetch('/api/getEntries');
+        if (!response.ok) {
+          throw new Error(`Error fetching guestbook entries: ${response.statusText}`);
+        }
+        const data: GuestbookEntryDto[] = await response.json();
+        setEntries(data);
+      } catch (err) {
+        setError((err as Error).message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchEntries();
+  }, []);
 
   return (
     <div className="guestbook">
@@ -55,6 +54,9 @@ export default function Guestbook() {
       )}
 
       <hr/>
+
+      {loading && 'Loading entries ...'}
+      {error && `Couldn't load guestbook entries. Please try again later.`}
 
       <Masonry columnsCount={2} gutter={'1em'}>
         {entries.map((entry) => (

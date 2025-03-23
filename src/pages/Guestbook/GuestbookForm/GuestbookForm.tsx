@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import './GuestbookForm.css';
 import GuestbookHouse from '../GuestbookHouse/GuestbookHouse';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Stamp from '../../../components/Stamp';
-import { CreateEntryDto } from '../api/create-entry.dto';
+import { CreateEntryDto } from '@api/dtos/create-entry.dto';
 
 export default function GuestbookForm() {
   const [accentColor, setAccentColor] = useState(1);
@@ -15,6 +15,9 @@ export default function GuestbookForm() {
   const [messageError, setMessageError] = useState('');
   const [nameError, setNameError] = useState('');
   const [isLoading, setLoading] = useState(false);
+  const [apiError, setApiError] = useState(false);
+
+  const navigate = useNavigate()
 
   const messageMaxLength = 255;
   const nameMaxLength = 30;
@@ -59,7 +62,7 @@ export default function GuestbookForm() {
     setNameError('');
   };
 
-  const handleSubmit = (event: React.FormEvent) => {
+  const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
 
     let isValid = true;
@@ -80,14 +83,32 @@ export default function GuestbookForm() {
 
     if (isValid) {
       setLoading(true);
+      setApiError(false);
 
-      const dto: CreateEntryDto = {
-        name,
-        message,
-        facade,
-      };
+      try {
+        const dto: CreateEntryDto = {
+          name,
+          message,
+          facade,
+        };
 
-      console.log(dto);
+        const response = await fetch('/api/createEntry', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(dto),
+        });
+
+        if (!response.ok) {
+          throw new Error(`Failed to submit entry: ${response.statusText}`);
+        }
+
+        navigate('/guestbook');
+      } catch (err) {
+        setApiError(true);
+        setLoading(false);
+      }
     }
   };
 
@@ -188,6 +209,8 @@ export default function GuestbookForm() {
           />
           {nameError && <div className="validation-message">{nameError}</div>}
         </div>
+
+        {apiError && <div className="validation-message">Something went wrong. Please try again later.</div>}
 
         <button type="submit" disabled={isLoading}>
           {isLoading ? 'Loading ...' : 'Submit'}

@@ -2,7 +2,7 @@ import React from 'react';
 import './GuestbookEntry.css';
 import GuestbookHouse from '../GuestbookHouse/GuestbookHouse';
 import Stamp from '../../../components/Stamp';
-import { GuestbookEntryDto } from '../api/guestbook-entry.dto';
+import { GuestbookEntryDto } from '@api/dtos/guestbook-entry.dto';
 
 export interface GuestbookEntryProps {
   entry: GuestbookEntryDto;
