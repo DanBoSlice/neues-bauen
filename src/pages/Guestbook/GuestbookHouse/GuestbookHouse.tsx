@@ -6,6 +6,10 @@ import './styles/doors.css';
 import './styles/facades.css';
 import './styles/roofs.css';
 import './styles/windows.css';
+import Window from './Window';
+import Facade from './Facade';
+import StaircaseWindow from './StaircaseWindow';
+import Door from './Door';
 
 export interface GuestbookHouseProps {
   accentColor: number;
@@ -15,6 +19,7 @@ export interface GuestbookHouseProps {
 
 export default function GuestbookHouse(props: GuestbookHouseProps) {
   const classes = [
+    'house',
     'accent-color-' + props.accentColor,
     'base-' + props.base,
     'facade-' + props.facade,
@@ -23,23 +28,15 @@ export default function GuestbookHouse(props: GuestbookHouseProps) {
   const houseWidth = 260;
   const houseHeight = 360;
 
-  const brickWidth = 8;
-  const brickHeight = 3;
-  const brickRows = 3;
-
-  const shingleWidth = 12;
-  const shingleHeight = 6;
-
   const doorWidth = 40;
   const doorHeight = 70;
 
   const staircaseWidth = 28;
   const staircaseHeight = 180;
-  const staircaseWindowBars = 20;
   const staircaseY = 84;
 
   const stories = [270, 205, 140, 75];
-  const smallBaseHeight = 7 * brickHeight;
+  const smallBaseHeight = 21;
   const bigBaseHeight = 95;
   const windowBars = 3;
 
@@ -52,210 +49,79 @@ export default function GuestbookHouse(props: GuestbookHouseProps) {
 
   const roofHeight = 55;
 
+  const blinds = [
+    [.65, 0, 0, 0],
+    [0, 0, .5, .25],
+    [0, 0, 0, 0],
+    [.4, 0, .7, 0],
+  ];
+
   return (
-    <div className="house">
-      <svg version="1.2" xmlns="http://www.w3.org/2000/svg"
-           viewBox={`0 0 ${houseWidth} ${houseHeight}`}
-           width={houseWidth}
-           height={houseHeight}
-           className={classes}>
-        <defs>
-          <symbol id="window-big" overflow="visible">
-            <rect
-              className="window-frame"
-              width={windowBigWidth}
-              height={windowHeight}
-            />
-            <rect
-              className="window"
-              width={windowBigWidth}
-              height={windowHeight}
-            />
-            <path
-              d={`M${windowBigWidth / 2},0 L${windowBigWidth / 2},${windowHeight}`}
-              className="window-center-bar"
-            />
-            {[...Array(windowBars)]
-              .map((_, i) => (i + 1) * windowHeight / (windowBars + 1))
-              .map((y) => (
-                <path
-                  key={y}
-                  d={`M0,${y} L${windowBigWidth},${y}`}
-                  className="window-cross-bar"
-                />
-              ))}
-            <rect
-              fill="#457949"
-              width={windowBigWidth + 2}
-              height={20}
-              x={-1}
-              y={-1}
-            ></rect>
-          </symbol>
+    <svg
+      version="1.2" xmlns="http://www.w3.org/2000/svg"
+      viewBox={`0 0 ${houseWidth} ${houseHeight}`}
+      width={houseWidth}
+      height={houseHeight}
+      className={classes}
+    >
+      <Facade
+        houseWidth={houseWidth}
+        houseHeight={houseHeight}
+        roofHeight={roofHeight}
+        baseHeight={props.base === 0 ? smallBaseHeight : bigBaseHeight}
+      />
 
-          <symbol id="window-small" overflow="visible">
-            <rect
-              className="window-frame"
-              width={windowSmallWidth}
-              height={windowHeight}
-            />
-            <rect
-              className="window"
-              width={windowSmallWidth}
-              height={windowHeight}
-            />
-            <path
-              d={`M${windowSmallWidth / 2},0 L${windowSmallWidth / 2},${windowHeight}`}
-              className="window-center-bar"
-            />
-            {[...Array(windowBars)]
-              .map((_, i) => (i + 1) * windowHeight / (windowBars + 1))
-              .map((y) => (
-                <path
-                  key={y}
-                  d={`M0,${y} L${windowSmallWidth},${y}`}
-                  className="window-cross-bar"
-                />
-              ))}
-          </symbol>
-
-          <symbol id="staircase" overflow="visible">
-            <rect
-              className="window"
-              width={staircaseWidth}
-              height={staircaseHeight}
-            />
-            {[...Array(staircaseWindowBars)]
-              .map((_, i) => (i + 1) * staircaseHeight / (staircaseWindowBars + 1))
-              .map((y) => (
-                <path
-                  key={y}
-                  d={`M0,${y} L${staircaseWidth},${y}`}
-                  className="window-cross-bar"
-                />
-              ))}
-          </symbol>
-
-          <pattern
-            id="brickPattern"
-            width={3 * brickWidth}
-            height={brickRows * brickHeight}
-            patternUnits="userSpaceOnUse"
-          >
-            {[...Array(brickRows)].map((_, i) => {
-              return (
-                <g key={i}>
-                  <rect
-                    width={brickWidth}
-                    height={brickHeight}
-                    x={0}
-                    y={i * brickHeight}
-                    className={'brick brick-' + (i % 3)}
-                  />
-                  <rect
-                    width={brickWidth}
-                    height={brickHeight}
-                    x={brickWidth}
-                    y={i * brickHeight}
-                    className={'brick brick-' + ((i + 1) % 3)}
-                  />
-                  <rect
-                    width={brickWidth}
-                    height={brickHeight}
-                    x={2 * brickWidth}
-                    y={i * brickHeight}
-                    className={'brick brick-' + ((i + 2) % 3)}
-                  />
-                </g>
-              );
-            })}
-          </pattern>
-
-          <pattern
-            id="shinglePattern"
-            width={shingleWidth}
-            height={shingleHeight}
-            patternUnits="userSpaceOnUse"
-          >
-            <rect width={shingleWidth} height={shingleHeight} className="shingle"/>
-            <rect x={-shingleWidth / 2} y={shingleHeight / 2} width={shingleWidth} height={shingleHeight}
-                  className="shingle"/>
-          </pattern>
-
-          <pattern id="stuccoPattern" width="16" height="16" patternUnits="userSpaceOnUse">
-            <path d="M2,2 l8,6 M6,10 l8,6 M10,4 l6,8" className="stucco stucco-0"/>
-            <path d="M14,2 l4,10 M2,14 l10,4" className="stucco stucco-1"/>
-          </pattern>
-        </defs>
-
-        <rect
-          className="facade"
-          x="0"
-          y="0"
-          width={houseWidth}
-          height={houseHeight}
-        />
-        <rect
-          fill="url(#stuccoPattern)"
-          x="0"
-          y="0"
-          width={houseWidth}
-          height={houseHeight}
-        />
-
-        {props.base === 0 && (
-          <rect
-            fill="url(#brickPattern)"
-            x={0}
-            y={houseHeight - smallBaseHeight}
-            width={houseWidth}
-            height={smallBaseHeight}
+      {stories.map((y, i) => (
+        // accentColor has to be part of the key to force a rerender of the windows when the accent color changes.
+        // Otherwise, Safari doesn't update the window styles if the accentColor changes.
+        <g className="story" transform={`translate(0, ${y})`} key={y + props.accentColor}>
+          <Window
+            width={windowBigWidth}
+            height={windowHeight}
+            bars={windowBars}
+            x={outerWindowMarginX}
+            blindsClosed={blinds[i][0]}
           />
-        )}
-        {props.base === 1 && (
-          <rect
-            fill="url(#brickPattern)"
-            x={0}
-            y={houseHeight - bigBaseHeight}
-            width={houseWidth}
-            height={bigBaseHeight}
+
+          <Window
+            width={windowSmallWidth}
+            height={windowHeight}
+            bars={windowBars}
+            x={innerWindowMarginX}
+            blindsClosed={blinds[i][1]}
           />
-        )}
 
-        <rect
-          fill="url(#shinglePattern)"
-          x="0"
-          y="0"
-          width={houseWidth}
-          height={roofHeight}
-        />
+          <Window
+            width={windowSmallWidth}
+            height={windowHeight}
+            bars={windowBars}
+            x={houseWidth - windowSmallWidth - innerWindowMarginX}
+            blindsClosed={blinds[i][2]}
+          />
 
-        {stories.map(y => (
-          // accentColor has to be part of the key to force a rerender of the windows when the accent color changes.
-          // Otherwise, Safari doesn't update the window styles if the accentColor changes.
-          <g className="story" transform={`translate(0, ${y})`} key={y + props.accentColor}>
-            <use href="#window-big" x={outerWindowMarginX}/>
-            <use href="#window-small" x={innerWindowMarginX}/>
+          <Window
+            width={windowBigWidth}
+            height={windowHeight}
+            bars={windowBars}
+            x={houseWidth - windowBigWidth - outerWindowMarginX}
+            blindsClosed={blinds[i][3]}
+          />
+        </g>
+      ))}
 
-            <use href="#window-small" x={houseWidth - windowSmallWidth - innerWindowMarginX}/>
-            <use href="#window-big" x={houseWidth - windowBigWidth - outerWindowMarginX}/>
-          </g>
-        ))}
+      <StaircaseWindow
+        width={staircaseWidth}
+        height={staircaseHeight}
+        x={(houseWidth - staircaseWidth) / 2}
+        y={staircaseY}
+      />
 
-        <use
-          href="#staircase"
-          x={(houseWidth - staircaseWidth) / 2}
-          y={staircaseY}
-        />
-
-        <rect
-          className="door"
-          x={(houseWidth - doorWidth) / 2}
-          y={houseHeight - doorHeight}
-          width={doorWidth}
-          height={doorHeight}
-        />
-      </svg>
-    </div>
+      <Door
+        width={doorWidth}
+        height={doorHeight}
+        x={(houseWidth - doorWidth) / 2}
+        y={houseHeight - doorHeight}
+      />
+    </svg>
   );
 }

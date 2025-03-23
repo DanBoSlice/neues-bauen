@@ -1,6 +1,7 @@
 import React from 'react';
 import './DesignElements.css';
 import { Link } from 'react-router-dom';
+import ExampleHouse from './ExampleHouse';
 
 export default function DesignElements() {
   return (
@@ -21,7 +22,7 @@ export default function DesignElements() {
 
       <div className="details">
         <div className="example-house">
-          House
+          <ExampleHouse/>
         </div>
 
         <p className="detail-labels">

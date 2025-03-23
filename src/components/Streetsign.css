@@ -70,7 +70,7 @@
         border-radius: 50%;
         width: var(--sign-border-radius);
         height: var(--sign-border-radius);
-        position: absolute; /* todo: removed from prod build somehow */
+        position: absolute !important; /* todo: removed from prod build somehow */
         top: calc(-1 * var(--sign-border-width));
         left: calc(-1 * var(--sign-border-width));
         border: var(--sign-border-width) solid white;
