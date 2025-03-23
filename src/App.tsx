@@ -8,6 +8,7 @@ import ScrollToTop from './ScrollToTop';
 import History from './pages/History/History';
 import DesignElementsRoutes from './pages/DesignElements/DesignElementsRoutes';
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 const NavLink = ({ to, children }: { to: string; children: React.ReactNode }) => {
   const location = useLocation();
@@ -33,6 +34,7 @@ function App() {
     <BrowserRouter>
       <ScrollToTop/>
       <Analytics/>
+      <SpeedInsights/>
 
       <div className="app">
         <div className="container">
