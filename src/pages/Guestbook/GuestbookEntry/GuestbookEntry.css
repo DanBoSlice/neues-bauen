@@ -13,10 +13,12 @@
   font-family: "Courier New", monospace;
   font-size: 1.1em;
   width: 100%;
+  word-wrap: break-word;
 }
 
 .author {
   display: inline-block;
   font-family: 'Mortega Regular', cursive;
   font-size: 1.5em;
+  word-break: break-all;
 }

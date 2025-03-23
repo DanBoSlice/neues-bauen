@@ -203,7 +203,7 @@ export default function GuestbookForm() {
           <input
             type="text"
             id="guestbook-name"
-            className="author"
+            className="author author-input"
             autoComplete="off"
             maxLength={nameMaxLength}
             value={name}
