@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS guestbook_entries (
+    id TEXT PRIMARY KEY,
+    author TEXT NOT NULL,
+    message TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
