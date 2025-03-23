@@ -43,14 +43,14 @@ export default function Facade({ houseWidth, houseHeight, roofHeight, baseHeight
       </pattern>
 
       <pattern id="rauputzPuttern" width="16" height="16" patternUnits="userSpaceOnUse">
-        <circle cx="4" cy="3" r="0.4" className="raufaser"/>
-        <circle cx="12" cy="4.4" r="0.3" className="raufaser"/>
-        <circle cx="3" cy="8" r="0.5" className="raufaser"/>
-        <circle cx="10" cy="10" r="0.35" className="raufaser"/>
-        <circle cx="14" cy="13" r="0.45" className="raufaser"/>
-        <circle cx="6" cy="14" r="0.3" className="raufaser"/>
-        <circle cx="1" cy="12" r="0.4" className="raufaser"/>
-        <circle cx="9" cy="5" r="0.35" className="raufaser"/>
+        <circle cx="4" cy="3" r="1" className="raufaser"/>
+        <circle cx="12" cy="4.4" r="1" className="raufaser"/>
+        <circle cx="3" cy="8" r="1" className="raufaser"/>
+        <circle cx="10" cy="10" r="1" className="raufaser"/>
+        <circle cx="14" cy="13" r="1" className="raufaser"/>
+        <circle cx="6" cy="14" r="1" className="raufaser"/>
+        <circle cx="1" cy="12" r="1" className="raufaser"/>
+        <circle cx="9" cy="5" r="1" className="raufaser"/>
       </pattern>
 
       <pattern
