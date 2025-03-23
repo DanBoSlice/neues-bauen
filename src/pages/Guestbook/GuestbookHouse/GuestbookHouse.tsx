@@ -10,7 +10,6 @@ import Window from './Window';
 import Facade from './Facade';
 import StaircaseWindow from './StaircaseWindow';
 import Door from './Door';
-import RoofWindow from './RoofWindow';
 
 export interface GuestbookHouseProps {
   accentColor: number;
@@ -69,51 +68,54 @@ export default function GuestbookHouse(props: GuestbookHouseProps) {
         houseWidth={houseWidth}
         houseHeight={houseHeight}
         roofHeight={roofHeight}
-        baseHeight={props.base === 0 ? smallBaseHeight : bigBaseHeight}
+        baseHeight={props.base === 1 ? smallBaseHeight : bigBaseHeight}
       />
 
-      {/*<RoofWindow x={28} y={roofHeight / 2} />*/}
-      {/*<RoofWindow x={64} y={roofHeight / 2} />*/}
-      {/*<RoofWindow x={houseWidth - 64} y={roofHeight / 2} />*/}
-      {/*<RoofWindow x={houseWidth - 28} y={roofHeight / 2} />*/}
+      {stories.map((y, story) => {
+        const showBorder = props.base !== 0 || story !== 0;
 
-      {stories.map((y, i) => (
-        // accentColor has to be part of the key to force a rerender of the windows when the accent color changes.
-        // Otherwise, Safari doesn't update the window styles if the accentColor changes.
-        <g className="story" transform={`translate(0, ${y})`} key={y + props.accentColor}>
-          <Window
-            width={windowBigWidth}
-            height={windowHeight}
-            bars={windowBars}
-            x={outerWindowMarginX}
-            blindsClosed={blinds[i][0]}
-          />
+        return (
+          // accentColor has to be part of the key to force a rerender of the windows when the accent color changes.
+          // Otherwise, Safari doesn't update the window styles if the accentColor changes.
+          <g className="story" transform={`translate(0, ${y})`} key={y + props.accentColor}>
+            <Window
+              width={windowBigWidth}
+              height={windowHeight}
+              bars={windowBars}
+              x={outerWindowMarginX}
+              blindsClosed={blinds[story][0]}
+              showBorder={showBorder}
+            />
 
-          <Window
-            width={windowSmallWidth}
-            height={windowHeight}
-            bars={windowBars}
-            x={innerWindowMarginX}
-            blindsClosed={blinds[i][1]}
-          />
+            <Window
+              width={windowSmallWidth}
+              height={windowHeight}
+              bars={windowBars}
+              x={innerWindowMarginX}
+              blindsClosed={blinds[story][1]}
+              showBorder={showBorder}
+            />
 
-          <Window
-            width={windowSmallWidth}
-            height={windowHeight}
-            bars={windowBars}
-            x={houseWidth - windowSmallWidth - innerWindowMarginX}
-            blindsClosed={blinds[i][2]}
-          />
+            <Window
+              width={windowSmallWidth}
+              height={windowHeight}
+              bars={windowBars}
+              x={houseWidth - windowSmallWidth - innerWindowMarginX}
+              blindsClosed={blinds[story][2]}
+              showBorder={showBorder}
+            />
 
-          <Window
-            width={windowBigWidth}
-            height={windowHeight}
-            bars={windowBars}
-            x={houseWidth - windowBigWidth - outerWindowMarginX}
-            blindsClosed={blinds[i][3]}
-          />
-        </g>
-      ))}
+            <Window
+              width={windowBigWidth}
+              height={windowHeight}
+              bars={windowBars}
+              x={houseWidth - windowBigWidth - outerWindowMarginX}
+              blindsClosed={blinds[story][3]}
+              showBorder={showBorder}
+            />
+          </g>
+        );
+      })}
 
       <StaircaseWindow
         width={staircaseWidth}

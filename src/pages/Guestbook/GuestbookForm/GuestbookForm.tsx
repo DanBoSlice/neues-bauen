@@ -6,9 +6,9 @@ import Stamp from '../../../components/Stamp';
 import { CreateEntryDto } from '@api/dtos/create-entry.dto';
 
 export default function GuestbookForm() {
-  const [accentColor, setAccentColor] = useState(1);
-  const [base, setBase] = useState(0);
-  const [facade, setFacade] = useState(0);
+  const [facadeStyle, setFacadeStyle] = useState(0);
+  const [facadeColor, setFacadeColor] = useState(0);
+  const [accentColor, setAccentColor] = useState(0);
 
   const [message, setMessage] = useState('');
   const [name, setName] = useState('');
@@ -22,27 +22,27 @@ export default function GuestbookForm() {
   const messageMaxLength = 255;
   const nameMaxLength = 30;
 
+  const facadeStyles = 2;
+  const facadeColors = 4;
   const accentColors = 2;
-  const bases = 2;
-  const facades = 4;
 
   const randomIntFromInterval = (min: number, max: number): number => {
     return Math.floor(Math.random() * (max - min + 1) + min);
   };
 
   const selectRandom = () => {
-    const oldState = `${accentColor}${base}${facade}`;
+    const oldState = `${facadeStyle}${facadeColor}${accentColor}`;
 
-    const newAccountColor = randomIntFromInterval(0, accentColors - 1);
-    setAccentColor(newAccountColor);
+    const newFacadeStyle = randomIntFromInterval(0, facadeStyles - 1);
+    setFacadeStyle(newFacadeStyle);
 
-    const newBase = randomIntFromInterval(0, bases - 1);
-    setBase(newBase);
+    const newFacadeColor = randomIntFromInterval(0, facadeColors - 1);
+    setFacadeColor(newFacadeColor);
 
-    const newFacade = randomIntFromInterval(0, facades - 1);
-    setFacade(newFacade);
+    const newAccent = randomIntFromInterval(0, accentColors - 1);
+    setAccentColor(newAccent);
 
-    const newState = `${newAccountColor}${newBase}${newFacade}`;
+    const newState = `${newFacadeStyle}${newFacadeColor}${newAccent}`;
     if (oldState === newState) {
       selectRandom();
     }
@@ -89,7 +89,7 @@ export default function GuestbookForm() {
         const dto: CreateEntryDto = {
           name,
           message,
-          facade,
+          facade: facadeColor,
         };
 
         const response = await fetch('/api/createEntry', {
@@ -122,8 +122,8 @@ export default function GuestbookForm() {
         <Stamp>
           <GuestbookHouse
             accentColor={accentColor}
-            base={base}
-            facade={facade}
+            base={facadeStyle}
+            facade={facadeColor}
           />
         </Stamp>
 
@@ -133,42 +133,41 @@ export default function GuestbookForm() {
           </button>
 
           <div>
+            <h3>Facade Style</h3>
+
+            <div className="options">
+              {[...Array(facadeStyles)].map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => !isLoading && setFacadeStyle(i)}
+                >{i}</button>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <h3>Facade Color</h3>
+
+            <div className="options">
+              {[...Array(facadeColors)].map((_, i) => (
+                <div
+                  key={i}
+                  className={`facade-${i} option`}
+                  onClick={() => !isLoading && setFacadeColor(i)}
+                ></div>
+              ))}
+            </div>
+          </div>
+
+          <div>
             <h3>Accent Color</h3>
 
             <div className="options">
-              {[...Array(facades)].map((_, i) => (
+              {[...Array(facadeColors)].map((_, i) => (
                 <div
                   key={i}
                   className={`accent-color-${i} option`}
                   onClick={() => !isLoading && setAccentColor(i)}
-                ></div>
-              ))}
-            </div>
-          </div>
-
-          <div>
-            <h3>Facade</h3>
-
-            <div className="options">
-              {[...Array(facades)].map((_, i) => (
-                <div
-                  key={i}
-                  className={`facade-${i} option`}
-                  onClick={() => !isLoading && setFacade(i)}
-                ></div>
-              ))}
-            </div>
-          </div>
-
-          <div>
-            <h3>Base</h3>
-
-            <div className="options">
-              {[...Array(bases)].map((_, i) => (
-                <div
-                  key={i}
-                  className={`facade-${i} option`}
-                  onClick={() => !isLoading && setBase(i)}
                 ></div>
               ))}
             </div>

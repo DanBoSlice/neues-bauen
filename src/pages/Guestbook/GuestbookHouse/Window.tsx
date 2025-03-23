@@ -5,10 +5,11 @@ export interface WindowProps {
   height: number;
   bars: number;
   x: number;
+  showBorder?: boolean;
   blindsClosed?: number;
 }
 
-export default function Window({ width, height, bars, x, blindsClosed }: WindowProps) {
+export default function Window({ width, height, bars, x, showBorder = true, blindsClosed }: WindowProps) {
   return (
     <>
       <defs>
@@ -19,11 +20,13 @@ export default function Window({ width, height, bars, x, blindsClosed }: WindowP
       </defs>
 
       <g transform={`translate(${x}, 0)`}>
-        <rect
-          className="window-frame"
-          width={width}
-          height={height}
-        />
+        {showBorder && (
+          <rect
+            className="window-frame"
+            width={width}
+            height={height}
+          />
+        )}
 
         <rect
           className="window"
