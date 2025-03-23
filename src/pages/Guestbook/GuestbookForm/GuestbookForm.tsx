@@ -24,7 +24,7 @@ export default function GuestbookForm() {
 
   const facadeStyles = 2;
   const facadeColors = 4;
-  const accentColors = 2;
+  const accentColors = 3;
 
   const randomIntFromInterval = (min: number, max: number): number => {
     return Math.floor(Math.random() * (max - min + 1) + min);
@@ -137,7 +137,7 @@ export default function GuestbookForm() {
           </button>
 
           <div>
-            <h3>Facade Style</h3>
+            <h2>Facade Style</h2>
 
             <div className="options">
               {[...Array(facadeStyles)].map((_, i) => (
@@ -150,7 +150,7 @@ export default function GuestbookForm() {
           </div>
 
           <div>
-            <h3>Facade Color</h3>
+            <h2>Facade Color</h2>
 
             <div className="options">
               {[...Array(facadeColors)].map((_, i) => (
@@ -164,10 +164,10 @@ export default function GuestbookForm() {
           </div>
 
           <div>
-            <h3>Accent Color</h3>
+            <h2>Accent Color</h2>
 
             <div className="options">
-              {[...Array(facadeColors)].map((_, i) => (
+              {[...Array(accentColors)].map((_, i) => (
                 <div
                   key={i}
                   className={`accent-color-${i} option`}

@@ -9,7 +9,7 @@
 
   &:before {
     content: "";
-    background: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+    background: url("https://www.transparenttextures.com/patterns/asfalt-dark.png"); /* todo */
     position: absolute;
     width: 100%;
     height: 100%;
@@ -32,15 +32,24 @@
   position: relative;
 
   &:before {
+    --ledge: 8px;
+    --ledge-shadow: 4px;
     content: "";
     display: block;
     background: #7988f1;
     height: var(--roof-edge-height);
-    width: 100%;
+    width: calc(100% + var(--ledge) * 2);
     position: absolute;
     top: 0;
-    left: 0;
-    /*box-shadow: 0 3px 4px rgba(0, 0, 0, .1);*/
+    left: calc(-1 * var(--ledge));
+    clip-path: polygon(0 0, 100% 0, calc(100% - var(--ledge)) calc(100% + var(--ledge-shadow)), var(--ledge) calc(100% + var(--ledge-shadow)));
+  }
+
+  &:nth-of-type(1),
+  &:nth-of-type(2) {
+    &:before {
+      box-shadow: 0 3px var(--ledge-shadow) rgba(0, 0, 0, .1);
+    }
   }
 }
 
