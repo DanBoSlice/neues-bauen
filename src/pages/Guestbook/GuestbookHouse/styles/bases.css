@@ -1,19 +1,20 @@
-.base {
-  fill: #d1b390;
-}
-
-.brick {
-  stroke: rgba(41, 34, 26, .3);
-}
-
 .brick-0 {
-  fill: #875852;
+  fill: #805841;
+  stroke: #5d3e2e;
+  stroke-width: 0.5;
+  filter: brightness(0.97);
 }
 
 .brick-1 {
-  fill: #6d4647;
+  fill: #8a5d46;
+  stroke: #624330;
+  stroke-width: 0.5;
+  filter: brightness(1.0);
 }
 
 .brick-2 {
-  fill: #906763;
+  fill: #6f4a37;
+  stroke: #4b3225;
+  stroke-width: 0.6;
+  opacity: 0.92;
 }

@@ -38,9 +38,9 @@ function App() {
 
       <div className="app">
         <div className="container">
-          <div className="facade roof-top"></div>
+          <div className="app-facade roof-top"></div>
 
-          <div className="facade logo-roof">
+          <div className="app-facade logo-roof">
             <Link to="/" className="logo">
               Portal des Neuen Bauens
             </Link>
@@ -61,9 +61,9 @@ function App() {
             </div>
           </div>
 
-          <div className="facade roof-separator"></div>
+          <div className="app-facade roof-separator"></div>
 
-          <div className="facade content">
+          <div className="app-facade content">
             <Routes>
               <Route path="/" element={<Home/>}/>
               <Route path="history" element={<History/>}/>

@@ -10,6 +10,7 @@ import Window from './Window';
 import Facade from './Facade';
 import StaircaseWindow from './StaircaseWindow';
 import Door from './Door';
+import RoofWindow from './RoofWindow';
 
 export interface GuestbookHouseProps {
   accentColor: number;
@@ -31,9 +32,9 @@ export default function GuestbookHouse(props: GuestbookHouseProps) {
   const doorWidth = 40;
   const doorHeight = 70;
 
-  const staircaseWidth = 28;
-  const staircaseHeight = 180;
-  const staircaseY = 84;
+  const staircaseWidth = 24;
+  const staircaseHeight = 204;
+  const staircaseY = 60;
 
   const stories = [270, 205, 140, 75];
   const smallBaseHeight = 21;
@@ -70,6 +71,11 @@ export default function GuestbookHouse(props: GuestbookHouseProps) {
         roofHeight={roofHeight}
         baseHeight={props.base === 0 ? smallBaseHeight : bigBaseHeight}
       />
+
+      {/*<RoofWindow x={28} y={roofHeight / 2} />*/}
+      {/*<RoofWindow x={64} y={roofHeight / 2} />*/}
+      {/*<RoofWindow x={houseWidth - 64} y={roofHeight / 2} />*/}
+      {/*<RoofWindow x={houseWidth - 28} y={roofHeight / 2} />*/}
 
       {stories.map((y, i) => (
         // accentColor has to be part of the key to force a rerender of the windows when the accent color changes.
