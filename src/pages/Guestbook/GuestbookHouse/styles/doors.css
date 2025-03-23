@@ -1,3 +1,30 @@
-.door {
-  fill: #33b377;
+.door-window {
+  fill: rgba(0, 0, 0, .5);
+  stroke: rgba(0, 0, 0, .8);
+  stroke-width: 2;
+  shape-rendering: crispEdges;
+}
+
+.facade-color-0 {
+  .door {
+    fill: #563012;
+  }
+}
+
+.facade-color-1 {
+  .door {
+    fill: #457949;
+  }
+}
+
+.facade-color-2 {
+  .door {
+    fill: #3d7098;
+  }
+}
+
+.facade-color-3 {
+  .door {
+    fill: #9a4830;
+  }
 }

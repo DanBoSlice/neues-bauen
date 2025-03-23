@@ -68,6 +68,7 @@ export default function GuestbookHouse(props: GuestbookHouseProps) {
         houseHeight={houseHeight}
         roofHeight={roofHeight}
         baseHeight={props.facadeStyle === 1 ? smallBaseHeight : bigBaseHeight}
+        facadeColor={props.facadeColor}
       />
 
       {stories.map((y, story) => {
@@ -128,6 +129,7 @@ export default function GuestbookHouse(props: GuestbookHouseProps) {
         height={doorHeight}
         x={(houseWidth - doorWidth) / 2}
         y={houseHeight - doorHeight}
+        facadeColor={props.facadeColor}
       />
     </svg>
   );

@@ -13,6 +13,11 @@
   }
 }
 
+.raufaser {
+  fill: black;
+  opacity: .5;
+}
+
 .facade-color-0 {
   .facade {
     fill: #fefdf7;
@@ -35,11 +40,11 @@
 
 .facade-color-2 {
   .facade {
-    fill: #f3ee92;
+    fill: #e8df9a;
   }
 
   &.option {
-    background: #f3ee92;
+    background: #e8df9a;
   }
 }
 
