@@ -52,8 +52,21 @@ export default function Roofs() {
         <WindowImage label="Waldsiedlung Zehlendorf">
           <img src="https://www.tip-berlin.de/wp-content/uploads/2022/04/imago0088797419h-scaled.jpg" alt="Waldsiedlung Zehlendorf"/>
         </WindowImage>
+
         <WindowImage label="Waldsiedlung Zehlendorf">
           <img src="https://upload.wikimedia.org/wikipedia/commons/6/63/Wilski_Ecke_Riemeister_Taut.jpeg" alt="Onkel Toms Hütte"/>
+        </WindowImage>
+      </Gallery>
+
+      <p>
+        Auch in Leipzig beim Bau des <a href="https://en.wikipedia.org/wiki/Rundling_(Leipzig)" target="_blank" rel="noreferrer">Rundling</a> darüber diskutiert.
+        Hubert Ritter vermochte den Ausschuss erst in der nächsten Sitzung durch den Nachweis, dass das flache Dach
+        kostengünstiger sei als das steile Dach, von dem Entwurf zu überzeugen.
+      </p>
+
+      <Gallery>
+        <WindowImage label="Rundling (1929-1930) in Leipzig">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/64/AHW_Wohnanlage_Rundling_Leipzig_1930.jpg" alt=""/>
         </WindowImage>
       </Gallery>
     </div>

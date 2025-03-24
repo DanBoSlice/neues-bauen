@@ -1,6 +1,7 @@
 import React from 'react';
 import Gallery from '../../../components/Gallery';
 import WindowImage from '../../../components/WindowImage';
+import entrance from './entrance.jpeg';
 
 export default function Materials() {
   return (
@@ -13,6 +14,20 @@ export default function Materials() {
         most of them were still built up using bricks, and as a design ethos the construction method should influence
         the appearance, therefore they were not covered up in some parts.
       </p>
+
+      <Gallery>
+        <WindowImage>
+          <img src={entrance} alt=""/>
+        </WindowImage>
+
+        <WindowImage>
+          <img src={entrance} alt=""/>
+        </WindowImage>
+
+        <WindowImage>
+          <img src={entrance} alt=""/>
+        </WindowImage>
+      </Gallery>
 
       <p>
         Plattenbauweise existed and was used in multiple examples, notably
