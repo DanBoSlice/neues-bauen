@@ -12,22 +12,33 @@ export default function Roofs() {
         At the time, buildings in Germany had hip or gable roofs.
         Very simple, or even flat roof. Otherwise simple V roof
 
-        Nach der Verunsicherung durch Krieg und Revolution suchte die eine Richtung Zuflucht in der Rückwendung auf eine
-        tradierte und bewährte Formensprache, wie sie z. B. Goethes Gartenhaus in Weimar verkörperte. Die andere
-        Richtung suchte eine neue, dem Stand der Wissenschaft und Technologie entsprechende Ästhetik, obwohl beide
-        Richtungen an einem gemeinsamen Punkt begannen: der Ablehnung des Stadtmodells des 19. Jahrhunderts und des
-        Lebens in der Mietskaserne.
+        Die Gegner des Spitzdaches sahen in ihm das Symbol für die Sehnsucht nach einer dörflichen Idylle, der
+        Verweigerung der urbanen Gegenwart mit drängender Wohnungsnot und ein Beispiel für flächenraubendes Bauen.
+
+        Die Gegner des flachen Daches sahen in ihm einen nicht in diesen Kulturkreis gehörenden Baustil und suchten eine
+        Rückwendung auf eine tradierte und bewährte Formensprache.
       </p>
 
       <p>
         Er entbrannte in Zehlendorf, wo die Onkel-Tom-Siedlung und die Siedlung Fischtalgrund, auf engstem Raum für zwei
         unterschiedliche ästhetische (vielleicht auch politische) Richtungen in der Architektur standen.
         Zehlendorfer Dächerstreit (Zehlendorf roof dispute)
-        Die Gegner des Spitzdaches sahen in ihm das Symbol für die Sehnsucht nach einer dörflichen Idylle, der
-        Verweigerung der urbanen Gegenwart mit drängender Wohnungsnot und ein Beispiel für flächenraubendes Bauen.
 
-        Onkel-Tom-Siedlung finished first, in the Villenviertel of Zehlendorf. As a protest, the Siedlung am Fischtalgrund
+        Onkel-Tom-Siedlung finished first, in the Villenviertel of Zehlendorf. As a protest, the Siedlung am
+        Fischtalgrund
         had as a requirement for architects to use gable roofs, and was finished a little later in 1928.
+      </p>
+
+      <p>
+        Doch beide Seiten stimmten in einem überein: der Ablehnung des Stadtmodells des 19. Jahrhunderts und des
+        Lebens in der Mietskaserne.
+      </p>
+
+      <p>
+        Auch in Leipzig beim Bau des <a href="https://en.wikipedia.org/wiki/Rundling_(Leipzig)" target="_blank"
+                                        rel="noreferrer">Rundling</a> darüber diskutiert.
+        Hubert Ritter vermochte den Ausschuss erst in der nächsten Sitzung durch den Nachweis, dass das flache Dach
+        kostengünstiger sei als das steile Dach, von dem Entwurf zu überzeugen.
       </p>
 
       <Gallery>
@@ -35,12 +46,19 @@ export default function Roofs() {
           label="Gable roofs of Onkel-Tom-Siedlung (left) and flat roofs of Siedlung am Fischtalgrund (right)"
           source="Foto: Arthur Köster, © VG Bild-Kunst"
         >
-          <img src={zehlendorf} alt="Gable roofs of Onkel-Tom-Siedlung (left) and flat roofs of Siedlung am Fischtalgrund (right)" />
+          <img src={zehlendorf}
+               alt="Gable roofs of Siedlung am Fischtalgrund (left) and flat roofs of Onkel-Tom-Siedlung (right)"/>
+        </WindowImage>
+
+        <WindowImage label="Rundling (1929-1930) in Leipzig">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/64/AHW_Wohnanlage_Rundling_Leipzig_1930.jpg"
+               alt=""/>
         </WindowImage>
       </Gallery>
 
       <p>
-        Die Verfechter des Flachdaches können in ihrer Berufsbiographie durchaus geneigte Satteldächer vorweisen – so auch Bruno Taut.
+        Die Verfechter des Flachdaches können in ihrer Berufsbiographie durchaus geneigte Satteldächer vorweisen – so
+        auch Bruno Taut.
 
         Siedlung Bornheimer Hang:
         In der Florstädter Straße und der Pestalozzistraße sowie am Pestalozziplatz entstanden zur besseren optischen
@@ -48,27 +66,6 @@ export default function Roofs() {
         im Gegensatz zu den sonst üblichen Flachdächern.
       </p>
 
-      <Gallery>
-        <WindowImage label="Waldsiedlung Zehlendorf">
-          <img src="https://www.tip-berlin.de/wp-content/uploads/2022/04/imago0088797419h-scaled.jpg" alt="Waldsiedlung Zehlendorf"/>
-        </WindowImage>
-
-        <WindowImage label="Waldsiedlung Zehlendorf">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/6/63/Wilski_Ecke_Riemeister_Taut.jpeg" alt="Onkel Toms Hütte"/>
-        </WindowImage>
-      </Gallery>
-
-      <p>
-        Auch in Leipzig beim Bau des <a href="https://en.wikipedia.org/wiki/Rundling_(Leipzig)" target="_blank" rel="noreferrer">Rundling</a> darüber diskutiert.
-        Hubert Ritter vermochte den Ausschuss erst in der nächsten Sitzung durch den Nachweis, dass das flache Dach
-        kostengünstiger sei als das steile Dach, von dem Entwurf zu überzeugen.
-      </p>
-
-      <Gallery>
-        <WindowImage label="Rundling (1929-1930) in Leipzig">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/6/64/AHW_Wohnanlage_Rundling_Leipzig_1930.jpg" alt=""/>
-        </WindowImage>
-      </Gallery>
     </div>
   );
 }

@@ -4,11 +4,11 @@ import { Route, Routes, useLocation } from 'react-router-dom';
 import DesignElements from './DesignElements';
 import Roofs from './Roofs/Roofs';
 import Facades from './Facades/Facades';
-import Windows from './subpages/Windows';
+import Windows from './Windows/Windows';
 import Ornamentation from './Ornamentation/Ornamentation';
 import Interiors from './Interiors/Interiors';
 import Materials from './Materials/Materials';
-import CityPlanning from './subpages/CityPlanning';
+import CityPlanning from './CityPlanning/CityPlanning';
 
 export default function DesignElementsRoutes() {
   const location = useLocation();
