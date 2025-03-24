@@ -33,7 +33,7 @@ export default function Roofs() {
       <Gallery>
         <WindowImage
           src={zehlendorf}
-          label="Gable roofs of Onkel-Tom-Siedlung and flat roofs of Siedlung am Fischtalgrund, ca. 1930"
+          label="Gable roofs of Onkel-Tom-Siedlung (left) and flat roofs of Siedlung am Fischtalgrund (right)"
           source="Foto: Arthur Köster, © VG Bild-Kunst"
         />
       </Gallery>

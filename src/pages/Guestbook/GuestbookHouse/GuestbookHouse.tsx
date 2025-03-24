@@ -36,8 +36,6 @@ export default function GuestbookHouse(props: GuestbookHouseProps) {
   const staircaseY = 60;
 
   const stories = [270, 205, 140, 75];
-  const smallBaseHeight = 21;
-  const bigBaseHeight = 95;
   const windowBars = 3;
 
   const windowBigWidth = 30;
@@ -68,7 +66,7 @@ export default function GuestbookHouse(props: GuestbookHouseProps) {
         houseWidth={houseWidth}
         houseHeight={houseHeight}
         roofHeight={roofHeight}
-        baseHeight={props.facadeStyle === 1 ? smallBaseHeight : bigBaseHeight}
+        facadeStyle={props.facadeStyle}
         facadeColor={props.facadeColor}
       />
 
@@ -118,12 +116,14 @@ export default function GuestbookHouse(props: GuestbookHouseProps) {
         );
       })}
 
-      <StaircaseWindow
-        width={staircaseWidth}
-        height={staircaseHeight}
-        x={(houseWidth - staircaseWidth) / 2}
-        y={staircaseY}
-      />
+      {props.facadeStyle === 0 && (
+        <StaircaseWindow
+          width={staircaseWidth}
+          height={staircaseHeight}
+          x={(houseWidth - staircaseWidth) / 2}
+          y={staircaseY}
+        />
+      )}
 
       <Door
         width={doorWidth}

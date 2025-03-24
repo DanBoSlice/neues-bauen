@@ -4,11 +4,11 @@ export interface FacadeProps {
   houseWidth: number;
   houseHeight: number;
   roofHeight: number;
-  baseHeight: number;
+  facadeStyle: number;
   facadeColor: number;
 }
 
-export default function Facade({ houseWidth, houseHeight, roofHeight, baseHeight, facadeColor }: FacadeProps) {
+export default function Facade({ houseWidth, houseHeight, roofHeight, facadeStyle, facadeColor }: FacadeProps) {
   const shingleWidth = 12;
   const shingleHeight = 6;
 
@@ -19,6 +19,10 @@ export default function Facade({ houseWidth, houseHeight, roofHeight, baseHeight
   const broadFacadeTopHeight = 10;
   const narrowFacadeTopWidth = 48;
   const narrowFacadeTopHeight = 10;
+
+  const bigBaseHeight = 95;
+  const smallBaseHeight = 21;
+  const baseHeight = facadeStyle === 0 ? bigBaseHeight : smallBaseHeight;
 
   const brickSeparatorHeight = 2;
 
@@ -111,49 +115,53 @@ export default function Facade({ houseWidth, houseHeight, roofHeight, baseHeight
         y={roofHeight - brickSeparatorHeight}
       />
 
-      <rect
-        className="facade"
-        width={broadFacadeTopWidth}
-        height={broadFacadeTopHeight}
-        x={(houseWidth - broadFacadeTopWidth) / 2}
-        y={roofHeight - broadFacadeTopHeight}
-      />
-      <rect
-        fill={`url(#${stuccoPattern})`}
-        width={broadFacadeTopWidth}
-        height={broadFacadeTopHeight}
-        x={(houseWidth - broadFacadeTopWidth) / 2}
-        y={roofHeight - broadFacadeTopHeight}
-      />
-      <rect
-        fill="url(#brickPattern)"
-        width={broadFacadeTopWidth}
-        height={brickSeparatorHeight}
-        x={(houseWidth - broadFacadeTopWidth) / 2}
-        y={roofHeight - broadFacadeTopHeight - brickSeparatorHeight}
-      />
+      {facadeStyle === 0 && (
+        <>
+          <rect
+            className="facade"
+            width={broadFacadeTopWidth}
+            height={broadFacadeTopHeight}
+            x={(houseWidth - broadFacadeTopWidth) / 2}
+            y={roofHeight - broadFacadeTopHeight}
+          />
+          <rect
+            fill={`url(#${stuccoPattern})`}
+            width={broadFacadeTopWidth}
+            height={broadFacadeTopHeight}
+            x={(houseWidth - broadFacadeTopWidth) / 2}
+            y={roofHeight - broadFacadeTopHeight}
+          />
+          <rect
+            fill="url(#brickPattern)"
+            width={broadFacadeTopWidth}
+            height={brickSeparatorHeight}
+            x={(houseWidth - broadFacadeTopWidth) / 2}
+            y={roofHeight - broadFacadeTopHeight - brickSeparatorHeight}
+          />
 
-      <rect
-        className="facade"
-        width={narrowFacadeTopWidth}
-        height={narrowFacadeTopHeight}
-        x={(houseWidth - narrowFacadeTopWidth) / 2}
-        y={roofHeight - broadFacadeTopHeight - narrowFacadeTopHeight}
-      />
-      <rect
-        fill={`url(#${stuccoPattern})`}
-        width={narrowFacadeTopWidth}
-        height={narrowFacadeTopHeight}
-        x={(houseWidth - narrowFacadeTopWidth) / 2}
-        y={roofHeight - broadFacadeTopHeight - narrowFacadeTopHeight}
-      />
-      <rect
-        fill="url(#brickPattern)"
-        width={narrowFacadeTopWidth}
-        height={brickSeparatorHeight}
-        x={(houseWidth - narrowFacadeTopWidth) / 2}
-        y={roofHeight - broadFacadeTopHeight - narrowFacadeTopHeight - brickSeparatorHeight}
-      />
+          <rect
+            className="facade"
+            width={narrowFacadeTopWidth}
+            height={narrowFacadeTopHeight}
+            x={(houseWidth - narrowFacadeTopWidth) / 2}
+            y={roofHeight - broadFacadeTopHeight - narrowFacadeTopHeight}
+          />
+          <rect
+            fill={`url(#${stuccoPattern})`}
+            width={narrowFacadeTopWidth}
+            height={narrowFacadeTopHeight}
+            x={(houseWidth - narrowFacadeTopWidth) / 2}
+            y={roofHeight - broadFacadeTopHeight - narrowFacadeTopHeight}
+          />
+          <rect
+            fill="url(#brickPattern)"
+            width={narrowFacadeTopWidth}
+            height={brickSeparatorHeight}
+            x={(houseWidth - narrowFacadeTopWidth) / 2}
+            y={roofHeight - broadFacadeTopHeight - narrowFacadeTopHeight - brickSeparatorHeight}
+          />
+        </>
+      )}
 
       <rect
         fill="url(#brickPattern)"

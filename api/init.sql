@@ -5,5 +5,7 @@ CREATE TABLE IF NOT EXISTS guestbook_entries (
     facade_style INT NOT NULL,
     facade_color INT NOT NULL,
     accent_color INT NOT NULL,
+    door_style INT NOT NULL,
+    published BIT NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );

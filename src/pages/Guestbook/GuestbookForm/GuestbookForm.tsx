@@ -98,6 +98,7 @@ export default function GuestbookForm() {
             facadeStyle: facadeStyle,
             facadeColor: facadeColor,
             accentColor: accentColor,
+            doorStyle: doorStyle,
           },
         };
 

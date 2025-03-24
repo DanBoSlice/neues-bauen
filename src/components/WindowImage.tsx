@@ -19,8 +19,12 @@ export default function WindowImage({ src, label, source }: WindowImageProps) {
         <div className="sprosse"></div>
       </div>
 
-      {label && (<><br/>{label}</>)}
-      {source && (<><br/>(Source: {source})</>)}
+      {(label || source) && (
+        <div className="image-label">
+          {label}
+          {source && (<><br/><small>{source}</small></>)}
+        </div>
+      )}
     </div>
   );
 }

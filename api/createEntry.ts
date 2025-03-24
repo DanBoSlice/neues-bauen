@@ -13,8 +13,24 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     }
 
     const result = await sql`
-      INSERT INTO guestbook_entries (author, message, facade_style, facade_color, accent_color)
-      VALUES (${dto.name}, ${dto.message}, ${dto.houseStyle.facadeStyle}, ${dto.houseStyle.facadeColor}, ${dto.houseStyle.accentColor})
+      INSERT INTO guestbook_entries (
+        author,
+        message, 
+        facade_style, 
+        facade_color, 
+        accent_color, 
+        door_style, 
+        published
+      )
+      VALUES (
+        ${dto.name}, 
+        ${dto.message}, 
+        ${dto.houseStyle.facadeStyle}, 
+        ${dto.houseStyle.facadeColor}, 
+        ${dto.houseStyle.accentColor},
+        ${dto.houseStyle.doorStyle},
+        '1'
+      )
       RETURNING author, message, created_at
     `;
 

@@ -16,7 +16,7 @@ export default function GuestbookEntry({ entry }: GuestbookEntryProps) {
           facadeStyle={entry.houseStyle.facadeStyle}
           facadeColor={entry.houseStyle.facadeColor}
           accentColor={entry.houseStyle.accentColor}
-          doorStyle={2} // todo
+          doorStyle={entry.houseStyle.doorStyle}
         />
       </Stamp>
 
