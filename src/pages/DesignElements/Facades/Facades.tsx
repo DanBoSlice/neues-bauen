@@ -9,35 +9,43 @@ export default function Facades() {
       <h2>Facades</h2>
 
       <p>
-        Facades were usually brightly colored in pastel tones.
-        Pastel colors, but also bold
+        The facades of 1920s buildings were a key element in defining the architectural character of the era. They
+        combined simplicity with striking contrasts, favoring clean surfaces, uniformity, and carefully placed
+        decorative elements.
       </p>
 
-      <Gallery>
-        <WindowImage>
-          <img src={image} alt=""/>
-        </WindowImage>
-        <WindowImage>
-          <img src={image} alt=""/>
-        </WindowImage>
-      </Gallery>
-
-      <p>Simple plaster, Münchner Rauputz</p>
-      <p>Stories usually very uniform</p>
+      <h3>Colors and Materials</h3>
 
       <p>
-        Im Kontrast zu den Putzflächen wurden Teile der Fassade mit rotem Sichtmauerwerk gestaltet.
-        Bei allen Häusern findet sich diese Gestaltung im Sockelbereich. Des Weiteren gibt es ebenfalls
-        Lisenen sowie Fenster und Türeinfassungen aus rotem Sichtmauerwerk.
+        Facades were often brightly colored, with pastel tones dominating the palette. However, bolder shades were also
+        used, creating a vibrant aesthetic. The most common facade finish was simple plaster, with
+        &raquo;Münchner Rauputz&laquo; (a rough-textured plaster) being a particularly popular choice.
       </p>
 
       <Gallery>
-        <WindowImage label="Hauptfeuerwache Leipzig">
+        <WindowImage label="Hauptfeuerwache Leipzig with the reconstructed 1928-1930 facade">
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Hauptfeuerwehrhaus.jpg/1280px-Hauptfeuerwehrhaus.jpg" alt=""/>
         </WindowImage>
 
-        <WindowImage label="Siedlung Italienischer Garten in Celle">
+        <WindowImage label="Bold colors of Siedlung Italienischer Garten (Celle)">
           <img src="https://upload.wikimedia.org/wikipedia/commons/b/be/Celle%2C_Siedlung_Italienischer_Garten%2C_Nr._7%2C_Hauseingang%2C_2008.jpg" alt=""/>
+        </WindowImage>
+      </Gallery>
+
+      <h3>Uniformity and Structure</h3>
+
+      <p>
+        1920s facades often followed a strictly uniform design across all stories.
+        Windows and decorative elements were usually aligned symmetrically.
+        This emphasis on repetition and clarity reflected the ideals of the era: functionality, efficiency, and a rejection of overly ornate designs.
+      </p>
+
+      <Gallery>
+        <WindowImage>
+          <img src={image} alt=""/>
+        </WindowImage>
+        <WindowImage>
+          <img src={image} alt=""/>
         </WindowImage>
       </Gallery>
     </div>

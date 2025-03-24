@@ -73,6 +73,11 @@ p {
   }
 }
 
+li {
+  line-height: 1.25;
+  margin-bottom: .5em;
+}
+
 .intro {
   text-align: center;
   text-wrap: balance;
