@@ -8,6 +8,8 @@ export default function Materials() {
     <div>
       <h2>Materials</h2>
 
+      <p>Das Neue Bauen setzte konsequent auf Backstein, Glas, Stahl und das neue Material Beton.</p>
+
       <p>
         A brick base is probably one of the most common design elements of houses of that time, although there are also
         some examples using limestone(?) as a base. While concrete was heavily used in the construction of these houses,

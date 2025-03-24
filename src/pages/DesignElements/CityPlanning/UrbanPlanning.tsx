@@ -1,12 +1,11 @@
 import React from 'react';
 import Gallery from '../../../components/Gallery';
 import WindowImage from '../../../components/WindowImage';
-import satellite from './satellite.png';
 
-export default function CityPlanning() {
+export default function UrbanPlanning() {
   return (
     <div>
-      <h2>City Planning</h2>
+      <h2>Urban Planning</h2>
 
       <p>
         The Neues Bauen movement sought to revolutionize urban planning by prioritizing light, air, and open spaces.

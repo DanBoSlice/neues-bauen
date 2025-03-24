@@ -109,7 +109,7 @@ export default function ExampleHouse() {
       {/*<ElementLink x={260} y={250} link="ornamentation" title="Ornamentation"/>*/}
       {/*<ElementLink x={width / 2} y={baseY + baseHeight - doorHeight / 2} link="interiors" title="Interiors"/>*/}
       {/*<ElementLink x={340} y={baseY + baseHeight / 2} link="materials" title="Materials"/>*/}
-      <ElementLink x={85} y={grassStartY + (grassEndY - grassStartY) / 2} link="city-planning" title="City Planning"/>
+      <ElementLink x={85} y={grassStartY + (grassEndY - grassStartY) / 2} link="urban-planning" title="City Planning"/>
     </svg>
   );
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import './DesignElements.css';
-import { Route, Routes, useLocation } from 'react-router-dom';
+import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import DesignElements from './DesignElements';
 import Roofs from './Roofs/Roofs';
 import Facades from './Facades/Facades';
@@ -8,7 +8,7 @@ import Windows from './Windows/Windows';
 import Ornamentation from './Ornamentation/Ornamentation';
 import Interiors from './Interiors/Interiors';
 import Materials from './Materials/Materials';
-import CityPlanning from './CityPlanning/CityPlanning';
+import UrbanPlanning from './CityPlanning/UrbanPlanning';
 
 export default function DesignElementsRoutes() {
   const location = useLocation();
@@ -25,7 +25,8 @@ export default function DesignElementsRoutes() {
         <Route path="ornamentation" element={<Ornamentation/>}/>
         <Route path="interiors" element={<Interiors/>}/>
         <Route path="materials" element={<Materials/>}/>
-        <Route path="city-planning" element={<CityPlanning/>}/>
+        <Route path="urban-planning" element={<UrbanPlanning/>}/>
+        <Route path="*" element={<Navigate to="/design-elements"/>}/>
       </Routes>
     </>
   );

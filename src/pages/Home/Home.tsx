@@ -13,14 +13,14 @@ export default function Home() {
       <div className="intro">
         <p>
           <strong>
-            Welcome to the Portal of &raquo;Neues Bauen&laquo;,
-            the modernist architecture movement in 1920s Germany!
+            Welcome to the Portal of &raquo;Neues Bauen&laquo;<br/>
+            Exploring the world of Weimar Republic architecture
           </strong>
         </p>
 
         <p>
           Neues Bauen is German for &raquo;New Building&laquo; or &raquo;New Constructing&laquo;
-          and refers to the new methods and principles of Weimar Republic architecture.
+          and refers to the new methods and principles of 1920s architecture.
         </p>
         <p>
           Moving away from the ornate styles of the past, this era focused on functionality and simplicity,
@@ -29,7 +29,7 @@ export default function Home() {
         <p>
           What sets these buildings apart from later modern architecture is the attention to subtle details.
           They capture the spirit of the time—optimistic and forward-thinking.
-          Here, we’ll explore these distinct design elements of 1920s architecture.
+          Here, we’ll explore these distinct design elements of the time, from Art déco influences to traditionalist approaches.
         </p>
       </div>
 
@@ -52,13 +52,13 @@ export default function Home() {
       <div className="home-end">
         <div>
           <p>
-            I started this little old-school niche website to share my interest and fascination about
-            the architecture of these buildings, and bring back some of the fun of the old internet.
+            I started this little old-school website to share my interest in early modern architecture,
+            and bring back some of the fun of the old internet.
             More content will follow soon!
           </p>
 
           <p>
-            Have fun exploring the site and learning about Neues Bauen, and make sure to
+            Have fun exploring the site and learning about Weimar Republic architecture, and make sure to
             add your own house to the <Link to="/guestbook">guestbook</Link>!
           </p>
         </div>

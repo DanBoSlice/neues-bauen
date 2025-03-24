@@ -1,7 +1,5 @@
 import React from 'react';
 import WindowImage from '../../../components/WindowImage';
-import looshaus from './looshaus.jpg';
-import historicism from './historicism.jpg';
 import Gallery from '../../../components/Gallery';
 
 export default function Ornamentation() {
@@ -21,12 +19,8 @@ export default function Ornamentation() {
       </p>
 
       <Gallery>
-        <WindowImage label="Gründerzeit facades in Leipzig">
-          <img src={historicism} alt="Gründerzeit facades in Leipzig"/>
-        </WindowImage>
-
-        <WindowImage label="Looshaus in Vienna, built in 1912">
-          <img src={looshaus} alt="Looshaus in Vienna"/>
+        <WindowImage label="Tagblatt-Turm in Stuttgart">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/15/Bundesarchiv_Bild_102-00543%2C_Stuttgart%2C_Tagblatt-Turm.jpg" alt=""/>
         </WindowImage>
       </Gallery>
 
