@@ -20,7 +20,7 @@ export default function Facade({ houseWidth, houseHeight, roofHeight, facadeStyl
 
   const bigBaseHeight = 95;
   const smallBaseHeight = 21;
-  const baseHeight = facadeStyle === 0 ? bigBaseHeight : smallBaseHeight;
+  const baseHeight = facadeStyle === 1 ? bigBaseHeight : smallBaseHeight;
 
   const brickSeparatorHeight = 2;
 
@@ -88,7 +88,7 @@ export default function Facade({ houseWidth, houseHeight, roofHeight, facadeStyl
         y={roofHeight - brickSeparatorHeight}
       />
 
-      {facadeStyle === 0 && (
+      {facadeStyle === 1 && (
         <>
           <rect
             className="facade"

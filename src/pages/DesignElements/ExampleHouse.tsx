@@ -105,10 +105,10 @@ export default function ExampleHouse() {
 
       <ElementLink x={width / 2} y={skyHeight + roofHeight / 2} link="roofs" title="Roofs"/>
       <ElementLink x={(width + staircaseWidth) / 2 + (width - staircaseWidth) / 4} y={120} link="facades" title="Facades"/>
-      <ElementLink x={(width - staircaseWidth) / 4} y={170} link="windows" title="Windows"/>
+      {/*<ElementLink x={(width - staircaseWidth) / 4} y={170} link="windows" title="Windows"/>*/}
       {/*<ElementLink x={260} y={250} link="ornamentation" title="Ornamentation"/>*/}
-      <ElementLink x={width / 2} y={baseY + baseHeight - doorHeight / 2} link="interiors" title="Interiors"/>
-      <ElementLink x={340} y={baseY + baseHeight / 2} link="materials" title="Materials"/>
+      {/*<ElementLink x={width / 2} y={baseY + baseHeight - doorHeight / 2} link="interiors" title="Interiors"/>*/}
+      {/*<ElementLink x={340} y={baseY + baseHeight / 2} link="materials" title="Materials"/>*/}
       <ElementLink x={85} y={grassStartY + (grassEndY - grassStartY) / 2} link="city-planning" title="City Planning"/>
     </svg>
   );

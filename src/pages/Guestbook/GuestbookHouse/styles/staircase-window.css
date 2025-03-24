@@ -1,3 +1,8 @@
+.brick-lining {
+  stroke: url(#brickPattern);
+  stroke-width: 5;
+}
+
 .staircase-window {
   fill: #313548;
   stroke: white;

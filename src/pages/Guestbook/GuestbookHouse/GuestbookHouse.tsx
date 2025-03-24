@@ -8,8 +8,9 @@ import './styles/roofs.css';
 import './styles/windows.css';
 import Window from './Window';
 import Facade from './Facade';
-import StaircaseWindow from './StaircaseWindow';
+import StaircaseWindows from './StaircaseWindow0';
 import Door from './Door';
+import StaircaseWindow1 from './StaircaseWindow1';
 
 export interface GuestbookHouseProps {
   facadeStyle: number;
@@ -29,11 +30,7 @@ export default function GuestbookHouse(props: GuestbookHouseProps) {
   const houseHeight = 360;
 
   const doorWidth = 40;
-  const doorHeight = 70;
-
-  const staircaseWidth = 24;
-  const staircaseHeight = 204;
-  const staircaseY = 60;
+  const doorHeight = 61;
 
   const stories = [270, 205, 140, 75];
   const windowBars = 3;
@@ -71,7 +68,7 @@ export default function GuestbookHouse(props: GuestbookHouseProps) {
       />
 
       {stories.map((y, story) => {
-        const showBorder = props.facadeStyle !== 0 || story !== 0;
+        const showBorder = !(props.facadeStyle === 1 && story === 0);
 
         return (
           // accentColor has to be part of the key to force a rerender of the windows when the accent color changes.
@@ -117,12 +114,14 @@ export default function GuestbookHouse(props: GuestbookHouseProps) {
       })}
 
       {props.facadeStyle === 0 && (
-        <StaircaseWindow
-          width={staircaseWidth}
-          height={staircaseHeight}
-          x={(houseWidth - staircaseWidth) / 2}
-          y={staircaseY}
+        <StaircaseWindows
+          height={houseHeight - roofHeight - doorHeight}
+          houseWidth={houseWidth}
+          roofHeight={roofHeight}
         />
+      )}
+      {props.facadeStyle === 1 && (
+        <StaircaseWindow1 houseWidth={houseWidth}/>
       )}
 
       <Door

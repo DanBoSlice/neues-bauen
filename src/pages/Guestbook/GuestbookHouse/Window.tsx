@@ -4,12 +4,15 @@ export interface WindowProps {
   width: number;
   height: number;
   bars: number;
-  x: number;
+  x?: number;
+  y?: number;
   showBorder?: boolean;
   blindsClosed?: number;
 }
 
-export default function Window({ width, height, bars, x, showBorder = true, blindsClosed }: WindowProps) {
+export default function Window({ width, height, bars, x, y, showBorder = true, blindsClosed }: WindowProps) {
+  // todo: define blindsPattern centrally once! (also across the whole guestbook, not per house)
+
   return (
     <>
       <defs>
@@ -19,7 +22,7 @@ export default function Window({ width, height, bars, x, showBorder = true, blin
         </pattern>
       </defs>
 
-      <g transform={`translate(${x}, 0)`}>
+      <g transform={`translate(${x ?? 0}, ${y ?? 0})`}>
         {showBorder && (
           <rect
             className="window-frame"

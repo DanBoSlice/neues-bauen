@@ -23,7 +23,7 @@ export default function GuestbookForm() {
   const messageMaxLength = 255;
   const nameMaxLength = 30;
 
-  const facadeStyles = 2;
+  const facadeStyles = 3;
   const facadeColors = 5;
   const accentColors = 4;
   const doorStyles = 4;

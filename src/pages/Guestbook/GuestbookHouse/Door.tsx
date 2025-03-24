@@ -18,6 +18,7 @@ export default function Door({ width, height, x, y, doorStyle }: DoorProps) {
     <g transform={`translate(${x}, ${y})`} className={'door-style-' + doorStyle}>
       <rect
         className="door-frame"
+        fill="url(#brickPattern)"
         width={width}
         height={height}
       />

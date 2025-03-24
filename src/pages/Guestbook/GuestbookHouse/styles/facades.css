@@ -20,11 +20,11 @@
 
 .facade-color-0 {
   .facade {
-    fill: #fefdf7;
+    fill: #fcf1e1;
   }
 
   &.option {
-    background: #fefdf7;
+    background: #fcf1e1;
   }
 }
 
