@@ -23,7 +23,7 @@ export default function GuestbookForm() {
   const nameMaxLength = 30;
 
   const facadeStyles = 2;
-  const facadeColors = 4;
+  const facadeColors = 5;
   const accentColors = 3;
 
   const randomIntFromInterval = (min: number, max: number): number => {
@@ -186,7 +186,7 @@ export default function GuestbookForm() {
           </div>
           <textarea
             id="guestbook-message"
-            className="message"
+            className="message message-input"
             rows={3}
             maxLength={messageMaxLength}
             value={message}

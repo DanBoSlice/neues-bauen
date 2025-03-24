@@ -36,6 +36,11 @@
   margin-bottom: .5em;
 }
 
+.message-input {
+  min-width: 100%;
+  max-width: 100%;
+}
+
 .author-input {
   width: 40%;
 }

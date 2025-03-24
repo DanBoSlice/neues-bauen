@@ -22,7 +22,7 @@ export default function Facade({ houseWidth, houseHeight, roofHeight, baseHeight
 
   const brickSeparatorHeight = 2;
 
-  const stuccoPattern = facadeColor === 1 || facadeColor === 2 ? 'rauputzPuttern' : 'stuccoPattern';
+  const stuccoPattern = [1, 2, 4].includes(facadeColor) ? 'rauputzPuttern' : 'stuccoPattern';
 
   const patterns = (
     <defs>

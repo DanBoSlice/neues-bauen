@@ -15,7 +15,7 @@
 
 .raufaser {
   fill: black;
-  opacity: .12;
+  opacity: .09;
 }
 
 .facade-color-0 {
@@ -55,5 +55,15 @@
 
   &.option {
     background: #8ac7ac;
+  }
+}
+
+.facade-color-4 {
+  .facade {
+    fill: #87b6ef;
+  }
+
+  &.option {
+    background: #87b6ef;
   }
 }
