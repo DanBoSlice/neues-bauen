@@ -1,3 +1,16 @@
+.facade-style-0 {
+  .door-frame {
+    fill: url(#brickPattern);
+  }
+}
+
+.facade-style-1,
+.facade-style-2 {
+  .door-frame {
+    fill: url(#stonePattern);
+  }
+}
+
 .door-style-0 {
   &.option {
     background: #563012;

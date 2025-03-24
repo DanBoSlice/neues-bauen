@@ -22,8 +22,9 @@ export interface GuestbookHouseProps {
 export default function GuestbookHouse(props: GuestbookHouseProps) {
   const classes = [
     'house',
-    'accent-color-' + props.accentColor,
+    'facade-style-' + props.facadeStyle,
     'facade-color-' + props.facadeColor,
+    'accent-color-' + props.accentColor,
   ].join(' ');
 
   const houseWidth = 260;

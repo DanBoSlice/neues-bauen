@@ -1,3 +1,13 @@
+.base {
+  fill: url(#brickPattern);
+}
+
+.facade-style-2 {
+  .base {
+    fill: url(#stonePattern);
+  }
+}
+
 .brick-0 {
   fill: #805841;
   stroke: #5d3e2e;

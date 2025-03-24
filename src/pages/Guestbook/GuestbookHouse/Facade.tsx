@@ -25,6 +25,8 @@ export default function Facade({ houseWidth, houseHeight, roofHeight, facadeStyl
   const brickSeparatorHeight = 2;
 
   const stuccoPattern = [1, 2, 4].includes(facadeColor) ? 'rauputzPuttern' : 'stuccoPattern';
+  const triangleWidth = 36;
+  const triangleHeight = 18;
 
   const patterns = (
     <defs>
@@ -56,6 +58,28 @@ export default function Facade({ houseWidth, houseHeight, roofHeight, facadeStyl
       </pattern>
 
       <BrickPattern brickWidth={8} brickHeight={3}/>
+
+
+      <filter id="roughStone" x="0" y="0" width="100%" height="100%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.2" numOctaves="4" result="noise"/>
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="0.4"/>
+      </filter>
+
+      <pattern id="stonePattern" patternUnits="userSpaceOnUse" width="20" height="20">
+        <rect width="20" height="20" fill="#b2aeab"/>
+
+        <circle cx="3" cy="5" r="0.5" fill="#868686"/>
+        <circle cx="8" cy="12" r="0.4" fill="#7c7c7c"/>
+        <circle cx="15" cy="7" r="0.3" fill="#7f7f7f"/>
+        <circle cx="17" cy="16" r="0.5" fill="#828282"/>
+        <circle cx="6" cy="17" r="0.3" fill="#898989"/>
+
+        <path d="M2,15 Q10,10 18,15" stroke="#7d7d7d" strokeWidth="0.5" fill="none"/>
+        <path d="M5,2 Q10,5 15,2" stroke="#868686" strokeWidth="0.4" fill="none"/>
+        <path d="M3,10 Q10,12 17,10" stroke="#7a7a7a" strokeWidth="0.3" fill="none"/>
+
+        <rect width="20" height="20" fill="none" filter="url(#stoneNoise)"/>
+      </pattern>
     </defs>
   );
 
@@ -87,6 +111,25 @@ export default function Facade({ houseWidth, houseHeight, roofHeight, facadeStyl
         height={brickSeparatorHeight}
         y={roofHeight - brickSeparatorHeight}
       />
+
+      {facadeStyle === 0 && (
+        <g transform={`translate(${(houseWidth - triangleWidth) / 2},${roofHeight - triangleHeight})`}>
+          <polygon
+            className="facade"
+            points={`${triangleWidth / 2},0 ${triangleWidth},${triangleHeight} 0,${triangleHeight}`}
+          />
+          <polygon
+            fill={`url(#${stuccoPattern})`}
+            points={`${triangleWidth / 2},0 ${triangleWidth},${triangleHeight} 0,${triangleHeight}`}
+          />
+          <path
+            fill="transparent"
+            stroke={`url(#brickPattern)`}
+            strokeWidth={4}
+            d={`M0,${triangleHeight} L${triangleWidth / 2},0 L${triangleWidth},${triangleHeight}`}
+          />
+        </g>
+      )}
 
       {facadeStyle === 1 && (
         <>
@@ -137,8 +180,7 @@ export default function Facade({ houseWidth, houseHeight, roofHeight, facadeStyl
       )}
 
       <rect
-        fill="url(#brickPattern)"
-        x={0}
+        className="base"
         y={houseHeight - baseHeight}
         width={houseWidth}
         height={baseHeight}
