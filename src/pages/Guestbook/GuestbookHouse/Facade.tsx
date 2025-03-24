@@ -1,4 +1,5 @@
 import React from 'react';
+import BrickPattern from '../../../components/BrickPattern';
 
 export interface FacadeProps {
   houseWidth: number;
@@ -11,9 +12,6 @@ export interface FacadeProps {
 export default function Facade({ houseWidth, houseHeight, roofHeight, facadeStyle, facadeColor }: FacadeProps) {
   const shingleWidth = 12;
   const shingleHeight = 6;
-
-  const brickWidth = 8;
-  const brickHeight = 3;
 
   const broadFacadeTopWidth = 76;
   const broadFacadeTopHeight = 10;
@@ -57,32 +55,7 @@ export default function Facade({ houseWidth, houseHeight, roofHeight, facadeStyl
         <circle cx="9" cy="5" r="1" className="raufaser"/>
       </pattern>
 
-      <pattern
-        id="brickPattern"
-        width={6 * brickWidth}
-        height={6 * brickHeight}
-        patternUnits="userSpaceOnUse"
-      >
-        {[
-          [0, 1, 2, 0, 2, 1],
-          [2, 0, 1, 2, 1, 0],
-          [1, 1, 0, 1, 0, 2],
-          [0, 2, 1, 0, 1, 2],
-          [1, 0, 2, 1, 2, 0],
-          [2, 1, 0, 2, 0, 1],
-        ].map((row, i) =>
-          row.map((brickType, j) => (
-            <rect
-              key={`${i}-${j}`}
-              width={brickWidth}
-              height={brickHeight}
-              x={j * brickWidth}
-              y={i * brickHeight}
-              className={`brick brick-${brickType}`}
-            />
-          )),
-        )}
-      </pattern>
+      <BrickPattern brickWidth={8} brickHeight={3}/>
     </defs>
   );
 

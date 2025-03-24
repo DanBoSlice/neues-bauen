@@ -7,7 +7,7 @@ import Facades from './Facades/Facades';
 import Windows from './subpages/Windows';
 import Ornamentation from './Ornamentation/Ornamentation';
 import Interiors from './Interiors/Interiors';
-import Materials from './subpages/Materials';
+import Materials from './Materials/Materials';
 import CityPlanning from './subpages/CityPlanning';
 
 export default function DesignElementsRoutes() {

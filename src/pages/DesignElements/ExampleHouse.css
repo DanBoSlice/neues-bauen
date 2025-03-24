@@ -1,0 +1,28 @@
+.roof {
+  fill: black;
+}
+
+.example-house-facade {
+  fill: #6789e8;
+}
+
+.staircase {
+  fill: white;
+}
+
+.door {
+  fill: #4b3225;
+}
+
+.grass {
+  fill: #72b542;
+}
+
+.element-link {
+  fill: #d93737;
+
+  &.active {
+    stroke: white;
+    stroke-width: 2px;
+  }
+}
