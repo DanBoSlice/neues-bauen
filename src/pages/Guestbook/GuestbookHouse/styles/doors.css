@@ -1,29 +1,64 @@
-.door-window {
-  fill: rgba(0, 0, 0, .5);
-  stroke: rgba(0, 0, 0, .8);
-  stroke-width: 2;
-  shape-rendering: crispEdges;
-}
+.door-style-0 {
+  &.option {
+    background: #563012;
+  }
 
-.facade-color-0 {
   .door {
     fill: #563012;
   }
+
+  .door-window {
+    fill: #1a1c26;
+    stroke: rgba(255, 255, 255, .35);
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+  }
+
+  .door-window-bar {
+    stroke: rgba(255, 255, 255, .35);
+    stroke-width: 1;
+  }
+
+  .door-protruding {
+    fill: rgba(0, 0, 0, .4);
+    stroke: rgba(0, 0, 0, .9);
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+  }
 }
 
-.facade-color-1 {
+.door-style-1 {
+  &.option {
+    background: #457949;
+  }
+
   .door {
     fill: #457949;
   }
 }
 
-.facade-color-2 {
+.door-style-2 {
+  &.option {
+    background: #3d7098;
+  }
+
   .door {
     fill: #3d7098;
   }
+
+  .door-window {
+    fill: #313548;
+    stroke: rgba(0, 0, 0, .6);
+    stroke-width: 2;
+    shape-rendering: crispEdges;
+  }
 }
 
-.facade-color-3 {
+.door-style-3 {
+  &.option {
+    background: #9a4830;
+  }
+
   .door {
     fill: #9a4830;
   }

@@ -15,6 +15,7 @@ export interface GuestbookHouseProps {
   facadeStyle: number;
   facadeColor: number;
   accentColor: number;
+  doorStyle: number;
 }
 
 export default function GuestbookHouse(props: GuestbookHouseProps) {
@@ -129,7 +130,7 @@ export default function GuestbookHouse(props: GuestbookHouseProps) {
         height={doorHeight}
         x={(houseWidth - doorWidth) / 2}
         y={houseHeight - doorHeight}
-        facadeColor={props.facadeColor}
+        doorStyle={props.doorStyle}
       />
     </svg>
   );

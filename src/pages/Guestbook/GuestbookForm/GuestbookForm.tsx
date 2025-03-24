@@ -9,6 +9,7 @@ export default function GuestbookForm() {
   const [facadeStyle, setFacadeStyle] = useState(0);
   const [facadeColor, setFacadeColor] = useState(0);
   const [accentColor, setAccentColor] = useState(0);
+  const [doorStyle, setDoorStyle] = useState(0);
 
   const [message, setMessage] = useState('');
   const [name, setName] = useState('');
@@ -24,7 +25,8 @@ export default function GuestbookForm() {
 
   const facadeStyles = 2;
   const facadeColors = 5;
-  const accentColors = 3;
+  const accentColors = 4;
+  const doorStyles = 4;
 
   const randomIntFromInterval = (min: number, max: number): number => {
     return Math.floor(Math.random() * (max - min + 1) + min);
@@ -39,10 +41,13 @@ export default function GuestbookForm() {
     const newFacadeColor = randomIntFromInterval(0, facadeColors - 1);
     setFacadeColor(newFacadeColor);
 
-    const newAccent = randomIntFromInterval(0, accentColors - 1);
-    setAccentColor(newAccent);
+    const newAccentColor = randomIntFromInterval(0, accentColors - 1);
+    setAccentColor(newAccentColor);
 
-    const newState = `${newFacadeStyle}${newFacadeColor}${newAccent}`;
+    const newDoorStyle = randomIntFromInterval(0, doorStyles - 1);
+    setDoorStyle(newDoorStyle);
+
+    const newState = `${newFacadeStyle}${newFacadeColor}${newAccentColor}${newDoorStyle}`;
     if (oldState === newState) {
       selectRandom();
     }
@@ -128,6 +133,7 @@ export default function GuestbookForm() {
             accentColor={accentColor}
             facadeStyle={facadeStyle}
             facadeColor={facadeColor}
+            doorStyle={doorStyle}
           />
         </Stamp>
 
@@ -137,7 +143,7 @@ export default function GuestbookForm() {
           </button>
 
           <div>
-            <h2>Facade Style</h2>
+            <h3>Facade Style</h3>
 
             <div className="options">
               {[...Array(facadeStyles)].map((_, i) => (
@@ -150,7 +156,7 @@ export default function GuestbookForm() {
           </div>
 
           <div>
-            <h2>Facade Color</h2>
+            <h3>Facade Color</h3>
 
             <div className="options">
               {[...Array(facadeColors)].map((_, i) => (
@@ -164,7 +170,7 @@ export default function GuestbookForm() {
           </div>
 
           <div>
-            <h2>Accent Color</h2>
+            <h3>Accent Color</h3>
 
             <div className="options">
               {[...Array(accentColors)].map((_, i) => (
@@ -172,6 +178,20 @@ export default function GuestbookForm() {
                   key={i}
                   className={`accent-color-${i} option`}
                   onClick={() => !isLoading && setAccentColor(i)}
+                ></div>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <h3>Door Style</h3>
+
+            <div className="options">
+              {[...Array(doorStyles)].map((_, i) => (
+                <div
+                  key={i}
+                  className={`door-style-${i} option`}
+                  onClick={() => !isLoading && setDoorStyle(i)}
                 ></div>
               ))}
             </div>

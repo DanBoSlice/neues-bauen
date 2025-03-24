@@ -43,3 +43,9 @@
     stroke: var(--accent-color-2);
   }
 }
+
+.accent-color-3 {
+  .window-frame {
+    stroke: var(--accent-color-3);
+  }
+}

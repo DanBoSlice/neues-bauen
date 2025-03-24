@@ -1,53 +1,38 @@
 import React from 'react';
+import DoorStyle2 from './doors/DoorStyle2';
+import DoorStyle0 from './doors/DoorStyle0';
 
 export interface DoorProps {
   width: number;
   height: number;
   x: number;
   y: number;
-  facadeColor: number;
+  doorStyle: number;
 }
 
-export default function Door({ width, height, x, y, facadeColor }: DoorProps) {
-  const windowWidth = 10;
-  const windowHeight = 3;
-  const windowDistance = 4;
+export default function Door({ width, height, x, y, doorStyle }: DoorProps) {
+  const doorWidth = 26;
+  const doorHeight = 52;
 
   return (
-    <g transform={`translate(${x}, ${y})`}>
+    <g transform={`translate(${x}, ${y})`} className={'door-style-' + doorStyle}>
       <rect
-        className="door"
+        className="door-frame"
         width={width}
         height={height}
       />
 
-      {facadeColor === 2 && (
-        <g transform={`translate(0, 14)`}>
-          <rect
-            className="door-window"
-            width={windowWidth}
-            height={windowHeight}
-            x={(width - windowWidth) / 2}
-            y={0}
-          />
+      <g transform={`translate(0, ${height - doorHeight})`}>
+        <rect
+          className="door"
+          width={doorWidth}
+          height={doorHeight}
+          x={(width - doorWidth) / 2}
+        />
 
-          <rect
-            className="door-window"
-            width={windowWidth}
-            height={windowHeight}
-            x={(width - windowWidth) / 2}
-            y={windowHeight + windowDistance}
-          />
-
-          <rect
-            className="door-window"
-            width={windowWidth}
-            height={windowHeight}
-            x={(width - windowWidth) / 2}
-            y={2 * (windowHeight + windowDistance)}
-          />
-        </g>
-      )}
+        {doorStyle === 0 && <DoorStyle0 width={width}/>}
+        {doorStyle === 2 && <DoorStyle2 width={width}/>}
+      </g>
     </g>
   );
 }
