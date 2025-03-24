@@ -21,12 +21,22 @@ export default function Facades() {
       <p>Stories usually very uniform</p>
 
       <p>
-        Während parallel die neue Sachlichkeit des Bauhauses für eine Abschaffung des Ornamentalen eintrat, entwickelten
-        die Architekten des Expressionismus quasi zeitgleich eine ornamentale Formensprache mit rauen, kantigen, oft
-        spitzen Elementen. Auch die horizontale Fassadengliederung durch abwechselnd vor und zurückgesetzten
-        Backsteinreihen sind typisch für diese Bauten. Die Stilelemente sollten die Dynamik der Zeit, aber auch ihre
-        Heftigkeit und ihre Spannungen zum Ausdruck bringen.
+        Im Kontrast zu den Putzflächen wurden Teile der Fassade mit rotem Sichtmauerwerk gestaltet.
+        Bei allen Häusern findet sich diese Gestaltung im Sockelbereich. Des Weiteren gibt es ebenfalls
+        Lisenen sowie Fenster und Türeinfassungen aus rotem Sichtmauerwerk.
       </p>
+
+      <Gallery>
+        <WindowImage
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Hauptfeuerwehrhaus.jpg/1280px-Hauptfeuerwehrhaus.jpg"
+          label="Hauptfeuerwache Leipzig"
+        />
+
+        <WindowImage
+          src="https://upload.wikimedia.org/wikipedia/commons/b/be/Celle%2C_Siedlung_Italienischer_Garten%2C_Nr._7%2C_Hauseingang%2C_2008.jpg"
+          label="Siedlung Italienischer Garten in Celle"
+        />
+      </Gallery>
     </div>
   );
 }

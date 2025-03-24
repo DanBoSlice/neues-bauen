@@ -1,6 +1,8 @@
 import React from 'react';
 import Gallery from '../../../components/Gallery';
 import WindowImage from '../../../components/WindowImage';
+import kitchen from './kitchen.jpg';
+import colors from './colors.png';
 
 export default function Interiors() {
   return (
@@ -15,7 +17,22 @@ export default function Interiors() {
       </p>
 
       <Gallery>
+        <WindowImage
+          src={kitchen}
+          label="Kitchen in Onkel Toms Hütte with Gas/Kohleherd, Klapptisch und Spüle"
+          source="© Bildarchiv Foto Marburg (fm1171685)"
+        />
+      </Gallery>
+
+      <p>Terrazzoböden in Küche und Bad sowie Holzdielen in den Wohnräumen</p>
+
+      <Gallery>
         <WindowImage src="https://upload.wikimedia.org/wikipedia/commons/1/19/TautesHeim_Ferienhaus_in_Hufeisensiedlung_2011_%C2%A9Promo_www.tautes-heim.de.jpg" />
+        <WindowImage
+          src={colors}
+          label="Wand- und Deckenfarben in Onkel Toms Hütte"
+          source="Landesdenkmalamt Berlin"
+        />
       </Gallery>
     </div>
   );

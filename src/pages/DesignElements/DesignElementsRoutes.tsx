@@ -2,11 +2,11 @@ import React from 'react';
 import './DesignElements.css';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import DesignElements from './DesignElements';
-import Roofs from './subpages/Roofs';
+import Roofs from './Roofs/Roofs';
 import Facades from './Facades/Facades';
 import Windows from './subpages/Windows';
-import Ornamentation from './subpages/Ornamentation';
-import Interiors from './subpages/Interiors';
+import Ornamentation from './Ornamentation/Ornamentation';
+import Interiors from './Interiors/Interiors';
 import Materials from './subpages/Materials';
 import CityPlanning from './subpages/CityPlanning';
 
