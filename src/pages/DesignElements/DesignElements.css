@@ -1,19 +1,10 @@
-.details {
+.example-house {
   display: flex;
-  gap: 1em;
+  justify-content: center;
   margin-top: 3em;
-
-  .example-house {
-    flex: 1;
-  }
+  margin-bottom: 1em;
 }
 
-.detail-labels {
-  display: flex;
-  flex-direction: column;
-}
-
-.detail-link {
-  font-family: 'GrenadierNF', sans-serif;
-  font-size: 2em;
+.element-link {
+  fill: red;
 }

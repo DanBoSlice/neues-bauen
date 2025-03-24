@@ -18,21 +18,25 @@ export default function Interiors() {
 
       <Gallery>
         <WindowImage
-          src={kitchen}
           label="Kitchen in Onkel Toms Hütte with Gas/Kohleherd, Klapptisch und Spüle"
           source="© Bildarchiv Foto Marburg (fm1171685)"
-        />
+        >
+          <img src={kitchen} alt=""/>
+        </WindowImage>
       </Gallery>
 
       <p>Terrazzoböden in Küche und Bad sowie Holzdielen in den Wohnräumen</p>
 
       <Gallery>
-        <WindowImage src="https://upload.wikimedia.org/wikipedia/commons/1/19/TautesHeim_Ferienhaus_in_Hufeisensiedlung_2011_%C2%A9Promo_www.tautes-heim.de.jpg" />
+        <WindowImage>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/TautesHeim_Ferienhaus_in_Hufeisensiedlung_2011_%C2%A9Promo_www.tautes-heim.de.jpg" alt=""/>
+        </WindowImage>
         <WindowImage
-          src={colors}
           label="Wand- und Deckenfarben in Onkel Toms Hütte"
           source="Landesdenkmalamt Berlin"
-        />
+        >
+          <img src={colors} alt=""/>
+        </WindowImage>
       </Gallery>
     </div>
   );

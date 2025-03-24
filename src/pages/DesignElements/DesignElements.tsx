@@ -1,7 +1,7 @@
 import React from 'react';
 import './DesignElements.css';
-import { Link } from 'react-router-dom';
 import ExampleHouse from './ExampleHouse';
+import WindowImage from '../../components/WindowImage';
 
 export default function DesignElements() {
   return (
@@ -20,20 +20,10 @@ export default function DesignElements() {
         </p>
       </div>
 
-      <div className="details">
-        <div className="example-house">
+      <div className="example-house">
+        <WindowImage>
           <ExampleHouse/>
-        </div>
-
-        <p className="detail-labels">
-          <Link to="/design-elements/roofs" className="detail-link">Roofs</Link>
-          <Link to="/design-elements/facades" className="detail-link">Facades</Link>
-          <Link to="/design-elements/windows" className="detail-link">Windows</Link>
-          <Link to="/design-elements/ornamentation" className="detail-link">Ornamentation</Link>
-          <Link to="/design-elements/interiors" className="detail-link">Interiors</Link>
-          <Link to="/design-elements/materials" className="detail-link">Materials</Link>
-          <Link to="/design-elements/city-planning" className="detail-link">City Planning</Link>
-        </p>
+        </WindowImage>
       </div>
     </>
   );

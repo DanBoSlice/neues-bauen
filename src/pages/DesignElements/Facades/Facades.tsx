@@ -6,15 +6,20 @@ import image from './1.jpg';
 export default function Facades() {
   return (
     <div>
+      <h2>Facades</h2>
+
       <p>
         Facades were usually brightly colored in pastel tones.
         Pastel colors, but also bold
       </p>
 
       <Gallery>
-        <WindowImage src={image}/>
-        <WindowImage src={image}/>
-        <WindowImage src={image}/>
+        <WindowImage>
+          <img src={image} alt=""/>
+        </WindowImage>
+        <WindowImage>
+          <img src={image} alt=""/>
+        </WindowImage>
       </Gallery>
 
       <p>Simple plaster, Münchner Rauputz</p>
@@ -27,15 +32,13 @@ export default function Facades() {
       </p>
 
       <Gallery>
-        <WindowImage
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Hauptfeuerwehrhaus.jpg/1280px-Hauptfeuerwehrhaus.jpg"
-          label="Hauptfeuerwache Leipzig"
-        />
+        <WindowImage label="Hauptfeuerwache Leipzig">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Hauptfeuerwehrhaus.jpg/1280px-Hauptfeuerwehrhaus.jpg" alt=""/>
+        </WindowImage>
 
-        <WindowImage
-          src="https://upload.wikimedia.org/wikipedia/commons/b/be/Celle%2C_Siedlung_Italienischer_Garten%2C_Nr._7%2C_Hauseingang%2C_2008.jpg"
-          label="Siedlung Italienischer Garten in Celle"
-        />
+        <WindowImage label="Siedlung Italienischer Garten in Celle">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/b/be/Celle%2C_Siedlung_Italienischer_Garten%2C_Nr._7%2C_Hauseingang%2C_2008.jpg" alt=""/>
+        </WindowImage>
       </Gallery>
     </div>
   );

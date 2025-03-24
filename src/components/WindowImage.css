@@ -31,17 +31,9 @@
     box-shadow: 2px 4px 4px rgba(0, 0, 0, .2);
   }
 
-  img {
+  img, svg {
     width: 100%;
     display: block;
-    /*opacity: .8;*/
-    transition: opacity .3s;
-  }
-
-  &:hover {
-    img {
-      opacity: 1;
-    }
   }
 
   /*.sprosse {*/

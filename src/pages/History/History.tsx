@@ -12,8 +12,12 @@ export default function History() {
       <p>Before, Gründerzeit</p>
 
       <Gallery>
-        <WindowImage src={image}/>
-        <WindowImage src={image}/>
+        <WindowImage>
+          <img src={image} alt=""/>
+        </WindowImage>
+        <WindowImage>
+          <img src={image} alt=""/>
+        </WindowImage>
       </Gallery>
 
       <p>After, Plattenbau</p>

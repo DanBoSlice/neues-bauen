@@ -35,9 +35,15 @@ export default function Home() {
 
       <div className="home-images">
         <Gallery>
-          <WindowImage src={image1}/>
-          <WindowImage src={image2}/>
-          <WindowImage src={image1}/>
+          <WindowImage>
+            <img src={image1} alt=""/>
+          </WindowImage>
+          <WindowImage>
+            <img src={image2} alt=""/>
+          </WindowImage>
+          <WindowImage>
+            <img src={image1} alt=""/>
+          </WindowImage>
         </Gallery>
       </div>
 

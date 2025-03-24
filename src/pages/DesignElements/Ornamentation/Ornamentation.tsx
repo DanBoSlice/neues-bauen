@@ -21,17 +21,13 @@ export default function Ornamentation() {
       </p>
 
       <Gallery>
-        <WindowImage
-          src={historicism}
-          label="Gründerzeit facades in Leipzig"
-          source="Own photo"
-        />
+        <WindowImage label="Gründerzeit facades in Leipzig">
+          <img src={historicism} alt="Gründerzeit facades in Leipzig"/>
+        </WindowImage>
 
-        <WindowImage
-          src={looshaus}
-          label="Looshaus in Vienna, built in 1912"
-          source="Own photo"
-        />
+        <WindowImage label="Looshaus in Vienna, built in 1912">
+          <img src={looshaus} alt="Looshaus in Vienna"/>
+        </WindowImage>
       </Gallery>
 
       <p>no or minimal ornamentation</p>

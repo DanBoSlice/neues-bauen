@@ -1,22 +1,22 @@
 import './WindowImage.css';
+import { PropsWithChildren } from 'react';
 
-export interface WindowImageProps {
-  src: string;
+export interface WindowImageProps extends PropsWithChildren{
   label?: string;
   source?: string;
 }
 
-export default function WindowImage({ src, label, source }: WindowImageProps) {
+export default function WindowImage({ children, label, source }: WindowImageProps) {
   // todo: randomly add flowers?
 
   return (
     <div>
       <div className="window-image">
-        <img src={src} alt={label} />
+        {children}
 
-        <div className="sprosse"></div>
-        <div className="sprosse"></div>
-        <div className="sprosse"></div>
+        {/*<div className="sprosse"></div>*/}
+        {/*<div className="sprosse"></div>*/}
+        {/*<div className="sprosse"></div>*/}
       </div>
 
       {(label || source) && (

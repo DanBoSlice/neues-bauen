@@ -32,10 +32,11 @@ export default function Roofs() {
 
       <Gallery>
         <WindowImage
-          src={zehlendorf}
           label="Gable roofs of Onkel-Tom-Siedlung (left) and flat roofs of Siedlung am Fischtalgrund (right)"
           source="Foto: Arthur Köster, © VG Bild-Kunst"
-        />
+        >
+          <img src={zehlendorf} alt="Gable roofs of Onkel-Tom-Siedlung (left) and flat roofs of Siedlung am Fischtalgrund (right)" />
+        </WindowImage>
       </Gallery>
 
       <p>
@@ -48,14 +49,12 @@ export default function Roofs() {
       </p>
 
       <Gallery>
-        <WindowImage
-          src="https://www.tip-berlin.de/wp-content/uploads/2022/04/imago0088797419h-scaled.jpg"
-          label="Waldsiedlung Zehlendorf"
-        />
-        <WindowImage
-          src="https://upload.wikimedia.org/wikipedia/commons/6/63/Wilski_Ecke_Riemeister_Taut.jpeg"
-          label="Onkel Toms Hütte"
-        />
+        <WindowImage label="Waldsiedlung Zehlendorf">
+          <img src="https://www.tip-berlin.de/wp-content/uploads/2022/04/imago0088797419h-scaled.jpg" alt="Waldsiedlung Zehlendorf"/>
+        </WindowImage>
+        <WindowImage label="Waldsiedlung Zehlendorf">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/63/Wilski_Ecke_Riemeister_Taut.jpeg" alt="Onkel Toms Hütte"/>
+        </WindowImage>
       </Gallery>
     </div>
   );
