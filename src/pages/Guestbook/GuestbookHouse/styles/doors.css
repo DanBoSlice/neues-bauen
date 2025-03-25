@@ -62,4 +62,15 @@
   .door {
     fill: #9a4830;
   }
+
+  .door-window {
+    fill: #1a1c26;
+    stroke: rgba(255, 255, 255, .35);
+    stroke-width: 1;
+  }
+
+  .door-window-bar {
+    stroke: rgba(255, 255, 255, .35);
+    stroke-width: 2;
+  }
 }

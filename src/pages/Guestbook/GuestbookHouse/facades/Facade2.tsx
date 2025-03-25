@@ -20,6 +20,9 @@ export default function Facade2({ houseWidth, houseHeight }: Facade2Props) {
   const staircaseWindowDistance = 64;
   const staircaseY = 70;
 
+  const doorFrameWidth = 42;
+  const doorFrameHeight = 64;
+
   const topFloor = (
     <>
       <rect
@@ -98,6 +101,16 @@ export default function Facade2({ houseWidth, houseHeight }: Facade2Props) {
     />
   );
 
+  const doorFrame = (
+    <rect
+      className="base"
+      x={(houseWidth - doorFrameWidth) / 2}
+      y={houseHeight - doorFrameHeight}
+      width={doorFrameWidth}
+      height={doorFrameHeight - baseHeight}
+    />
+  );
+
   return (
     <>
       {topFloor}
@@ -107,6 +120,7 @@ export default function Facade2({ houseWidth, houseHeight }: Facade2Props) {
       {staircaseWindows}
 
       {base}
+      {doorFrame}
     </>
   );
 }
