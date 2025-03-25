@@ -17,7 +17,7 @@ export default function UrbanPlanning() {
         Licht und Luft
       </p>
 
-      <h2>Linear Block Layout (Zeilenbauweise)</h2>
+      <h3>Linear Block Layout (Zeilenbauweise)</h3>
 
       <p>
         One of the defining principles of modernist city planning was Zeilenbauweise (linear block layout), where
@@ -46,7 +46,7 @@ export default function UrbanPlanning() {
         </WindowImage>
       </Gallery>
 
-      <h2>Garden City</h2>
+      <h3>Garden City</h3>
 
       <ul>
         <li>A balance of housing, green spaces, and local infrastructure</li>

@@ -9,14 +9,6 @@ export default function Facades() {
       <h2>Facades</h2>
 
       <p>
-        The facades of 1920s buildings were a key element in defining the architectural character of the era. They
-        combined simplicity with striking contrasts, favoring clean surfaces, uniformity, and carefully placed
-        decorative elements.
-      </p>
-
-      <h3>Colors and Materials</h3>
-
-      <p>
         Facades were often brightly colored, with pastel tones dominating the palette. However, bolder shades were also
         used, creating a vibrant aesthetic. The most common facade finish was simple plaster, with
         &raquo;Münchner Rauputz&laquo; (a rough-textured plaster) being a particularly popular choice.
@@ -31,8 +23,6 @@ export default function Facades() {
           <img src="https://upload.wikimedia.org/wikipedia/commons/b/be/Celle%2C_Siedlung_Italienischer_Garten%2C_Nr._7%2C_Hauseingang%2C_2008.jpg" alt=""/>
         </WindowImage>
       </Gallery>
-
-      <h3>Uniformity and Structure</h3>
 
       <p>
         1920s facades often followed a strictly uniform design across all stories.

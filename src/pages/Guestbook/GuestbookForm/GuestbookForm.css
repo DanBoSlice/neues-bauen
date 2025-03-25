@@ -7,11 +7,11 @@
 .options-form {
   display: flex;
   flex-direction: column;
-  gap: 2em;
+  gap: 1.8em;
 
   h3 {
     margin-top: 0;
-    margin-bottom: .3em;
+    margin-bottom: .4em;
   }
 }
 
