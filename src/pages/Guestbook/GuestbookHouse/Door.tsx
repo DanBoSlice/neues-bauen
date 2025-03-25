@@ -1,61 +1,140 @@
 import React from 'react';
-import DoorStyle2 from './doors/DoorStyle2';
-import DoorStyle0 from './doors/DoorStyle0';
 
 export interface DoorProps {
-  width: number;
-  height: number;
-  x: number;
-  y: number;
+  houseWidth: number;
+  houseHeight: number;
   doorStyle: number;
 }
 
-export default function Door({ width, height, x, y, doorStyle }: DoorProps) {
+export default function Door({ houseWidth, houseHeight, doorStyle }: DoorProps) {
   const doorWidth = 26;
   const doorHeight = 52;
 
-  const style3WindowWidth = 13;
-  const style3WindowHeight = 38;
-  const style3WindowCrosses = 4;
+  const DoorStyle0 = () => {
+    const windowWidth = 14;
+    const windowHeight = 20;
+    const windowY = 7;
 
-  const crossHeight = style3WindowHeight / style3WindowCrosses;
-  const style3 = (
-    <g transform={`translate(${(width - style3WindowWidth) / 2}, ${(doorHeight - style3WindowHeight) / 2})`}>
-      <rect
-        className="door-window"
-        width={style3WindowWidth}
-        height={style3WindowHeight}
-      />
+    const protrudingWidth = 14;
+    const protrudingHeight = 10;
+    const protrudingY = 34;
 
-      {[...Array(style3WindowCrosses)].map((_, i) => (
-        <g transform={`translate(0, ${i * crossHeight})`}>
-          <path
-            className="door-window-bar"
-            d={`M0,0 L${style3WindowWidth},${crossHeight}`}
-          />
-          <path
-            className="door-window-bar"
-            d={`M0,${crossHeight} L${style3WindowWidth},0`}
-          />
-        </g>
-      ))}
-    </g>
-  );
+    const bars = 3;
 
-  return (
-    <g transform={`translate(${x}, ${y})`} className={'door-style-' + doorStyle}>
-    <g transform={`translate(0, ${height - doorHeight})`}>
+    return (
+      <>
         <rect
-          className="door"
-          width={doorWidth}
-          height={doorHeight}
-          x={(width - doorWidth) / 2}
+          className="door-window"
+          width={windowWidth}
+          height={windowHeight}
+          x={(doorWidth - windowWidth) / 2}
+          y={windowY}
         />
 
-        {doorStyle === 0 && <DoorStyle0 width={width}/>}
-        {doorStyle === 2 && <DoorStyle2 width={width}/>}
-        {doorStyle === 3 && style3}
+        {[...Array(bars)].map((_, i) => {
+          const startX = (doorWidth - windowWidth) / 2 + 1;
+          const endX = (doorWidth + windowWidth) / 2 - 1;
+
+          const barOffset = windowHeight / (bars + 1);
+          const y = windowY + (i + 1) * barOffset;
+
+          return (
+            <path
+              key={i}
+              d={`M${startX},${y} L${endX},${y}`}
+              className="door-window-bar"
+            />
+          );
+        })}
+
+        <rect
+          className="door-protruding"
+          width={protrudingWidth}
+          height={protrudingHeight}
+          x={(doorWidth - protrudingWidth) / 2}
+          y={protrudingY}
+        />
+      </>
+    );
+  };
+
+  const DoorStyle2 = () => {
+    const windowWidth = 8;
+    const windowHeight = 2;
+    const windowDistance = 4;
+    const windowsY = 10;
+
+    return (
+      <g transform={`translate(0, ${windowsY})`}>
+        <rect
+          className="door-window"
+          width={windowWidth}
+          height={windowHeight}
+          x={(doorWidth - windowWidth) / 2}
+          y={0}
+        />
+
+        <rect
+          className="door-window"
+          width={windowWidth}
+          height={windowHeight}
+          x={(doorWidth - windowWidth) / 2}
+          y={windowHeight + windowDistance}
+        />
+
+        <rect
+          className="door-window"
+          width={windowWidth}
+          height={windowHeight}
+          x={(doorWidth - windowWidth) / 2}
+          y={2 * (windowHeight + windowDistance)}
+        />
       </g>
+    );
+  };
+
+  const DoorStyle3 = () => {
+    const windowWidth = 13;
+    const windowHeight = 38;
+    const windowCrosses = 4;
+
+    const crossHeight = windowHeight / windowCrosses;
+
+    return (
+      <g transform={`translate(${(doorWidth - windowWidth) / 2}, ${(doorHeight - windowHeight) / 2})`}>
+        <rect
+          className="door-window"
+          width={windowWidth}
+          height={windowHeight}
+        />
+
+        {[...Array(windowCrosses)].map((_, i) => (
+          <g transform={`translate(0, ${i * crossHeight})`}>
+            <path
+              className="door-window-bar"
+              d={`M0,0 L${windowWidth},${crossHeight}`}
+            />
+            <path
+              className="door-window-bar"
+              d={`M0,${crossHeight} L${windowWidth},0`}
+            />
+          </g>
+        ))}
+      </g>
+    );
+  };
+
+  return (
+    <g transform={`translate(${(houseWidth - doorWidth) / 2}, ${houseHeight - doorHeight})`} className={'door-style-' + doorStyle}>
+      <rect
+        className="door"
+        width={doorWidth}
+        height={doorHeight}
+      />
+
+      {doorStyle === 0 && <DoorStyle0/>}
+      {doorStyle === 2 && <DoorStyle2/>}
+      {doorStyle === 3 && <DoorStyle3/>}
     </g>
   );
 }

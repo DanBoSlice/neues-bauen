@@ -32,9 +32,6 @@ export default function GuestbookHouse(props: GuestbookHouseProps) {
   const houseWidth = 260;
   const houseHeight = 360;
 
-  const doorWidth = 46;
-  const doorHeight = 61;
-
   const getFacade = () => {
     switch (props.facadeStyle) {
       case 0: return (
@@ -75,10 +72,8 @@ export default function GuestbookHouse(props: GuestbookHouseProps) {
       />
 
       <Door
-        width={doorWidth}
-        height={doorHeight}
-        x={(houseWidth - doorWidth) / 2}
-        y={houseHeight - doorHeight}
+        houseWidth={houseWidth}
+        houseHeight={houseHeight}
         doorStyle={props.doorStyle}
       />
     </svg>
