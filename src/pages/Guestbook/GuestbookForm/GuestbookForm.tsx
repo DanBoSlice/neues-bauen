@@ -4,6 +4,7 @@ import GuestbookHouse from '../GuestbookHouse/GuestbookHouse';
 import { Link, useNavigate } from 'react-router-dom';
 import Stamp from '../../../components/Stamp';
 import { CreateEntryDto } from '@api/dtos/create-entry.dto';
+import GuestbookHousePatterns from '../GuestbookHouse/GuestbookHousePatterns';
 
 export default function GuestbookForm() {
   const [facadeStyle, setFacadeStyle] = useState(0);
@@ -130,6 +131,7 @@ export default function GuestbookForm() {
 
       <div className="form-content">
         <Stamp>
+          <GuestbookHousePatterns/>
           <GuestbookHouse
             accentColor={accentColor}
             facadeStyle={facadeStyle}

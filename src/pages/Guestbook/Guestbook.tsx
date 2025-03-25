@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import Masonry from 'react-responsive-masonry';
 import './Guestbook.css';
 import { GuestbookEntryDto } from '@api/dtos/guestbook-entry.dto';
+import GuestbookHousePatterns from './GuestbookHouse/GuestbookHousePatterns';
 
 export default function Guestbook() {
   const [entries, setEntries] = useState<GuestbookEntryDto[]>([]);
@@ -57,6 +58,8 @@ export default function Guestbook() {
 
       {loading && 'Loading entries ...'}
       {error && `Couldn't load guestbook entries. Please try again later.`}
+
+      <GuestbookHousePatterns/>
 
       <Masonry columnsCount={2} gutter={'1em'}>
         {entries.map((entry) => (
