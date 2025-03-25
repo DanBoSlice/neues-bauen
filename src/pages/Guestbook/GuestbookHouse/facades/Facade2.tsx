@@ -49,6 +49,7 @@ export default function Facade2({ houseWidth, houseHeight }: Facade2Props) {
       {[...Array(topFloorWindowCount)].map((_, i) => {
         return (
           <polygon
+            key={i}
             className="window"
             points={`${topFloorWindowWidth / 2},0 ${topFloorWindowWidth},${topFloorWindowHeight}, 0,${topFloorWindowHeight}`}
             transform={`translate(${(i + 0.5) * spaceBetweenTopFloorWindows - (topFloorWindowWidth / 2)}, 0)`}

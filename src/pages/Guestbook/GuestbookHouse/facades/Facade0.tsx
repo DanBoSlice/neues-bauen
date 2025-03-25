@@ -85,6 +85,7 @@ export default function Facade0({ houseWidth, houseHeight }: Facade0Props) {
     <g transform={`translate(${houseWidth / 2}, ${roofHeight + windowY})`}>
       {[...Array(windows)].map((_, i) => (
         <circle
+          key={i}
           fill="red"
           r={windowRadius}
           cy={i * windowOffset}

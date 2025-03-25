@@ -5,6 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import Stamp from '../../../components/Stamp';
 import { CreateEntryDto } from '@api/dtos/create-entry.dto';
 import GuestbookHousePatterns from '../GuestbookHouse/GuestbookHousePatterns';
+import GuestbookFormOption from './GuestbookFormOption';
 
 export default function GuestbookForm() {
   const [facadeStyle, setFacadeStyle] = useState(0);
@@ -141,19 +142,23 @@ export default function GuestbookForm() {
         </Stamp>
 
         <div className="options-form">
-          <button onClick={selectRandom} disabled={isLoading}>
-            Random
-          </button>
+          {/*<button onClick={selectRandom} disabled={isLoading}>*/}
+          {/*  Random*/}
+          {/*</button>*/}
 
           <div>
             <h3>Facade Style</h3>
 
             <div className="options">
               {[...Array(facadeStyles)].map((_, i) => (
-                <button
+                <GuestbookFormOption
                   key={i}
-                  onClick={() => !isLoading && setFacadeStyle(i)}
-                >{i}</button>
+                  option="facade-style"
+                  value={i}
+                  isActive={facadeStyle === i}
+                  disabled={isLoading}
+                  onClick={() => setFacadeStyle(i)}
+                />
               ))}
             </div>
           </div>
@@ -163,11 +168,14 @@ export default function GuestbookForm() {
 
             <div className="options">
               {[...Array(facadeColors)].map((_, i) => (
-                <div
+                <GuestbookFormOption
                   key={i}
-                  className={`facade-color-${i} option`}
-                  onClick={() => !isLoading && setFacadeColor(i)}
-                ></div>
+                  option="facade-color"
+                  value={i}
+                  isActive={facadeColor === i}
+                  disabled={isLoading}
+                  onClick={() => setFacadeColor(i)}
+                />
               ))}
             </div>
           </div>
@@ -177,11 +185,14 @@ export default function GuestbookForm() {
 
             <div className="options">
               {[...Array(accentColors)].map((_, i) => (
-                <div
+                <GuestbookFormOption
                   key={i}
-                  className={`accent-color-${i} option`}
-                  onClick={() => !isLoading && setAccentColor(i)}
-                ></div>
+                  option="accent-color"
+                  value={i}
+                  isActive={accentColor === i}
+                  disabled={isLoading}
+                  onClick={() => setAccentColor(i)}
+                />
               ))}
             </div>
           </div>
@@ -191,11 +202,14 @@ export default function GuestbookForm() {
 
             <div className="options">
               {[...Array(doorStyles)].map((_, i) => (
-                <div
+                <GuestbookFormOption
                   key={i}
-                  className={`door-style-${i} option`}
-                  onClick={() => !isLoading && setDoorStyle(i)}
-                ></div>
+                  option="door-style"
+                  value={i}
+                  isActive={doorStyle === i}
+                  disabled={isLoading}
+                  onClick={() => setDoorStyle(i)}
+                />
               ))}
             </div>
           </div>
