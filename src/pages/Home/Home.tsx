@@ -4,8 +4,12 @@ import WindowImage from '../../components/WindowImage';
 import { Link } from 'react-router-dom';
 import BuildersPlaque from '../../components/BuildersPlaque';
 import Gallery from '../../components/Gallery';
-import image1 from './IMG_0424.jpeg';
-import image2 from './IMG_0442.jpeg';
+import image1 from './1.jpg';
+import image2 from './2.jpg';
+import image3 from './3.jpg';
+import bigImage1 from './1big.jpeg';
+import bigImage2 from './2big.jpeg';
+import bigImage3 from './3big.jpg';
 
 export default function Home() {
   return (
@@ -36,18 +40,24 @@ export default function Home() {
       <div className="home-images">
         <Gallery>
           <WindowImage>
-            <img src={image1} alt=""/>
+            <a href={bigImage1}>
+              <img src={image1} alt=""/>
+            </a>
           </WindowImage>
           <WindowImage>
-            <img src={image2} alt=""/>
+            <a href={bigImage2}>
+              <img src={image2} alt=""/>
+            </a>
           </WindowImage>
           <WindowImage>
-            <img src={image1} alt=""/>
+            <a href={bigImage3}>
+              <img src={image3} alt=""/>
+            </a>
           </WindowImage>
         </Gallery>
       </div>
 
-      <hr />
+      <hr/>
 
       <div className="home-end">
         <div>
