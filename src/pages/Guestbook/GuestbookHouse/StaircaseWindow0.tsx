@@ -9,13 +9,13 @@ export interface StaircaseWindowProps {
 }
 
 export default function StaircaseWindow0({ height, houseWidth, roofHeight }: StaircaseWindowProps) {
-  const windowWidth = 16;
-  const windowHeight = 9;
+  const windowWidth = 20;
+  const windowHeight = 8;
   const windows = 4;
-  const windowY = 12;
+  const windowY = 15;
   const windowOffset = 64;
 
-  const staircaseWidth = 35;
+  const staircaseWidth = 41;
 
   const x= (houseWidth - staircaseWidth) / 2;
 

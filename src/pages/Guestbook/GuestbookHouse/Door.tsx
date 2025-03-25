@@ -16,12 +16,6 @@ export default function Door({ width, height, x, y, doorStyle }: DoorProps) {
 
   return (
     <g transform={`translate(${x}, ${y})`} className={'door-style-' + doorStyle}>
-      <rect
-        className="door-frame"
-        width={width}
-        height={height}
-      />
-
       <g transform={`translate(0, ${height - doorHeight})`}>
         <rect
           className="door"

@@ -67,7 +67,7 @@ export default function ExampleHouse() {
       />
 
       <rect
-        className="roof"
+        className="example-house-roof"
         width={width}
         height={roofHeight}
         y={skyHeight}

@@ -1,4 +1,9 @@
-.shingle {
-  fill: #c66d4b;
-  stroke: #85462f;
+.roof {
+  fill: url(#shinglePattern);
+}
+
+.roof-lining {
+  stroke: url(#brickPattern);
+  stroke-width: 2;
+  transform: translateY(-1px);
 }

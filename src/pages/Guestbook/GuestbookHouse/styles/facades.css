@@ -1,26 +1,10 @@
-.stucco {
-  stroke: black;
-  stroke-linecap: round;
-
-  &.stucco-0 {
-    stroke-width: .5;
-    stroke-opacity: .3;
-  }
-
-  &.stucco-1 {
-    stroke-width: .5;
-    stroke-opacity: .2;
-  }
-}
-
-.raufaser {
-  fill: black;
-  opacity: .09;
-}
-
 .facade-color-0 {
   .facade {
     fill: #fcf1e1;
+  }
+
+  .facade-pattern {
+    fill: url(#stuccoPattern);
   }
 
   &.option {
@@ -33,6 +17,10 @@
     fill: #f39292;
   }
 
+  .facade-pattern {
+    fill: url(#rauputzPuttern);
+  }
+
   &.option {
     background: #f39292;
   }
@@ -41,6 +29,10 @@
 .facade-color-2 {
   .facade {
     fill: #e8df9a;
+  }
+
+  .facade-pattern {
+    fill: url(#rauputzPuttern);
   }
 
   &.option {
@@ -53,6 +45,10 @@
     fill: #8ac7ac;
   }
 
+  .facade-pattern {
+    fill: url(#stuccoPattern);
+  }
+
   &.option {
     background: #8ac7ac;
   }
@@ -61,6 +57,10 @@
 .facade-color-4 {
   .facade {
     fill: #87b6ef;
+  }
+
+  .facade-pattern {
+    fill: url(#rauputzPuttern);
   }
 
   &.option {

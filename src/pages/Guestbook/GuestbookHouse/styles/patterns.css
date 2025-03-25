@@ -1,0 +1,45 @@
+.brick-0 {
+  fill: #805841;
+  stroke: #5d3e2e;
+  stroke-width: 0.5;
+  filter: brightness(0.97);
+}
+
+.brick-1 {
+  fill: #8a5d46;
+  stroke: #624330;
+  stroke-width: 0.5;
+  filter: brightness(1.0);
+}
+
+.brick-2 {
+  fill: #6f4a37;
+  stroke: #4b3225;
+  stroke-width: 0.6;
+  opacity: 0.92;
+}
+
+.shingle {
+  fill: #c66d4b;
+  stroke: #85462f;
+}
+
+.stucco {
+  stroke: black;
+  stroke-linecap: round;
+
+  &.stucco-0 {
+    stroke-width: .5;
+    stroke-opacity: .3;
+  }
+
+  &.stucco-1 {
+    stroke-width: .5;
+    stroke-opacity: .2;
+  }
+}
+
+.raufaser {
+  fill: black;
+  opacity: .09;
+}
