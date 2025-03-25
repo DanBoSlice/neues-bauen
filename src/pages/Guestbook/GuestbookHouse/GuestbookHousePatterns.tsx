@@ -36,7 +36,7 @@ export default function GuestbookHousePatterns() {
         </pattern>
 
         <pattern id="blindsPattern" width="1" height="3" patternUnits="userSpaceOnUse">
-          <rect width="1" height="3" className="blinds"/>
+          <rect width="1" height="3" className="blinds-area"/>
           <line x1="0" y1="3" x2="1" y2="2" className="blinds-separator"/>
         </pattern>
 

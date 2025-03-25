@@ -5,11 +5,15 @@
 }
 
 .blinds {
-  fill: #457949;
+  fill: url(#blindsPattern);
+}
+
+.blinds-area {
+  fill: rgba(69, 121, 73, .95);
 }
 
 .blinds-separator {
-  stroke: #365C39;
+  stroke: rgba(54, 92, 57, .95);
 }
 
 .window-center-bar {

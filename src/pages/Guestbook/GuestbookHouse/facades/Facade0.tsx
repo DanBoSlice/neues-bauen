@@ -76,7 +76,7 @@ export default function Facade0({ houseWidth, houseHeight }: Facade0Props) {
     </g>
   );
 
-  const windowRadius = 10;
+  const windowRadius = 9;
   const windows = 4;
   const windowY = 20;
   const windowOffset = 64;
@@ -84,12 +84,21 @@ export default function Facade0({ houseWidth, houseHeight }: Facade0Props) {
   const staircaseWindows = (
     <g transform={`translate(${houseWidth / 2}, ${roofHeight + windowY})`}>
       {[...Array(windows)].map((_, i) => (
-        <circle
-          key={i}
-          fill="red"
-          r={windowRadius}
-          cy={i * windowOffset}
-        />
+        <g transform={`translate(0,${i * windowOffset})`}>
+          <circle
+            key={i}
+            className="window"
+            r={windowRadius}
+          />
+          <path
+            className="window-cross-bar"
+            d={`M0,${-windowRadius} L0,${windowRadius}`}
+          />
+          <path
+            className="window-cross-bar"
+            d={`M${-windowRadius},0 L${windowRadius},0`}
+          />
+        </g>
       ))}
     </g>
   );

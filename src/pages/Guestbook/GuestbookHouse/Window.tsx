@@ -44,7 +44,7 @@ export default function Window({ width, height, bars, x, y, showBorder = true, b
 
       {blindsClosed && (
         <rect
-          fill="url(#blindsPattern)"
+          className="blinds"
           width={width + 2}
           height={blindsClosed * height}
           x={-1}
