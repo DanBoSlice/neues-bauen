@@ -1,69 +1,55 @@
+.brick-lining {
+  fill: transparent;
+  stroke: url(#brickPattern);
+  stroke-width: 5;
+}
+
 .facade-color-0 {
   .facade {
-    fill: #fcf1e1;
+    fill: var(--facade-color-0);
   }
 
   .facade-pattern {
     fill: url(#stuccoPattern);
-  }
-
-  &.option {
-    background: #fcf1e1;
   }
 }
 
 .facade-color-1 {
   .facade {
-    fill: #f39292;
+    fill: var(--facade-color-1);
   }
 
   .facade-pattern {
     fill: url(#rauputzPuttern);
-  }
-
-  &.option {
-    background: #f39292;
   }
 }
 
 .facade-color-2 {
   .facade {
-    fill: #e8df9a;
+    fill: var(--facade-color-2);
   }
 
   .facade-pattern {
     fill: url(#rauputzPuttern);
-  }
-
-  &.option {
-    background: #e8df9a;
   }
 }
 
 .facade-color-3 {
   .facade {
-    fill: #8ac7ac;
+    fill: var(--facade-color-3);
   }
 
   .facade-pattern {
     fill: url(#stuccoPattern);
   }
-
-  &.option {
-    background: #8ac7ac;
-  }
 }
 
 .facade-color-4 {
   .facade {
-    fill: #87b6ef;
+    fill: var(--facade-color-4);
   }
 
   .facade-pattern {
     fill: url(#rauputzPuttern);
-  }
-
-  &.option {
-    background: #87b6ef;
   }
 }

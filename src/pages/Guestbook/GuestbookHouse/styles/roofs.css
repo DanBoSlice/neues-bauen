@@ -7,3 +7,27 @@
   stroke-width: 2;
   transform: translateY(-1px);
 }
+
+.accent-color-0 {
+  .accent-floor {
+    fill: var(--accent-color-0);
+  }
+}
+
+.accent-color-1 {
+  .accent-floor {
+    fill: var(--accent-color-1);
+  }
+}
+
+.accent-color-2 {
+  .accent-floor {
+    fill: var(--accent-color-2);
+  }
+}
+
+.accent-color-3 {
+  .accent-floor {
+    fill: var(--accent-color-3);
+  }
+}

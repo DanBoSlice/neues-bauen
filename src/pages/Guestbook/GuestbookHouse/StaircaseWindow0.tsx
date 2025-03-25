@@ -9,11 +9,6 @@ export interface StaircaseWindowProps {
 }
 
 export default function StaircaseWindow0({ height, houseWidth, roofHeight }: StaircaseWindowProps) {
-  const windowWidth = 20;
-  const windowHeight = 8;
-  const windows = 4;
-  const windowY = 15;
-  const windowOffset = 64;
 
   const staircaseWidth = 41;
 
@@ -30,15 +25,6 @@ export default function StaircaseWindow0({ height, houseWidth, roofHeight }: Sta
         className="brick-lining"
       />
 
-      {[...Array(windows)].map((_, i) => (
-        <Window
-          width={windowWidth}
-          height={windowHeight}
-          bars={0}
-          x={(staircaseWidth - windowWidth) / 2}
-          y={windowY + i * windowOffset}
-        />
-      ))}
     </g>
   );
 }
