@@ -58,6 +58,34 @@ export default function Door({ houseWidth, houseHeight, doorStyle }: DoorProps) 
     );
   };
 
+  const DoorStyle1 = () => {
+    const rows = 5;
+    const cols = 2;
+    const gap = 4;
+
+    const width = (doorWidth - (cols + 1) * gap) / cols;
+    const height = (doorHeight - (rows + 1) * gap) / rows;
+
+    return (
+      <>
+        {[...Array(rows)].map((_, row) => (
+          <g key={row} transform={`translate(0, ${gap + row * (height + gap)})`}>
+            {[...Array(cols)].map((_, col) => (
+              <g key={col}>
+                <rect
+                  className="door-protruding"
+                  width={width}
+                  height={height}
+                  x={gap + col * (width + gap)}
+                />
+              </g>
+            ))}
+          </g>
+        ))}
+      </>
+    );
+  };
+
   const DoorStyle2 = () => {
     const windowWidth = 8;
     const windowHeight = 2;
@@ -133,6 +161,7 @@ export default function Door({ houseWidth, houseHeight, doorStyle }: DoorProps) 
       />
 
       {doorStyle === 0 && <DoorStyle0/>}
+      {doorStyle === 1 && <DoorStyle1/>}
       {doorStyle === 2 && <DoorStyle2/>}
       {doorStyle === 3 && <DoorStyle3/>}
     </g>

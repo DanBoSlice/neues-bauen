@@ -9,18 +9,19 @@
 
   .door-window {
     fill: #1a1c26;
-    stroke: rgba(255, 255, 255, .35);
+    stroke: rgba(255, 255, 255, .2);
     stroke-width: 1;
     shape-rendering: crispEdges;
   }
 
   .door-window-bar {
-    stroke: rgba(255, 255, 255, .35);
+    stroke: rgba(255, 255, 255, .3);
     stroke-width: 1;
   }
 
   .door-protruding {
-    fill: rgba(0, 0, 0, .3);
+    fill: #3b210c;
+    stroke: #3b210c;
   }
 }
 
@@ -31,6 +32,11 @@
 
   .door {
     fill: #457949;
+  }
+
+  .door-protruding {
+    fill: transparent;
+    stroke: rgba(0, 0, 0, .3);
   }
 }
 
@@ -45,9 +51,8 @@
 
   .door-window {
     fill: #313548;
-    stroke: rgba(0, 0, 0, .6);
-    stroke-width: 2;
-    shape-rendering: crispEdges;
+    stroke: rgba(255, 255, 255, .2);
+    stroke-width: 1;
   }
 }
 
