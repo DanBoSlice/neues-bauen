@@ -1,17 +1,17 @@
 import { VercelRequest, VercelResponse } from '@vercel/node';
-import { CreateEntryDto } from './dtos/create-entry.dto';
 import { neon } from '@neondatabase/serverless';
+import { CreateEntryModel } from './models/create-entry.model';
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   const sql = neon(process.env.DATABASE_URL!);
 
+  const model = new CreateEntryModel(req.body);
+
+  if (!model.isValid()) {
+    return res.status(400).json({ error: 'Invalid input data' });
+  }
+
   try {
-    const dto: CreateEntryDto = req.body;
-
-    if (!dto.name || !dto.message) {
-      return res.status(400).json({ error: 'Invalid input data' });
-    }
-
     const result = await sql`
       INSERT INTO guestbook_entries (
         author,
@@ -23,12 +23,12 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         published
       )
       VALUES (
-        ${dto.name}, 
-        ${dto.message}, 
-        ${dto.houseStyle.facadeStyle}, 
-        ${dto.houseStyle.facadeColor}, 
-        ${dto.houseStyle.accentColor},
-        ${dto.houseStyle.doorStyle},
+        ${model.name}, 
+        ${model.message}, 
+        ${model.houseStyle.facadeStyle}, 
+        ${model.houseStyle.facadeColor}, 
+        ${model.houseStyle.accentColor},
+        ${model.houseStyle.doorStyle},
         '1'
       )
       RETURNING author, message, created_at

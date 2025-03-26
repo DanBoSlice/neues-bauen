@@ -7,6 +7,14 @@ import { CreateEntryDto } from '@api/dtos/create-entry.dto';
 import GuestbookHousePatterns from '../GuestbookHouse/GuestbookHousePatterns';
 import GuestbookFormOption from './GuestbookFormOption';
 import { useGuestbook } from '../GuestbookContext';
+import {
+  accentColors,
+  doorStyles,
+  facadeColors,
+  facadeStyles,
+  messageMaxLength, messageMinLength,
+  nameMaxLength,
+} from '../guestbook-config';
 
 export default function GuestbookForm() {
   const [facadeStyle, setFacadeStyle] = useState(0);
@@ -23,14 +31,6 @@ export default function GuestbookForm() {
 
   const navigate = useNavigate();
   const { refetchEntries } = useGuestbook();
-
-  const messageMaxLength = 255;
-  const nameMaxLength = 30;
-
-  const facadeStyles = 3;
-  const facadeColors = 5;
-  const accentColors = 4;
-  const doorStyles = 4;
 
   const randomIntFromInterval = (min: number, max: number): number => {
     return Math.floor(Math.random() * (max - min + 1) + min);
@@ -76,15 +76,15 @@ export default function GuestbookForm() {
 
     let isValid = true;
 
-    if (message.trim().length < 5) {
-      setMessageError('Message must be at least 5 characters long.');
+    if (message.trim().length < messageMaxLength) {
+      setMessageError(`Message must be at least ${messageMaxLength} characters long.`);
       isValid = false;
     } else {
       setMessageError('');
     }
 
-    if (name.trim().length < 3) {
-      setNameError('Name must be at least 3 characters long.');
+    if (name.trim().length < messageMinLength) {
+      setNameError(`Name must be at least ${messageMinLength} characters long.`);
       isValid = false;
     } else {
       setNameError('');

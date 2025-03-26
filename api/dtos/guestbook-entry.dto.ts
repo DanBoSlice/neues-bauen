@@ -1,8 +1,8 @@
-import { GuestbookHouseStyle } from '@api/dtos/guestbook-house-style';
+import { GuestbookHouseStyleDto } from '@api/dtos/guestbook-house-style.dto';
 
 export interface GuestbookEntryDto {
   id: string;
   author: string;
   message: string;
-  houseStyle: GuestbookHouseStyle;
+  houseStyle: GuestbookHouseStyleDto;
 }
