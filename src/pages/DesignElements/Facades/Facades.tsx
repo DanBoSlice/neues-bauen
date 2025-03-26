@@ -2,6 +2,7 @@ import React from 'react';
 import Gallery from '../../../components/Gallery';
 import WindowImage from '../../../components/WindowImage';
 import image from './1.jpg';
+import image1 from '../../Home/2big.jpeg';
 
 export default function Facades() {
   return (
@@ -15,27 +16,34 @@ export default function Facades() {
       </p>
 
       <Gallery>
-        <WindowImage label="Hauptfeuerwache Leipzig with the reconstructed 1928-1930 facade">
+        <WindowImage
+          label="Hauptfeuerwache Leipzig with the reconstructed 1928-1930 facade"
+          source={<a href="https://commons.wikimedia.org/wiki/File:Hauptfeuerwehrhaus.jpg" target="_blank" rel="noreferrer">Wikimedia Commons</a>}
+        >
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Hauptfeuerwehrhaus.jpg/1280px-Hauptfeuerwehrhaus.jpg" alt=""/>
         </WindowImage>
 
-        <WindowImage label="Bold colors of Siedlung Italienischer Garten (Celle)">
+        <WindowImage
+          label="Bold colors of Siedlung Italienischer Garten (Celle)"
+          source={<a href="https://commons.wikimedia.org/wiki/File:Celle,_Siedlung_Italienischer_Garten,_Nr._7,_Hauseingang,_2008.jpg" target="_blank" rel="noreferrer">Wikimedia Commons</a>}
+        >
           <img src="https://upload.wikimedia.org/wikipedia/commons/b/be/Celle%2C_Siedlung_Italienischer_Garten%2C_Nr._7%2C_Hauseingang%2C_2008.jpg" alt=""/>
         </WindowImage>
       </Gallery>
 
       <p>
-        1920s facades often followed a strictly uniform design across all stories.
-        Windows and decorative elements were usually aligned symmetrically.
-        This emphasis on repetition and clarity reflected the ideals of the era: functionality, efficiency, and a rejection of overly ornate designs.
+        1920s facades often followed a strictly uniform design across all stories. Windows and decorative elements were
+        usually aligned symmetrically. This emphasis on repetition and clarity reflected the ideals of the era:
+        functionality, efficiency, and a rejection of overly ornate designs.
       </p>
 
       <Gallery>
-        <WindowImage>
+        <WindowImage label="Uniformly structured facade in Valleystraße (Munich)">
           <img src={image} alt=""/>
         </WindowImage>
-        <WindowImage>
-          <img src={image} alt=""/>
+
+        <WindowImage label="Theodor-Neubauer-Straße (Leipzig)">
+          <img src={image1} alt=""/>
         </WindowImage>
       </Gallery>
     </div>
