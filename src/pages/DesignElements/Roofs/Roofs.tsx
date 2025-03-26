@@ -1,7 +1,9 @@
 import React from 'react';
 import Gallery from '../../../components/Gallery';
 import WindowImage from '../../../components/WindowImage';
+import rundling from './rundling.jpg';
 import zehlendorf from './zehlendorf.jpg';
+import mixedRoof from './mixed-roof.jpg';
 
 export default function Roofs() {
   return (
@@ -9,10 +11,9 @@ export default function Roofs() {
       <h2>Roofs</h2>
 
       <p>
-        With the availability of new building materials such as concrete and steel, architecture saw a shift in roof
-        design.
-        Traditional hip and gable roofs were used almost exclusively in Germany at the time, but the emerging modernist
-        movements introduced flat roofs as alternatives.
+        With the availability of new building materials such as concrete and steel, German architecture saw a shift
+        in roof design. While traditional hip and gable roofs remained dominant, modernist movements increasingly
+        introduced flat roofs as an alternative.
       </p>
 
       <p>
@@ -28,35 +29,37 @@ export default function Roofs() {
         </li>
 
         <li>
-          Critics of flat roofs, on the other hand, saw them as a foreign architectural influence, detached from
-          traditional local building styles. They called for a return to familiar, proven forms.
+          Critics of flat roofs, on the other hand, saw them as a foreign influence, detached from local building
+          styles. They called for a return to familiar, proven forms.
         </li>
       </ul>
 
       <p>
-        One of the most notable manifestations of this debate took place in Zehlendorf, Berlin, where two contrasting
+        One of the most notable manifestations of this debate took place in Zehlendorf (Berlin), where two contrasting
         housing projects were developed in close proximity:
       </p>
 
       <ul>
         <li>
-          <strong>Onkel-Tom-Siedlung</strong>, designed by Bruno Taut and completed first, embraced flat roofs as a
-          modern and functional choice.
+          <strong>Onkel-Tom-Siedlung</strong>, designed between 1926-1931, embraced flat roofs as a modern and
+          functional choice. It sparked controversy as Zehlendorf at the time was characterized by historicist
+          mansions and traditional suburban architecture.
         </li>
 
         <li>
-          <strong>Siedlung am Fischtalgrund</strong>, built in response, mandated the use of gable roofs, explicitly
-          opposing the flat-roofed aesthetic. It was finished in 1928 and represented a deliberate counterpoint
-          to the Onkel-Tom-Siedlung.
+          <strong>Siedlung am Fischtalgrund</strong>, built in 1928, mandated the use of gable roofs, explicitly
+          opposing the flat-roofed aesthetic. It represented a deliberate counterpoint not only to the
+          Onkel-Tom-Siedlung but also the radical modernism of the 1927{' '}
+          <a href="https://en.wikipedia.org/wiki/Weissenhof_Estate" target="_blank" rel="noreferrer">Weissenhof Estate</a>
+          {' '}in Stuttgart.
         </li>
       </ul>
 
       <p>
         A similar debate took place in Leipzig during the planning of the{' '}
         <a href="https://en.wikipedia.org/wiki/Rundling_(Leipzig)" target="_blank" rel="noreferrer">Rundling</a>.
-        Initially, the use of flat roofs faced resistance. Architect Hubert Ritter was only able to convince the
-        planning committee after proving that flat roofs were more cost-effective than steep ones.
-        This practical argument ultimately swayed the decision in favor of modernist design.
+        Initially, the use of flat roofs faced resistance and the architect was only able to convince the planning
+        committee after proving that flat roofs were more cost-effective than steep ones.
       </p>
 
       <Gallery>
@@ -64,33 +67,36 @@ export default function Roofs() {
           label="Gable roofs of Siedlung am Fischtalgrund (left) and flat roofs of Onkel-Tom-Siedlung (right)"
           source="Foto: Arthur Köster, © VG Bild-Kunst"
         >
-          <img src={zehlendorf}
-               alt="Gable roofs of Siedlung am Fischtalgrund (left) and flat roofs of Onkel-Tom-Siedlung (right)"/>
+          <img src={zehlendorf} alt="Gable roofs of Siedlung am Fischtalgrund (left) and flat roofs of Onkel-Tom-Siedlung (right)"/>
         </WindowImage>
 
-        <WindowImage label="Rundling (1929-1930) in Leipzig">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/6/64/AHW_Wohnanlage_Rundling_Leipzig_1930.jpg"
-               alt=""/>
+        <WindowImage
+          label="Rundling (1929-1930) in Leipzig"
+          source={<a href="https://commons.wikimedia.org/wiki/File:AHW_Wohnanlage_Rundling_Leipzig_1930.jpg" target="_blank" rel="noreferrer">Wikimedia Commons</a>}
+        >
+          <img src={rundling} alt="Rundling (1929-1930) in Leipzig"/>
         </WindowImage>
       </Gallery>
 
       <p>
-        Despite their differences, both projects rejected 19th-century urban planning models and the cramped, unhealthy
-        living conditions of traditional tenement blocks (Mietskasernen).
+        Interestingly, even leading proponents of flat roofs, such as Bruno Taut (Onkel-Tom-Siedlung) or Ernst May
+        (Neues Frankfurt), were not rigid in their approach.
+        In some cases, pitched roofs were incorporated to better integrate with the surrounding architecture.
+        One example is Bornheimer Hang in Frankfurt, where Ernst May’s otherwise flat-roofed developments featured
+        steep gable roofs where necessary.
       </p>
 
       <p>
-        Interestingly, even leading proponents of flat roofs, such as Bruno Taut, were not rigid in their approach. In
-        some cases, such as in the Bornheimer Hang estate in Frankfurt, pitched roofs were incorporated to better
-        integrate with the surrounding architecture. In Florstädter Straße and Pestalozziplatz, Ernst May’s otherwise
-        flat-roofed developments featured steep gable roofs where necessary, showing that functionality often took
-        precedence over ideological purity.
+        In general, flat roofs were primarily seen in new housing estates on the outskirts of the cities, where there were
+        fewer architectural constraints and therefore less resistance. In contrast, developments closer to existing
+        urban centers often adapted to the surrounding roofscape, blending modernist ideals with the more traditional forms.
       </p>
 
-      <p>
-        And especially houses built in Lücken of existing Wohnblocks they usually adept to the surrounding landscape
-        by not using a flat roof.
-      </p>
+      <Gallery>
+        <WindowImage label="Apartment building from 1930 in Friedrich-Dittes-Straße (Leipzig) with a mix of gable and flat roofs">
+          <img src={mixedRoof} alt=""/>
+        </WindowImage>
+      </Gallery>
     </div>
   );
 }

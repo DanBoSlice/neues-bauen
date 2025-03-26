@@ -8,7 +8,7 @@ import Windows from './Windows/Windows';
 import Ornamentation from './Ornamentation/Ornamentation';
 import Interiors from './Interiors/Interiors';
 import Materials from './Materials/Materials';
-import UrbanPlanning from './CityPlanning/UrbanPlanning';
+import UrbanPlanning from './UrbanPlanning/UrbanPlanning';
 
 export default function DesignElementsRoutes() {
   const location = useLocation();

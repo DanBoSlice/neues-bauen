@@ -1,9 +1,9 @@
 import './WindowImage.css';
-import { PropsWithChildren } from 'react';
+import React, { PropsWithChildren } from 'react';
 
 export interface WindowImageProps extends PropsWithChildren{
   label?: string;
-  source?: string;
+  source?: React.ReactNode;
 }
 
 export default function WindowImage({ children, label, source }: WindowImageProps) {

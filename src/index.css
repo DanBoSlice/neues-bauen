@@ -46,7 +46,9 @@ a {
   text-decoration: none;
 }
 
-p a {
+p a,
+li a,
+.image-label a {
   color: #734f2b;
   text-decoration: none;
   border-bottom: 3px double #734f2b;
