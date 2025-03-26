@@ -1,35 +1,24 @@
 import { Link } from 'react-router-dom';
 import GuestbookEntry from './GuestbookEntry/GuestbookEntry';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import Masonry from 'react-responsive-masonry';
 import './Guestbook.css';
-import { GuestbookEntryDto } from '@api/dtos/guestbook-entry.dto';
 import GuestbookHousePatterns from './GuestbookHouse/GuestbookHousePatterns';
+import { useGuestbook } from './GuestbookContext';
 
 export default function Guestbook() {
-  const [entries, setEntries] = useState<GuestbookEntryDto[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-  const [hasPublished] = useState(false);
+  const { entries, loading, error, fetchEntries } = useGuestbook();
+  const hasFetched = useRef(false);
 
   useEffect(() => {
-    const fetchEntries = async () => {
-      try {
-        const response = await fetch('/api/getEntries');
-        if (!response.ok) {
-          throw new Error(`Error fetching guestbook entries: ${response.statusText}`);
-        }
-        const data: GuestbookEntryDto[] = await response.json();
-        setEntries(data);
-      } catch (err) {
-        setError((err as Error).message);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchEntries();
+    // To prevent it being called twice in React dev mode
+    if (!hasFetched.current) {
+      fetchEntries();
+      hasFetched.current = true;
+    }
   }, []);
+
+  const hasPublished = false;
 
   return (
     <div className="guestbook">

@@ -83,6 +83,7 @@ export default function Facade2({ houseWidth, houseHeight }: Facade2Props) {
     <g transform={`translate(${(houseWidth - staircaseWindowWidth) / 2}, ${staircaseY})`}>
       {[...Array(staircaseWindowCount)].map((_, i) => (
         <Window
+          key={i}
           width={staircaseWindowWidth}
           height={staircaseWindowHeight}
           bars={0}

@@ -84,7 +84,7 @@ export default function Facade0({ houseWidth, houseHeight }: Facade0Props) {
   const staircaseWindows = (
     <g transform={`translate(${houseWidth / 2}, ${roofHeight + windowY})`}>
       {[...Array(windows)].map((_, i) => (
-        <g transform={`translate(0,${i * windowOffset})`}>
+        <g key={i} transform={`translate(0,${i * windowOffset})`}>
           <circle
             key={i}
             className="window"

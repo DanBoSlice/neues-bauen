@@ -109,7 +109,7 @@ export default function Door({ houseWidth, houseHeight, doorStyle }: DoorProps) 
         />
 
         {[...Array(windowCrosses)].map((_, i) => (
-          <g transform={`translate(0, ${i * crossHeight})`}>
+          <g key={i} transform={`translate(0, ${i * crossHeight})`}>
             <path
               className="door-window-bar"
               d={`M0,0 L${windowWidth},${crossHeight}`}

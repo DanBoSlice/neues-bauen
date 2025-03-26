@@ -6,6 +6,7 @@ import Stamp from '../../../components/Stamp';
 import { CreateEntryDto } from '@api/dtos/create-entry.dto';
 import GuestbookHousePatterns from '../GuestbookHouse/GuestbookHousePatterns';
 import GuestbookFormOption from './GuestbookFormOption';
+import { useGuestbook } from '../GuestbookContext';
 
 export default function GuestbookForm() {
   const [facadeStyle, setFacadeStyle] = useState(0);
@@ -20,7 +21,8 @@ export default function GuestbookForm() {
   const [isLoading, setLoading] = useState(false);
   const [apiError, setApiError] = useState(false);
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+  const { refetchEntries } = useGuestbook();
 
   const messageMaxLength = 255;
   const nameMaxLength = 30;
@@ -116,6 +118,7 @@ export default function GuestbookForm() {
           throw new Error(`Failed to submit entry: ${response.statusText}`);
         }
 
+        refetchEntries();
         navigate('/guestbook');
       } catch (err) {
         setApiError(true);

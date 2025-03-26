@@ -9,6 +9,7 @@ import History from './pages/History/History';
 import DesignElementsRoutes from './pages/DesignElements/DesignElementsRoutes';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/react';
+import { GuestbookProvider } from './pages/Guestbook/GuestbookContext';
 
 const NavLink = ({ to, children }: { to: string; children: React.ReactNode }) => {
   const location = useLocation();
@@ -64,13 +65,15 @@ function App() {
           <div className="app-facade roof-separator"></div>
 
           <div className="app-facade content">
-            <Routes>
-              <Route path="/" element={<Home/>}/>
-              <Route path="history" element={<History/>}/>
-              <Route path="design-elements/*" element={<DesignElementsRoutes/>}/>
-              <Route path="guestbook/*" element={<GuestbookRoutes/>}/>
-              <Route path="*" element={<Navigate to="/"/>}/>
-            </Routes>
+            <GuestbookProvider>
+              <Routes>
+                <Route path="/" element={<Home/>}/>
+                <Route path="history" element={<History/>}/>
+                <Route path="design-elements/*" element={<DesignElementsRoutes/>}/>
+                <Route path="guestbook/*" element={<GuestbookRoutes/>}/>
+                <Route path="*" element={<Navigate to="/"/>}/>
+              </Routes>
+            </GuestbookProvider>
           </div>
 
           <div className="footer"></div>
