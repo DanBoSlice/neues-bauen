@@ -8,6 +8,10 @@ export default function Ornamentation() {
       <h2>Ornamentation</h2>
 
       <p>
+        Die Architektur sollte nicht durch verlogene Verzierungen leben, sondern durch ihre einfachen Formen wirken
+      </p>
+
+      <p>
         In the decades before, the predominant architecture style in the German empire was Gründerzeit architecture.
         It sprung out of the rapid industrialization and quickly changing living conditions, and therefore a longing for
         stability. The facades where therefore richly ornamented with historical elements from simpler times.

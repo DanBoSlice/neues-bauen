@@ -1,6 +1,7 @@
 import React from 'react';
 import Gallery from '../../../components/Gallery';
 import WindowImage from '../../../components/WindowImage';
+import image1 from './1.jpg';
 
 export default function UrbanPlanning() {
   return (
@@ -8,53 +9,55 @@ export default function UrbanPlanning() {
       <h2>Urban Planning</h2>
 
       <p>
-        The Neues Bauen movement sought to revolutionize urban planning by prioritizing light, air, and open spaces.
-        This contrasted sharply with the dense, cramped Mietskasernen of the 19th century. Two key approaches shaped the
-        new urban landscape:
+        One of the key goals of new housing developments in the Weimar Republic was to break away from the dense,
+        overcrowded <em>Mietskasernen</em> (tenement blocks) of the 19th century, which were notorious for their poor
+        living conditions. Instead of being built around dark, cramped courtyards, apartment buildings were designed
+        to provide lots of light, fresh air, and green surroundings.
       </p>
 
       <p>
-        Licht und Luft
-      </p>
-
-      <h3>Linear Block Layout (Zeilenbauweise)</h3>
-
-      <p>
-        One of the defining principles of modernist city planning was Zeilenbauweise (linear block layout), where
-        buildings were arranged in parallel rows with generous spacing in between. This design ensured:
-      </p>
-
-      <ul>
-        <li>Maximum sunlight exposure for each apartment</li>
-        <li>Improved ventilation, reducing the spread of diseases</li>
-        <li>Green courtyards and shared spaces for recreation</li>
-      </ul>
-
-      <p>
-        Unlike traditional perimeter block developments, which enclosed courtyards and limited airflow, Zeilenbau
-        embraced open layouts to enhance urban living conditions.
+        A fundamental principle in achieving this was the linear block layout (Zeilenbauweise), where buildings were
+        arranged in parallel rows with space in between. This ensured that every apartment received maximum
+        sunlight exposure and allowed for cross-ventilation, meaning that each unit had windows on opposite sides for
+        better airflow.
       </p>
 
       <Gallery>
-        <WindowImage label="Zeilenbauweise of the Krochsiedlung (1929-1930) in Leipzig">
+        <WindowImage
+          label="Linear rows of the Krochsiedlung (1929-1930) in Leipzig"
+          source={<a href="https://commons.wikimedia.org/wiki/File:Krochsiedlung.jpg" target="_blank" rel="noreferrer">Wikimedia Commons</a>}
+        >
           <img src="https://upload.wikimedia.org/wikipedia/commons/1/16/Krochsiedlung.jpg" alt=""/>
         </WindowImage>
 
-        <WindowImage label="Rundling (1929-1930) in Leipzig">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Rundling_01.jpg/1280px-Rundling_01.jpg"
-               alt=""/>
+        <WindowImage
+          label="Rundling (1929-1930) in Leipzig"
+          source={<a href="https://commons.wikimedia.org/wiki/File:Rundling_01.jpg" target="_blank" rel="noreferrer">Wikimedia Commons</a>}
+        >
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Rundling_01.jpg/1280px-Rundling_01.jpg" alt=""/>
         </WindowImage>
       </Gallery>
 
-      <h3>Garden City</h3>
+      <p>
+        As a response to the overcrowded and heavily industrialized cities, green spaces also became an essential
+        element of modern urban planning. Ernst May, the architect behind{' '}
+        <a href="https://en.wikipedia.org/wiki/New_Frankfurt" target="_blank" rel="noreferrer">Neues Frankfurt</a>,
+        envisioned a garden for each home, allowing residents to grow their own vegetables and become more
+        self-sufficient. However, he acknowledged that this idea was difficult to implement in an urban reality
+        where space was limited and the demand for housing was high.
+      </p>
 
-      <ul>
-        <li>A balance of housing, green spaces, and local infrastructure</li>
-        <li>Small-scale housing units integrated with gardens</li>
-        <li>A rejection of overcrowded, industrial urban centers</li>
-      </ul>
+      <p>
+        Even in more densely populated areas, urban planners found ways to introduce greenery. One common approach was
+        to set buildings slightly back, giving space for small front gardens, which provided additional green space
+        close to existing urban developments.
+      </p>
 
-      <p>Ernst May wollte fuer jeden Hof. Bauhaus, im Erdgeschoss Vieh</p>
+      <Gallery>
+        <WindowImage label="Set back houses from 1930 with a small front garden in Leipzig">
+          <img src={image1} alt=""/>
+        </WindowImage>
+      </Gallery>
     </div>
   );
 }

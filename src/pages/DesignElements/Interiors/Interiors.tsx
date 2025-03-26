@@ -38,6 +38,10 @@ export default function Interiors() {
           <img src={colors} alt=""/>
         </WindowImage>
       </Gallery>
+
+      Die Wohnungen hatten alle ein Bad, Gasbadeöfen, eine Loggia oder einen Balkon, teilweise auch Zentralheizung und Einbaumöbel in der Küche.
+
+      Durch zentrale Waschhäuser konnten die Küchen kleiner ausfallen.
     </div>
   );
 }

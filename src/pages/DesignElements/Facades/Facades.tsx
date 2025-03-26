@@ -10,9 +10,13 @@ export default function Facades() {
       <h2>Facades</h2>
 
       <p>
-        Facades were often brightly colored, with pastel tones dominating the palette. However, bolder shades were also
-        used, creating a vibrant aesthetic. The most common facade finish was simple plaster, with
-        &raquo;Münchner Rauputz&laquo; (a rough-textured plaster) being a particularly popular choice.
+        To counteract the gray monotony of the old tenement housing, facades were often brightly colored. This was not
+        only aesthetic but also a symbolic break from the past and the old German empire.
+      </p>
+
+      <p>
+        The facades themselves remained simple, typically finished with plain plaster, either smooth or with
+        &raquo;Münchner Rauputz&laquo;, a rough-textured plaster that was particularly popular.
       </p>
 
       <Gallery>

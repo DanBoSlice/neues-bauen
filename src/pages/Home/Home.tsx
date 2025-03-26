@@ -34,6 +34,9 @@ export default function Home() {
           What sets these buildings apart from later modern architecture is the attention to subtle details.
           They capture the spirit of the time—optimistic and forward-thinking.
           Here, we’ll explore these distinct design elements of the time, from Art déco influences to traditionalist approaches.
+
+          Die Beseitigung des Wohnungsmangels war eine der wichtigsten Herausforderungen für die junge Republik.
+          Traditionalisten und Funktionalisten, expressionists
         </p>
       </div>
 
