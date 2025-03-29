@@ -2,6 +2,7 @@ import React from 'react';
 import Gallery from '../../../components/Gallery';
 import WindowImage from '../../../components/WindowImage';
 import entrance from './entrance.jpeg';
+import ExternalLink from '../../../components/ExternalLink';
 
 export default function Materials() {
   return (
@@ -44,7 +45,7 @@ export default function Materials() {
 
       <p>
         Plattenbauweise existed and was used in multiple examples, notably
-        the <a href="https://en.wikipedia.org/wiki/Krochsiedlung" target="_blank" rel="noreferrer">Krochsiedlung</a> in
+        the <ExternalLink href="https://en.wikipedia.org/wiki/Krochsiedlung">Krochsiedlung</ExternalLink> in
         Leipzig.
         However, this type of construction was still more expensive than bricks, because labor was cheap.
       </p>

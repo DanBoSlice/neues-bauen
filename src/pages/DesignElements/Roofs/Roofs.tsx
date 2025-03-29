@@ -4,6 +4,7 @@ import WindowImage from '../../../components/WindowImage';
 import rundling from './rundling.jpg';
 import zehlendorf from './zehlendorf.jpg';
 import mixedRoof from './mixed-roof.jpg';
+import ExternalLink from '../../../components/ExternalLink';
 
 export default function Roofs() {
   return (
@@ -50,14 +51,14 @@ export default function Roofs() {
           <strong>Siedlung am Fischtalgrund</strong>, built in 1928, mandated the use of gable roofs, explicitly
           opposing the flat-roofed aesthetic. It represented a deliberate counterpoint not only to the
           Onkel-Tom-Siedlung but also the radical modernism of the 1927{' '}
-          <a href="https://en.wikipedia.org/wiki/Weissenhof_Estate" target="_blank" rel="noreferrer">Weissenhof Estate</a>
+          <ExternalLink href="https://en.wikipedia.org/wiki/Weissenhof_Estate">Weissenhof Estate</ExternalLink>
           {' '}in Stuttgart.
         </li>
       </ul>
 
       <p>
         A similar debate took place in Leipzig during the planning of the{' '}
-        <a href="https://en.wikipedia.org/wiki/Rundling_(Leipzig)" target="_blank" rel="noreferrer">Rundling</a>.
+        <ExternalLink href="https://en.wikipedia.org/wiki/Rundling_(Leipzig)">Rundling</ExternalLink>.
         Initially, the use of flat roofs faced resistance and the architect was only able to convince the planning
         committee after proving that flat roofs were more cost-effective than steep ones.
       </p>
@@ -72,7 +73,7 @@ export default function Roofs() {
 
         <WindowImage
           label="Rundling (1929-1930) in Leipzig"
-          source={<a href="https://commons.wikimedia.org/wiki/File:AHW_Wohnanlage_Rundling_Leipzig_1930.jpg" target="_blank" rel="noreferrer">Wikimedia Commons</a>}
+          source={<ExternalLink href="https://commons.wikimedia.org/wiki/File:AHW_Wohnanlage_Rundling_Leipzig_1930.jpg">Wikimedia Commons</ExternalLink>}
         >
           <img src={rundling} alt="Rundling (1929-1930) in Leipzig"/>
         </WindowImage>

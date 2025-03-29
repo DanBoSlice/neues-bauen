@@ -1,6 +1,7 @@
 import React from 'react';
 import WindowImage from '../../../components/WindowImage';
 import Gallery from '../../../components/Gallery';
+import ExternalLink from '../../../components/ExternalLink';
 
 export default function Ornamentation() {
   return (
@@ -19,7 +20,7 @@ export default function Ornamentation() {
 
       <p>
         Adolf Loos: Ornamentation is disingenuous. Who kicked off the end of historicism with the 1912
-        finished <a href="https://en.wikipedia.org/wiki/Looshaus" target="_blank" rel="noreferrer">Looshaus</a> in Vienna.
+        finished <ExternalLink href="https://en.wikipedia.org/wiki/Looshaus">Looshaus</ExternalLink> in Vienna.
       </p>
 
       <Gallery>

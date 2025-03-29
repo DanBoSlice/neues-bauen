@@ -2,6 +2,7 @@ import React from 'react';
 import Gallery from '../../../components/Gallery';
 import WindowImage from '../../../components/WindowImage';
 import image1 from './1.jpg';
+import ExternalLink from '../../../components/ExternalLink';
 
 export default function UrbanPlanning() {
   return (
@@ -25,14 +26,14 @@ export default function UrbanPlanning() {
       <Gallery>
         <WindowImage
           label="Linear rows of the Krochsiedlung (1929-1930) in Leipzig"
-          source={<a href="https://commons.wikimedia.org/wiki/File:Krochsiedlung.jpg" target="_blank" rel="noreferrer">Wikimedia Commons</a>}
+          source={<ExternalLink href="https://commons.wikimedia.org/wiki/File:Krochsiedlung.jpg">Wikimedia Commons</ExternalLink>}
         >
           <img src="https://upload.wikimedia.org/wikipedia/commons/1/16/Krochsiedlung.jpg" alt=""/>
         </WindowImage>
 
         <WindowImage
           label="Rundling (1929-1930) in Leipzig"
-          source={<a href="https://commons.wikimedia.org/wiki/File:Rundling_01.jpg" target="_blank" rel="noreferrer">Wikimedia Commons</a>}
+          source={<ExternalLink href="https://commons.wikimedia.org/wiki/File:Rundling_01.jpg">Wikimedia Commons</ExternalLink>}
         >
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Rundling_01.jpg/1280px-Rundling_01.jpg" alt=""/>
         </WindowImage>
@@ -41,7 +42,7 @@ export default function UrbanPlanning() {
       <p>
         As a response to the overcrowded and heavily industrialized cities, green spaces also became an essential
         element of modern urban planning. Ernst May, the architect behind{' '}
-        <a href="https://en.wikipedia.org/wiki/New_Frankfurt" target="_blank" rel="noreferrer">Neues Frankfurt</a>,
+        <ExternalLink href="https://en.wikipedia.org/wiki/New_Frankfurt">Neues Frankfurt</ExternalLink>,
         envisioned a garden for each home, allowing residents to grow their own vegetables and become more
         self-sufficient. However, he acknowledged that this idea was difficult to implement in an urban reality
         where space was limited and the demand for housing was high.
