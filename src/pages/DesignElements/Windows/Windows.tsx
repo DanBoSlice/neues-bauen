@@ -7,8 +7,23 @@ export default function Windows() {
     <div>
       <h2>Windows</h2>
 
-      <p>White, wooden, panelled</p>
-      <p>Corner windows</p>
+      <p>
+        White, wooden, panelled
+      </p>
+      <p>
+        Corner windows
+      </p>
+
+      <p>
+        Doppelkastenfenster (double-hung window)
+      </p>
+
+      <p>
+        Fenstersprossen
+        Großer Wohnungsmangel, so wie alles andere sollte es möglichst kostengünstig sein.
+        Die Aufteilung der Fensterfläche durch Sprossen hatte ursprünglich Kostengründe: Kleine Scheiben in Holz- oder
+        Bleifassungen waren billiger und leichter herzustellen.
+      </p>
 
       <Gallery>
         <WindowImage label="Eckfenster am Rundling">

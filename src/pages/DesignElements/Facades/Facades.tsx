@@ -14,9 +14,15 @@ export default function Facades() {
         only aesthetic but also a symbolic break from the past and the old German empire.
       </p>
 
+      <p>Not even white before, so Großsiedlung Schillerpromenade Berlin, bald Weiße Stadt genannt, wegen weißem Putz.</p>
+
       <p>
         The facades themselves remained simple, typically finished with plain plaster, either smooth or with
         &raquo;Münchner Rauputz&laquo;, a rough-textured plaster that was particularly popular.
+      </p>
+
+      <p>
+        Rauputz z.b. hier: https://timelessmoon.getarchive.net/amp/media/ahw-wohnanlage-brandvorwerkstr-leipzig-1928-1-baa6e4
       </p>
 
       <Gallery>

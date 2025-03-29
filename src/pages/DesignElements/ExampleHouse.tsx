@@ -1,25 +1,11 @@
 import { Link, useLocation } from 'react-router-dom';
 import './ExampleHouse.css';
 import React from 'react';
-import BrickPattern from '../../components/BrickPattern';
+import exampleHouse from './Roofs/mixed-roof.jpg';
 
 export default function ExampleHouse() {
-  const width = 400;
-  const height = 500;
-
-  const skyHeight = 20;
-  const roofHeight = 10;
-  const houseHeight = 374;
-  const staircaseWidth = 100;
-  const baseY = skyHeight + houseHeight;
-  const baseHeight = 31;
-  const doorWidth = 50;
-  const doorHeight = 90;
-
-  const grassXCenterOffsetTop = 40;
-  const grassXCenterOffsetBottom = 80;
-  const grassStartY = baseY + baseHeight + 5;
-  const grassEndY = height;
+  const width = 722;
+  const height = 520;
 
   const ElementLink = ({ x, y, link, title }: any) => {
     const to = '/design-elements/' + link;
@@ -41,75 +27,15 @@ export default function ExampleHouse() {
       width={width}
       height={height}
     >
-      <defs>
-        <BrickPattern brickWidth={11} brickHeight={5}/>
-      </defs>
+      <image href={exampleHouse} width={'100%'}/>
 
-      <rect
-        fill="white"
-        width={width}
-        height={height}
-      />
-
-      <rect
-        className="example-house-facade"
-        width={width}
-        height={houseHeight}
-        y={skyHeight}
-      />
-
-      <rect
-        className="staircase"
-        width={staircaseWidth}
-        height={houseHeight}
-        x={(width - staircaseWidth) / 2}
-        y={skyHeight}
-      />
-
-      <rect
-        className="example-house-roof"
-        width={width}
-        height={roofHeight}
-        y={skyHeight}
-      />
-      <rect
-        fill="url(#brickPattern)"
-        width={20}
-        height={skyHeight}
-        x={73}
-      />
-
-      <rect
-        fill="url(#brickPattern)"
-        width={width}
-        height={baseHeight}
-        y={baseY}
-      />
-
-      <rect
-        className="door"
-        width={doorWidth}
-        height={doorHeight}
-        x={(width - doorWidth) / 2}
-        y={baseY + baseHeight - doorHeight}
-      ></rect>
-
-      <polygon
-        points={`0,${grassStartY} ${width / 2 - grassXCenterOffsetTop},${grassStartY} ${width / 2 - grassXCenterOffsetBottom},${grassEndY} 0,${grassEndY}`}
-        className="grass"
-      />
-      <polygon
-        points={`${width / 2 + grassXCenterOffsetTop},${grassStartY} ${width},${grassStartY} ${width},${grassEndY} ${width / 2 + grassXCenterOffsetBottom},${grassEndY}`}
-        className="grass"
-      />
-
-      <ElementLink x={width / 2} y={skyHeight + roofHeight / 2} link="roofs" title="Roofs"/>
-      <ElementLink x={(width + staircaseWidth) / 2 + (width - staircaseWidth) / 4} y={120} link="facades" title="Facades"/>
-      {/*<ElementLink x={(width - staircaseWidth) / 4} y={170} link="windows" title="Windows"/>*/}
-      {/*<ElementLink x={260} y={250} link="ornamentation" title="Ornamentation"/>*/}
-      {/*<ElementLink x={width / 2} y={baseY + baseHeight - doorHeight / 2} link="interiors" title="Interiors"/>*/}
-      {/*<ElementLink x={340} y={baseY + baseHeight / 2} link="materials" title="Materials"/>*/}
-      <ElementLink x={85} y={grassStartY + (grassEndY - grassStartY) / 2} link="urban-planning" title="City Planning"/>
+      <ElementLink x={width * .6} y={height * .144} link="roofs" title="Roofs"/>
+      <ElementLink x={width * .445} y={height * .478} link="facades" title="Facades"/>
+      <ElementLink x={width * .6} y={height * .68} link="windows" title="Windows"/>
+      <ElementLink x={width * .238} y={height * .376} link="ornamentation" title="Ornamentation"/>
+      <ElementLink x={width * .73} y={height * .9} link="interiors" title="Interiors"/>
+      <ElementLink x={width * .443} y={height * .89} link="materials" title="Materials"/>
+      <ElementLink x={width * .55} y={height * .95} link="urban-planning" title="City Planning"/>
     </svg>
   );
 }

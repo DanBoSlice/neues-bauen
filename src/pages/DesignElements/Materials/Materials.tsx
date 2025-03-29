@@ -60,6 +60,15 @@ export default function Materials() {
       <p>Klinkerexpressionismus</p>
 
       <p>Natürliche Materialien wie Holz</p>
+
+      <p>
+        Noch neu als Material war der Stahlbeton. Stahlbeton war erst 1867 in Frankreich erfunden worden und wurde nun immer bekannter.
+      </p>
+
+      <p>
+        Um Bauvorhaben umzusetzen, wurden vor allem neue industrielle Materialien verwendet. Dazu gehören Glas, Stahl,
+        Beton und Backstein. Auf diese Weise war es möglich, größere Gebäude oder ganze Gebäudekomplexe zu konstruieren.
+      </p>
     </div>
   );
 }
