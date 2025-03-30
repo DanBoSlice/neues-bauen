@@ -1,14 +1,16 @@
 import React from 'react';
 import Gallery from '../../../components/Gallery';
 import WindowImage from '../../../components/WindowImage';
-import image from './1.jpg';
-import image1 from '../../Home/2big.jpeg';
+import image from '../../Home/2big.jpeg';
+import image1 from './1.jpg';
+import image2 from './3.jpg';
 import ExternalLink from '../../../components/ExternalLink';
+import CuratorsTake from '../CuratorsTake';
 
 export default function Facades() {
   return (
     <div>
-      <h2>Facades</h2>
+      <h2>Simple and Colorful Facades</h2>
 
       <p>
         To counteract the gray monotony of the old tenement housing, facades were often brightly colored. This was not
@@ -44,13 +46,23 @@ export default function Facades() {
 
       <Gallery>
         <WindowImage label="Uniformly structured facade in Valleystraße (Munich)">
-          <img src={image} alt=""/>
-        </WindowImage>
-
-        <WindowImage label="Theodor-Neubauer-Straße (Leipzig)">
           <img src={image1} alt=""/>
         </WindowImage>
+
+        <WindowImage label="Rottacher Str. (Munich)">
+          <img src={image2} alt=""/>
+        </WindowImage>
       </Gallery>
+
+      <Gallery>
+        <WindowImage label="Theodor-Neubauer-Straße (Leipzig)">
+          <img src={image} alt=""/>
+        </WindowImage>
+      </Gallery>
+
+      {/*<CuratorsTake>*/}
+      {/*  Todo*/}
+      {/*</CuratorsTake>*/}
     </div>
   );
 }
