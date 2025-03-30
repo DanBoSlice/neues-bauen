@@ -1,7 +1,6 @@
 import React from 'react';
 import WindowImage from '../../../components/WindowImage';
 import Gallery from '../../../components/Gallery';
-import ExternalLink from '../../../components/ExternalLink';
 
 export default function Ornamentation() {
   return (
@@ -9,25 +8,21 @@ export default function Ornamentation() {
       <h2>Ornamentation</h2>
 
       <p>
-        Die Architektur sollte nicht durch verlogene Verzierungen leben, sondern durch ihre einfachen Formen wirken
-      </p>
-
-      <p>
-        In the decades before, the predominant architecture style in the German empire was Gründerzeit architecture.
+        In the decades before, the predominant architecture style in the German empire was Gründerzeit/historicism architecture.
         It sprung out of the rapid industrialization and quickly changing living conditions, and therefore a longing for
         stability. The facades where therefore richly ornamented with historical elements from simpler times.
       </p>
 
       <p>
-        Adolf Loos: Ornamentation is disingenuous. Who kicked off the end of historicism with the 1912
-        finished <ExternalLink href="https://en.wikipedia.org/wiki/Looshaus">Looshaus</ExternalLink> in Vienna.
+        Adolf Loos: Ornamentation is disingenuous. Die Architektur sollte nicht durch verlogene Verzierungen leben,
+        sondern durch ihre einfachen Formen wirken.
+
+        Kicked off Neue Sachlichkeit/new objectivity.
       </p>
 
-      <Gallery>
-        <WindowImage label="Tagblatt-Turm in Stuttgart">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/1/15/Bundesarchiv_Bild_102-00543%2C_Stuttgart%2C_Tagblatt-Turm.jpg" alt=""/>
-        </WindowImage>
-      </Gallery>
+      <p>
+        Dem Chaos ihrer Zeit begegneten sie mit radikaler Reduktion und Klarheit von Formen und Anordnungen.
+      </p>
 
       <p>no or minimal ornamentation</p>
       <p>clinker expressionism</p>
@@ -40,6 +35,14 @@ export default function Ornamentation() {
         Backsteinreihen sind typisch für diese Bauten. Die Stilelemente sollten die Dynamik der Zeit, aber auch ihre
         Heftigkeit und ihre Spannungen zum Ausdruck bringen.
       </p>
+
+      <Gallery>
+        <WindowImage label="Tagblatt-Turm in Stuttgart">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/1/15/Bundesarchiv_Bild_102-00543%2C_Stuttgart%2C_Tagblatt-Turm.jpg"
+            alt=""/>
+        </WindowImage>
+      </Gallery>
     </div>
   );
 }
