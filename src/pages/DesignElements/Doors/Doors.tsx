@@ -14,6 +14,7 @@ import woodDoor from './wood-door.jpg';
 import woodDoorSmall from './wood-door-small.jpg';
 import React from 'react';
 import CuratorsTake from '../../../components/CuratorsTake';
+import ExternalLink from '../../../components/ExternalLink';
 
 export default function Doors() {
   return (
@@ -21,17 +22,15 @@ export default function Doors() {
       <h2>Front Doors</h2>
 
       <p>
-        Front doors followed the shift from the more ornate styles of the past to more minimal designs.
-        The most common materials were wood, glass, and metal (typically steel), each chosen for their availability and affordability.
-        PVC had not yet been invented, and aluminum remained too expensive for widespread use.
+        The most common materials for front doors were wood, glass, and metal (typically steel), chosen for their
+        availability and affordability. PVC had not yet been invented, and aluminum was too expensive.
       </p>
 
       <p>
-        Nearly every door from this period was made out of wood, especially on residential buildings.
-        Germany’s strong forestry resources made it a cheap and simultaneously practical option.
-        Up until this point, almost all front doors were made out of wood, but 1920s doors were a lot simpler.
-        Doors were often flat, with only horizontal or vertical slats adding structure, or other simple geometric forms,
-        equally helping the structure of the door and not useless only optical decorative elements.
+        Wood was by far the dominant material, especially for residential buildings, due to Germany’s strong forestry
+        resources, which made it both cheap and practical. While front doors had traditionally been made of wood, they
+        became a lot less ornate in the 1920s. Flat surfaces replaced heavy ornamentation, and horizontal and vertical
+        slats added structure and reinforcement.
       </p>
 
       <Gallery>
@@ -49,13 +48,16 @@ export default function Doors() {
       </Gallery>
 
       <p>
-        To protect against the elements, wood was often stained, keeping its natural appearance intact.
+        To protect against the elements, the wood was often stained, keeping its natural appearance intact.
         However, some doors, especially in more experimental housing projects, featured bright colors, similar to the
         facades.
       </p>
 
       <Gallery>
-        <WindowImage label="Colorful front doors of Hufeisensiedlung (Berlin)">
+        <WindowImage
+          label="Colorful front doors of Hufeisensiedlung (Berlin)"
+          source={<ExternalLink href="https://commons.wikimedia.org/wiki/File:Hufeisensiedlung_Tueren_Details_divStrassen_2011.jpg">Wikimedia Commons</ExternalLink>}
+        >
           <a href={'https://upload.wikimedia.org/wikipedia/commons/c/cd/Hufeisensiedlung_Tueren_Details_divStrassen_2011.jpg'}>
             <img src={'https://upload.wikimedia.org/wikipedia/commons/c/cd/Hufeisensiedlung_Tueren_Details_divStrassen_2011.jpg'} alt=""/>
           </a>
@@ -63,9 +65,8 @@ export default function Doors() {
       </Gallery>
 
       <p>
-        Glass panes were another common feature of front doors, reinforcing the principle of "light and sun".
-        However, large glass panes were expensive and difficult to produce, so most doors used multiple smaller panes,
-        divided by wooden frames.
+        Glass panes were common feature, reinforcing the principle of &raquo;light and sun&laquo;. Large glass panes
+        were still difficult to produce and therefore expensive, so most doors used smaller panes divided by wooden frames.
       </p>
 
       <Gallery>
@@ -83,24 +84,18 @@ export default function Doors() {
       </Gallery>
 
       <p>
-        Occasionally, metal, typically steel, was used for decoration and reinforcement.
-        Metal bars could provide a subtle ornamental touch, especially in expressionist designs, while also adding
-        security.
-      </p>
-
-      <p>
-        Metal was less common for full doors due to cost and weight, but steel-framed glass doors were sometimes used in
-        commercial or modernist buildings.
+        Occasionally, metal (typically steel), was used for decoration and reinforcement. Metal bars could provide
+        a subtle ornamental touch, especially in expressionist designs, while also adding security.
       </p>
 
       <Gallery>
-        <WindowImage label="Wood frames between glass panes and decorative metal bars">
+        <WindowImage label="Wood separating glass panes and decorative metal bars">
           <a href={metalBars}>
             <img src={metalBarsSmall} alt=""/>
           </a>
         </WindowImage>
 
-        <WindowImage label="Blue painted wood and metal bar ornamentation in Munich">
+        <WindowImage label="Blue painted wood and metal bar ornamentation">
           <a href={blueDoor}>
             <img src={blueDoorSmall} alt=""/>
           </a>
@@ -109,21 +104,17 @@ export default function Doors() {
 
       <CuratorsTake>
         <p>
-          I like how these doors balance functionality with warmth. The natural materials and handcrafted details make
-          early modernist architecture feel more human compared to later, more industrialized designs.
+          Even under the guiding principle of form follows function, form was never entirely forgotten. Rather than
+          being purely flat and featureless, these doors incorporate subtle structural elements that enhance both
+          durability and aesthetics. They are simple, but not boring.
         </p>
 
         <p>
-          Even with the leading principle of form follows function, the form was not forgotten. Instead of using purely
-          flat doors, a certain structure can be seen which at the same time improves the sturdiness of the door.
-          They are simple, but not boring.
-        </p>
-
-        <p>
-          These choices weren’t just aesthetic but also practical. Wood was chosen because it was cheap and easy to
-          work with, not necessarily because of its beauty. But necessity led to elegance, and that’s why I find early
-          modernism more compelling than later iterations—it still carries a sense of craftsmanship and natural
-          materials.
+          The material choices weren’t just about aesthetics but also practical. Wood was widely used because it was
+          cheap and easy to work with. But necessity led to elegance, and that’s why I find early modernism more
+          compelling than later developments. While they adhered to the same principles, the increasing availability of
+          materials like aluminum led to doors that felt more industrial. The warmth and sense of craftsmanship of
+          these earlier designs was gradually lost.
         </p>
       </CuratorsTake>
     </>
