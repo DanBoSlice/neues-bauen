@@ -85,6 +85,7 @@ export default function Roofs() {
         In some cases, pitched roofs were incorporated to better integrate with the surrounding architecture.
         One example is Bornheimer Hang in Frankfurt, where Ernst May’s otherwise flat-roofed developments featured
         steep gable roofs where necessary.
+        {/*Bruno-Taut Siedlung in Eichwalde*/}
       </p>
 
       <p>
