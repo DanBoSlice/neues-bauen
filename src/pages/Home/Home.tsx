@@ -60,7 +60,7 @@ export default function Home() {
         </Gallery>
       </div>
 
-      <hr/>
+      {/*<hr/>*/}
 
       <div className="home-end">
         <div>

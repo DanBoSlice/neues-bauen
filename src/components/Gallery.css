@@ -1,7 +1,15 @@
 .gallery {
+  background: url('/public/bg-light.png') #eac59a;
   display: flex;
   gap: 1em;
   margin-bottom: 2em;
+
+  margin: 2em -3em;
+  padding: 1em 3em;
+
+  &:last-child {
+    margin-bottom: -2em;
+  }
 
   > * {
     flex: 1;

@@ -7,23 +7,19 @@ export interface WindowImageProps extends PropsWithChildren{
 }
 
 export default function WindowImage({ children, label, source }: WindowImageProps) {
-  // todo: randomly add flowers?
-
   return (
     <div>
-      <div className="window-image">
-        {children}
-
-        {/*<div className="sprosse"></div>*/}
-        {/*<div className="sprosse"></div>*/}
-        {/*<div className="sprosse"></div>*/}
+      <div className="window-frame">
+        <div className="window-image">
+          {children}
+        </div>
       </div>
 
       {(label || source) && (
-        <div className="image-label">
+        <p className="image-label">
           {label}
-          {source && (<><br/><small>{source}</small></>)}
-        </div>
+          {source && (<div className="source">{source}</div>)}
+        </p>
       )}
     </div>
   );

@@ -36,7 +36,7 @@
     --ledge-shadow: 4px;
     content: "";
     display: block;
-    background: #7988f1;
+    background: var(--primary-color);
     height: var(--roof-edge-height);
     width: calc(100% + var(--ledge) * 2);
     position: absolute;
